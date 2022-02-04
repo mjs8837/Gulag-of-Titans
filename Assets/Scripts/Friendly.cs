@@ -15,4 +15,10 @@ public class Friendly : Monster
     {
         
     }
+
+    protected override void Attack(float damageDealt, Monster target)
+    {
+        Debug.Log("You have attacked and dealt " + damageDealt + " damage to " + target.monsterName + "!");
+        base.Attack(damageDealt, target);
+    }
 }
