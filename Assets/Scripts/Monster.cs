@@ -5,6 +5,7 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     public float health;
+    public float totalHealth;
     public string monsterName;
 
     // Start is called before the first frame update
