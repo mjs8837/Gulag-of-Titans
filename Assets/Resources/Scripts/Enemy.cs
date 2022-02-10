@@ -7,6 +7,7 @@ using System.IO;
 public class Enemy : Titan
 {
     [SerializeField] Button damageButton;
+    [SerializeField] Button captureButton;
     [SerializeField] GameObject lowHealthIndicator;
 
     GameObject particle;
@@ -19,12 +20,14 @@ public class Enemy : Titan
         particle.transform.parent = transform;
 
         damageButton.onClick.AddListener(ButtonAttack);
+        captureButton.onClick.AddListener(CaptureClick);
     }
 
     // Update is called once per frame
     void Update()
     {
         CheckHealth();
+        CaptureLogic();
     }
 
     private GameObject LoadPrefabFromFile(string filename)
@@ -59,6 +62,7 @@ public class Enemy : Titan
             if (particle.GetComponent<ParticleSystem>().isStopped)
             {
                 particle.GetComponent<ParticleSystem>().Play();
+                gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             }
         }
 
@@ -66,6 +70,25 @@ public class Enemy : Titan
         {
             health = 0.0f;
             Destroy(gameObject);
+        }
+    }
+    
+    //Method to check the logic behind enemy capture. Called whenever the capture titan button is clicked
+    void CaptureClick()
+    {
+        float captureChance = 0.75f;
+        if (health <= (totalHealth * 0.25f))
+        {
+            
+        }
+    }
+
+    //Method to check the logic behind enemy capture. Called every frame
+    void CaptureLogic()
+    {
+        if (health <= (totalHealth * 0.25f))
+        {
+            captureButton.image.color = Color.white;
         }
     }
 }
