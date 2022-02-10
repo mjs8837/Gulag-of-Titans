@@ -5,7 +5,7 @@ using UnityEngine;
 public class Party : MonoBehaviour
 {
     GameObject[] activeParty;
-    List<GameObject> reserveParty;
+    public List<GameObject> reserveParty;
     // Start is called before the first frame update
     void Start()
     {

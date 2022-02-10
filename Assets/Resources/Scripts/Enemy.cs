@@ -10,6 +10,9 @@ public class Enemy : Titan
     [SerializeField] Button captureButton;
     [SerializeField] GameObject lowHealthIndicator;
 
+    [SerializeField] GameObject player;
+    Party partyScript;
+
     GameObject particle;
 
     // Start is called before the first frame update
@@ -21,6 +24,8 @@ public class Enemy : Titan
 
         damageButton.onClick.AddListener(ButtonAttack);
         captureButton.onClick.AddListener(CaptureClick);
+
+        partyScript = player.GetComponent<Party>();
     }
 
     // Update is called once per frame
@@ -77,9 +82,19 @@ public class Enemy : Titan
     void CaptureClick()
     {
         float captureChance = 0.75f;
+
         if (health <= (totalHealth * 0.25f))
         {
-            
+            if (Random.Range(0.0f, 1.0f) <= captureChance)
+            {
+                player.GetComponent<Party>().reserveParty.Add(gameObject);
+                gameObject.transform.position = new Vector2(-5.0f, -5.0f);
+                gameObject.transform.localScale = new Vector2(0.25f, 0.25f);
+            }
+            else
+            {
+                Debug.Log("Capture Unsuccessful");
+            }
         }
     }
 
