@@ -87,10 +87,18 @@ public class Enemy : Titan
         {
             if (Random.Range(0.0f, 1.0f) <= captureChance)
             {
-                player.GetComponent<Party>().reserveParty.Add(gameObject);
-                gameObject.transform.position = new Vector2(-5.0f, -5.0f);
+                if (player.GetComponent<Party>().reserveParty.Count == 0)
+                {
+                    player.GetComponent<Party>().reserveParty.Add(gameObject);
+                }
+
+                gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+                gameObject.transform.position = new Vector2(-9.0f, -4.0f);
                 gameObject.transform.localScale = new Vector2(0.25f, 0.25f);
+                particle.GetComponent<ParticleSystem>().Pause();
+                particle.GetComponent<ParticleSystem>().Clear();
             }
+
             else
             {
                 Debug.Log("Capture Unsuccessful");

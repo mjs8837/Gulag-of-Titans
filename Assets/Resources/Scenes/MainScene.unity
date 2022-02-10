@@ -1461,6 +1461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a2f0ea100480bc4db9ae5cf5520a9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reserveParty: []
 --- !u!1 &1824350083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,6 +1498,7 @@ MonoBehaviour:
   damageButton: {fileID: 2096251913}
   captureButton: {fileID: 909045525}
   lowHealthIndicator: {fileID: 0}
+  player: {fileID: 1764201730}
 --- !u!212 &1824350085
 SpriteRenderer:
   m_ObjectHideFlags: 0
