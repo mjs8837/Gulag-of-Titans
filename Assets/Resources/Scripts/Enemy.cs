@@ -93,10 +93,12 @@ public class Enemy : Titan
                 }
 
                 gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-                gameObject.transform.position = new Vector2(-9.0f, -4.0f);
+                gameObject.transform.position = new Vector2(-4.0f, -3.0f);
                 gameObject.transform.localScale = new Vector2(0.25f, 0.25f);
                 particle.GetComponent<ParticleSystem>().Pause();
                 particle.GetComponent<ParticleSystem>().Clear();
+                Destroy(this);
+                gameObject.AddComponent<Friendly>();
             }
 
             else
