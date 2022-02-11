@@ -15,6 +15,9 @@ public class Enemy : Titan
 
     GameObject particle;
 
+    public Text healthTxt;
+    public Text captureText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,6 +79,8 @@ public class Enemy : Titan
             health = 0.0f;
             Destroy(gameObject);
         }
+
+        healthTxt.text = health.ToString();
     }
     
     //Method to check the logic behind enemy capture. Called whenever the capture titan button is clicked
@@ -97,13 +102,14 @@ public class Enemy : Titan
                 gameObject.transform.localScale = new Vector2(0.25f, 0.25f);
                 particle.GetComponent<ParticleSystem>().Pause();
                 particle.GetComponent<ParticleSystem>().Clear();
+                captureText.text = "Capture Successful";
                 Destroy(this);
                 gameObject.AddComponent<Friendly>();
             }
 
             else
             {
-                Debug.Log("Capture Unsuccessful");
+                captureText.text = "Capture Unsuccessful";
             }
         }
     }
