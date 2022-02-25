@@ -6,7 +6,9 @@ public class Titan : MonoBehaviour
 {
     public float health;
     public float totalHealth;
-    public string monsterName;
+    public float damage;
+    public float fatigue;
+    public bool isEnemy;
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +19,11 @@ public class Titan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     //Creating a parent function for child classes that can be overriden
-    protected virtual void Attack(float damageDealt, Titan target)
+    public virtual void Attack(float damageDealt, Titan target)
     {
         ChangeHealth(damageDealt, target);
     }
@@ -31,4 +33,54 @@ public class Titan : MonoBehaviour
     {
         target.health += healthChange;
     }
+
+    public bool DeathCheck()
+    {
+        if (health <= 0 || fatigue <= 0)
+        {
+            OnDeath();
+            return true;
+        }
+
+        return false;
+    }
+
+
+    public virtual void OnAppear()
+    {
+
+    }
+
+    public virtual void OnBeginTurn()
+    {
+
+    }
+
+    public virtual void OnHit()
+    {
+
+    }
+
+    public virtual void OnEndTurn()
+    {
+        if (!isEnemy)
+        {
+            fatigue -= 1;
+        }
+    }
+
+    public virtual void OnDeath()
+    {
+
+    }
+
+    //Korngull
+    //Lucile
+    //Marcus
+    //William
+    //Gerard
+    //Caleb
+    //Moosh
+    //Goblin
+    //-1 fatigue to all except caleb
 }

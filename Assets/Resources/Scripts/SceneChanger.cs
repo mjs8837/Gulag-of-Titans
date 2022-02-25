@@ -33,10 +33,5 @@ public class SceneChanger : MonoBehaviour
         {
             SceneManager.LoadScene("Battle3");
         }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SceneManager.LoadScene("MainScene");
-        }
     }
 }
