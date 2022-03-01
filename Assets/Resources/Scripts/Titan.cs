@@ -22,16 +22,49 @@ public class Titan : MonoBehaviour
 
     }
 
-    //Creating a parent function for child classes that can be overriden
+    //Creating a parent function for enemy attacks
     public virtual void Attack(Titan[] party)
     {
-        
+        float attackChance = Random.Range(0.0f, 10.0f);
+
+        if (attackChance >= 0.0f && attackChance < 5.0f)
+        {
+            if (Random.Range(0.0f, 1.0f) <= 0.5f)
+            {
+                ChangeHealth(damage, party[0]);
+            }
+            else
+            {
+                ChangeHealth(damage, party[3]);
+            }
+        }
+
+        if (attackChance >= 5.0f && attackChance < 7.5f)
+        {
+            for (int i = 0; i < party.Length; i++)
+            {
+                ChangeHealth(damage, party[i]);
+            }
+
+        }
+
+        if (attackChance >= 7.5f)
+        {
+            if (Random.Range(0.0f, 1.0f) <= 0.5f)
+            {
+                ChangeHealth(damage * 2.0f, party[0]);
+            }
+            else
+            {
+                ChangeHealth(damage * 2.0f, party[3]);
+            }
+        }
     }
 
-
-    public virtual void Attack(Titan enemy)
+    //Creating a parent function for friendly attacks
+    public virtual void Attack(Titan enemy, int damage)
     {
-
+        ChangeHealth(damage, enemy);
     }
 
     //Creating a parent health function for child classes that can't be overridden, but can be called
