@@ -13,9 +13,14 @@ public class William : Titan
         fatigue = 4;
     }
 
-    public override void Attack(float damageDealt, Titan target)
+    public override void Attack(Titan enemy, int damage)
     {
-        base.Attack(damageDealt, target);
+        base.Attack(enemy, damage);
+    }
+
+    public override void Attack(Titan[] party)
+    {
+        base.Attack(party);
     }
 
     public override void OnAppear()
