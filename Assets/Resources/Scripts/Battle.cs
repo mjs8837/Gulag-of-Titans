@@ -44,6 +44,7 @@ public class Battle : MonoBehaviour
         //WAIT 
         //End turn Phase
 
+        //Deaths
         Titan[] tempParty = activeParty;
         enemy.DeathCheck();
 
@@ -74,7 +75,7 @@ public class Battle : MonoBehaviour
             }
 
         }
-        for(int i = 3; i < 5; i++){
+        for(int i = 3; i < 6; i++){
 
             if (activeParty[i] == null)
             {
@@ -100,6 +101,18 @@ public class Battle : MonoBehaviour
                 }
                 i--;
 
+            }
+        }
+        //End of turn abilities
+        for(int i = 0; i < 6; i++)
+        {
+            if(activeParty[i] == null)
+            {
+
+            }
+            else
+            {
+                activeParty[i].OnEndTurn();
             }
         }
        
