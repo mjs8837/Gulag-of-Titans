@@ -62,7 +62,7 @@ public class Titan : MonoBehaviour
     }
 
     //Creating a parent function for friendly attacks
-    public virtual void Attack(Titan enemy, int damage)
+    public virtual void Attack(Titan enemy, float damage)
     {
         ChangeHealth(damage, enemy);
     }
