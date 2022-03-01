@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Party : MonoBehaviour
 {
-    GameObject[] activeParty;
-    public List<GameObject> reserveParty;
+    public Titan[] activeParty;
+    public List<Titan> reserveParty;
     // Start is called before the first frame update
     void Start()
     {
-        activeParty = new GameObject[6];
-        reserveParty = new List<GameObject>();
+        activeParty = new Titan[6];
+        reserveParty = new List<Titan>();
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class Party : MonoBehaviour
         
     }
 
-    public void addTitanActive(GameObject titanToAdd, int position)
+    public void addTitanActive(Titan titanToAdd, int position)
     {
         if (activeParty[position] != null)
         {
@@ -28,7 +28,7 @@ public class Party : MonoBehaviour
         activeParty[position] = titanToAdd; 
     }
 
-    public void addTitanReserve(GameObject titanToAdd)
+    public void addTitanReserve(Titan titanToAdd)
     {
         reserveParty.Add(titanToAdd);
     }
