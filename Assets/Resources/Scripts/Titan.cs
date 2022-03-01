@@ -23,9 +23,15 @@ public class Titan : MonoBehaviour
     }
 
     //Creating a parent function for child classes that can be overriden
-    public virtual void Attack(float damageDealt, Titan target)
+    public virtual void Attack(Titan[] party)
     {
-        ChangeHealth(damageDealt, target);
+        
+    }
+
+
+    public virtual void Attack(Titan enemy)
+    {
+
     }
 
     //Creating a parent health function for child classes that can't be overridden, but can be called
