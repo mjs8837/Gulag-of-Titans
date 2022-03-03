@@ -26,10 +26,10 @@ public class Battle : MonoBehaviour
 
         //Beginning Phase
 
-        enemy.OnBeginTurn();
+        enemy.OnBeginTurn(activeParty, enemy);
         for (int i = 0; i < activeParty.Length; i++)
         {
-            activeParty[i].OnBeginTurn();
+            activeParty[i].OnBeginTurn(activeParty, enemy);
         }
 
         //WAIT 
@@ -46,15 +46,14 @@ public class Battle : MonoBehaviour
 
         //Deaths
         Titan[] tempParty = activeParty;
-        enemy.DeathCheck();
+        enemy.DeathCheck(activeParty, enemy);
 
         for(int i = 0; i < 3; i++){
             if(activeParty[i] == null)
             {
              
             }
-            else if(activeParty[i].DeathCheck() == true){
-                activeParty[i].OnDeath();
+            else if(activeParty[i].DeathCheck(activeParty, enemy) == true){
                 if (i == 0)
                 {
                     activeParty[0] = activeParty[1];
@@ -81,9 +80,8 @@ public class Battle : MonoBehaviour
             {
 
             }
-            else if (activeParty[i].DeathCheck() == true)
+            else if (activeParty[i].DeathCheck(activeParty, enemy) == true)
             {
-                activeParty[i].OnDeath();
                 if (i == 0)
                 {
                     activeParty[3] = activeParty[4];
@@ -112,7 +110,7 @@ public class Battle : MonoBehaviour
             }
             else
             {
-                activeParty[i].OnEndTurn();
+                activeParty[i].OnEndTurn(activeParty, enemy);
             }
         }
        
