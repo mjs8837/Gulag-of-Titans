@@ -6,8 +6,9 @@ public class Drag : MonoBehaviour
 {
     private bool dragging = false;
     private float distance;
-    public float xBound = 0;
-    public float yBound = -1.5f;
+    public float xBound = 3;
+    public float yBound = -4.5f;
+    public GameObject[] landingSpots;
 
     public void OnMouseDown()
     {

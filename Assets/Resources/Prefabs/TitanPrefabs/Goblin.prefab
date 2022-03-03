@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4397865390655396811}
   - component: {fileID: 8640037498452288197}
+  - component: {fileID: 9017657297177908399}
   - component: {fileID: 747629812392443486}
   - component: {fileID: 2642199993874202431}
   m_Layer: 0
-  m_Name: goblin
+  m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,6 +85,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &9017657297177908399
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147462645214859498}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 6.4}
+    newSize: {x: 6.4, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.4, y: 6.4}
+  m_EdgeRadius: 0
 --- !u!114 &747629812392443486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,8 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec2820d626edb9419389a6654e8bef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xBound: 0
-  yBound: -1.5
+  xBound: 3
+  yBound: -4.5
+  landingSpots: []
 --- !u!114 &2642199993874202431
 MonoBehaviour:
   m_ObjectHideFlags: 0
