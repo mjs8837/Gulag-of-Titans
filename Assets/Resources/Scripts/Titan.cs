@@ -73,11 +73,11 @@ public class Titan : MonoBehaviour
         target.health += healthChange;
     }
 
-    public bool DeathCheck()
+    public bool DeathCheck(Titan[] party, Titan enemy)
     {
         if (health <= 0 || fatigue <= 0)
         {
-            OnDeath();
+            OnDeath(party, enemy);
             return true;
         }
 
@@ -85,22 +85,22 @@ public class Titan : MonoBehaviour
     }
 
 
-    public virtual void OnAppear()
+    public virtual void OnAppear(Titan[] party, Titan enemy)
     {
 
     }
 
-    public virtual void OnBeginTurn()
+    public virtual void OnBeginTurn(Titan[] party, Titan enemy)
     {
 
     }
 
-    public virtual void OnHit()
+    public virtual void OnHit(Titan[] party, Titan enemy)
     {
 
     }
 
-    public virtual void OnEndTurn()
+    public virtual void OnEndTurn(Titan[] party, Titan enemy)
     {
         if (!isEnemy)
         {
@@ -108,7 +108,7 @@ public class Titan : MonoBehaviour
         }
     }
 
-    public virtual void OnDeath()
+    public virtual void OnDeath(Titan[] party, Titan enemy)
     {
 
     }

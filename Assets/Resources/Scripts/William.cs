@@ -23,30 +23,30 @@ public class William : Titan
         base.Attack(party);
     }
 
-    public override void OnAppear()
+    public override void OnAppear(Titan[] party, Titan enemy)
     {
-        base.OnAppear();
+        base.OnAppear(party, enemy);
     }
 
-    public override void OnBeginTurn ()
+    public override void OnBeginTurn (Titan[] party, Titan enemy)
     {
         health -= 1;
         damage -= 1;
-        base.OnBeginTurn();
+        base.OnBeginTurn(party, enemy);
     }
 
-    public override void OnHit()
+    public override void OnHit(Titan[] party, Titan enemy)
     {
-        base.OnHit();
+        base.OnHit(party, enemy);
     }
 
-    public override void OnEndTurn()
+    public override void OnEndTurn(Titan[] party, Titan enemy)
     {
-        base.OnEndTurn();
+        base.OnEndTurn(party, enemy);
     }
 
-    public override void OnDeath()
+    public override void OnDeath(Titan[] party, Titan enemy)
     {
-        base.OnDeath();
+        base.OnDeath(party, enemy);
     }
 }
