@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mk3 : Titan
+public class MK : Titan
 {
     // Start is called before the first frame update
     void Start()
     {
-        damage = 4;
-        health = 2;
-        totalHealth = 2;
-        fatigue = 3;
+        damage = 2;
+        health = 3;
+        totalHealth = 3;
+        fatigue = 2;
     }
 
     public override void Attack(Titan enemy, float damage)
@@ -25,7 +25,6 @@ public class Mk3 : Titan
 
     public override void OnAppear(List<Titan> party, Titan enemy)
     {
-        enemy.damage -= 1;
         base.OnAppear(party, enemy);
     }
 

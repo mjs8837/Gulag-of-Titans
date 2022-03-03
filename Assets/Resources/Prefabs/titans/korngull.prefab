@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3189182712904484285}
   - component: {fileID: 6289653331834139106}
   - component: {fileID: 2461602951200241602}
+  - component: {fileID: -3312504294006450499}
   m_Layer: 0
   m_Name: korngull
   m_TagString: Untagged
@@ -124,3 +125,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xBound: 0
   yBound: -1.5
+--- !u!114 &-3312504294006450499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2776877008016026983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073c87b63da9ceb4b92d2068aaded6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  totalHealth: 0
+  damage: 0
+  fatigue: 0
+  isEnemy: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1429761668679862106}
   - component: {fileID: 4294926912013669307}
   - component: {fileID: 8172425876180667304}
+  - component: {fileID: -2315289063733096803}
   m_Layer: 0
   m_Name: william
   m_TagString: Untagged
@@ -124,3 +125,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xBound: 0
   yBound: -1.5
+--- !u!114 &-2315289063733096803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3066878145884210405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86586db816b377b42aadc1d75b94c05f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  totalHealth: 0
+  damage: 0
+  fatigue: 0
+  isEnemy: 0

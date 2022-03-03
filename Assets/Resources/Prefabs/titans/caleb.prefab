@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1044870075404969833}
   - component: {fileID: 2974158955366306769}
   - component: {fileID: 7410619752105223546}
+  - component: {fileID: -4645389684486154012}
   m_Layer: 0
   m_Name: caleb
   m_TagString: Untagged
@@ -124,3 +125,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xBound: 0
   yBound: -1.5
+--- !u!114 &-4645389684486154012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6426160792523416912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9aaa860b02c2c4686e4f0ec360a169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  totalHealth: 0
+  damage: 0
+  fatigue: 0
+  isEnemy: 0

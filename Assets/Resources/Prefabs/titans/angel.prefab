@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8336304916211420050}
   - component: {fileID: 1406814708738941540}
   - component: {fileID: 6116986293701899466}
+  - component: {fileID: 997867927053776684}
   m_Layer: 0
   m_Name: angel
   m_TagString: Untagged
@@ -122,3 +123,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec2820d626edb9419389a6654e8bef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xBound: 0
+  yBound: -1.5
+--- !u!114 &997867927053776684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828446846021449373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a9e72b619a4fe4fabe8fcd82fc836f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  totalHealth: 0
+  damage: 0
+  fatigue: 0
+  isEnemy: 0
+  firstHitTaken: 0
