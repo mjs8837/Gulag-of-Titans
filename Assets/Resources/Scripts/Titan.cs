@@ -23,7 +23,7 @@ public class Titan : MonoBehaviour
     }
 
     //Creating a parent function for enemy attacks
-    public virtual void Attack(Titan[] party)
+    public virtual void Attack(List<Titan> party)
     {
         float attackChance = Random.Range(0.0f, 10.0f);
 
@@ -41,7 +41,7 @@ public class Titan : MonoBehaviour
 
         if (attackChance >= 5.0f && attackChance < 7.5f)
         {
-            for (int i = 0; i < party.Length; i++)
+            for (int i = 0; i < party.Count; i++)
             {
                 ChangeHealth(damage, party[i]);
             }
@@ -70,10 +70,10 @@ public class Titan : MonoBehaviour
     //Creating a parent health function for child classes that can't be overridden, but can be called
     protected void ChangeHealth(float healthChange, Titan target)
     {
-        target.health += healthChange;
+        target.health -= healthChange;
     }
 
-    public bool DeathCheck(Titan[] party, Titan enemy)
+    public bool DeathCheck(List<Titan> party, Titan enemy)
     {
         if (health <= 0 || fatigue <= 0)
         {
@@ -85,22 +85,22 @@ public class Titan : MonoBehaviour
     }
 
 
-    public virtual void OnAppear(Titan[] party, Titan enemy)
+    public virtual void OnAppear(List<Titan> party, Titan enemy)
     {
 
     }
 
-    public virtual void OnBeginTurn(Titan[] party, Titan enemy)
+    public virtual void OnBeginTurn(List<Titan> party, Titan enemy)
     {
 
     }
 
-    public virtual void OnHit(Titan[] party, Titan enemy)
+    public virtual void OnHit(List<Titan> party, Titan enemy)
     {
-
+        ChangeHealth(enemy.damage, this);
     }
 
-    public virtual void OnEndTurn(Titan[] party, Titan enemy)
+    public virtual void OnEndTurn(List<Titan> party, Titan enemy)
     {
         if (!isEnemy)
         {
@@ -108,18 +108,11 @@ public class Titan : MonoBehaviour
         }
     }
 
-    public virtual void OnDeath(Titan[] party, Titan enemy)
+    public virtual void OnDeath(List<Titan> party, Titan enemy)
     {
 
     }
 
-    //Korngull
-    //Lucile
-    //Marcus
-    //William
-    //Gerard
-    //Caleb
     //Moosh
     //Goblin
-    //-1 fatigue to all except caleb
 }

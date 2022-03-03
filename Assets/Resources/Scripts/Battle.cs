@@ -45,7 +45,6 @@ public class Battle : MonoBehaviour
         //End turn Phase
 
         //Deaths
-        Titan[] tempParty = activeParty;
         enemy.DeathCheck(activeParty, enemy);
 
         for(int i = 0; i < 3; i++){

@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class William : Titan
+public class Goblin : Titan
 {
     // Start is called before the first frame update
     void Start()
     {
-        damage = 5;
-        health = 5;
-        totalHealth = 5;
-        fatigue = 4;
+        damage = 2;
+        health = 3;
+        totalHealth = 3;
+        fatigue = 2;
     }
 
     public override void Attack(Titan enemy, float damage)
@@ -28,10 +28,8 @@ public class William : Titan
         base.OnAppear(party, enemy);
     }
 
-    public override void OnBeginTurn (List<Titan> party, Titan enemy)
+    public override void OnBeginTurn(List<Titan> party, Titan enemy)
     {
-        health -= 1;
-        damage -= 1;
         base.OnBeginTurn(party, enemy);
     }
 

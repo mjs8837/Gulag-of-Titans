@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class William : Titan
+public class Angel : Titan
 {
+    public bool firstHitTaken;
+
     // Start is called before the first frame update
     void Start()
     {
-        damage = 5;
-        health = 5;
-        totalHealth = 5;
+        damage = 4;
+        health = 1;
+        totalHealth = 1;
         fatigue = 4;
+        firstHitTaken = false;
     }
 
     public override void Attack(Titan enemy, float damage)
@@ -28,16 +31,19 @@ public class William : Titan
         base.OnAppear(party, enemy);
     }
 
-    public override void OnBeginTurn (List<Titan> party, Titan enemy)
+    public override void OnBeginTurn(List<Titan> party, Titan enemy)
     {
-        health -= 1;
-        damage -= 1;
         base.OnBeginTurn(party, enemy);
     }
 
     public override void OnHit(List<Titan> party, Titan enemy)
     {
-        base.OnHit(party, enemy);
+        if (firstHitTaken)
+        {
+            base.OnHit(party, enemy);
+        }
+
+        firstHitTaken = false;
     }
 
     public override void OnEndTurn(List<Titan> party, Titan enemy)
