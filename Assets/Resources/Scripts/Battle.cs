@@ -7,7 +7,7 @@ public class Battle : MonoBehaviour
 
     [SerializeField] Party partyClass;
     [SerializeField] Titan enemy;
-    Titan[] activeParty;
+    List<Titan> activeParty;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +27,7 @@ public class Battle : MonoBehaviour
         //Beginning Phase
 
         enemy.OnBeginTurn(activeParty, enemy);
-        for (int i = 0; i < activeParty.Length; i++)
+        for (int i = 0; i < activeParty.Count; i++)
         {
             activeParty[i].OnBeginTurn(activeParty, enemy);
         }

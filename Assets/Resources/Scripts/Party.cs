@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Party : MonoBehaviour
 {
-    public Titan[] activeParty;
+    public List<Titan> activeParty;
     public List<Titan> reserveParty;
     // Start is called before the first frame update
     void Start()
     {
-        activeParty = new Titan[6];
-        reserveParty = new List<Titan>();
+        activeParty = new List<Titan>(6);
+        reserveParty = new List<Titan>(3);
     }
 
     // Update is called once per frame
