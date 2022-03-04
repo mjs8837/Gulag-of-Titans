@@ -9,6 +9,7 @@ public class Titan : MonoBehaviour
     public float damage;
     public float fatigue;
     public bool isEnemy;
+    public int titanPosition;
 
     // Start is called before the first frame update
     void Start()

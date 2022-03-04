@@ -124,8 +124,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xBound: 3
-  yBound: -4.5
-  landingSpots: []
+  yBound: 2.5
+  isBound: 0
+  landingSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  partyClass: {fileID: 0}
+  titanClass: {fileID: 946035251878428168}
+  dragPosition: 0
 --- !u!114 &946035251878428168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,3 +153,4 @@ MonoBehaviour:
   damage: 0
   fatigue: 0
   isEnemy: 0
+  titanPosition: 0

@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class Drag : MonoBehaviour
 {
+    // Dragging Logic
     private bool dragging = false;
     private float distance;
-    public float xBound = 3;
-    public float yBound = -4.5f;
-    public GameObject[] landingSpots;
 
+    // Bounds Logic
+    public float xBound = 3;
+    public float yBound = 2.5f;
+    public bool isBound = false;
+
+    // Landing Logic
+    public GameObject[] landingSpots;
+    public Party partyClass;
+    public Titan titanClass;
+    public int dragPosition;
+
+    // If the player presses a titan it starts dragging
     public void OnMouseDown()
     {
         distance = Vector3.Distance(transform.position, Camera.main.transform.position);
         dragging = true;
     }
 
+    // If the player stops holding a titan it stops dragging
     public void OnMouseUp()
     {
         dragging = false;
@@ -24,16 +35,31 @@ public class Drag : MonoBehaviour
 
     public void Update()
     {
+        // Debug
+        if (Input.GetKey(KeyCode.K))
+        {
+            partyClass.listActiveParty();
+        }
+        // If the player is dragging...
         if (dragging)
         {
-            float mouseX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
-            float mouseY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
-            Debug.Log("X: " + mouseX + " Y: " + mouseY);
-            if (mouseX > xBound || mouseY > yBound)
+            // Updates position
+            dragPosition = titanClass.titanPosition;
+            
+            // Binding logic
+            if (isBound)
             {
-                dragging = false;
-                Drop();
-            } 
+                float mouseX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
+                float mouseY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y;
+
+                if (mouseX > xBound || mouseY > yBound)
+                {
+                    dragging = false;
+                    Drop();
+                }
+            }
+
+            // Changes the position of the titan
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 rayPoint = ray.GetPoint(distance);
             transform.position = rayPoint;
@@ -42,6 +68,38 @@ public class Drag : MonoBehaviour
 
     public void Drop()
     {
-        Debug.Log("Dropped");
+        for (int i = 0; i < landingSpots.Length; i++)
+        {
+            if (transform.position.x < landingSpots[i].transform.position.x + 1 && 
+                transform.position.y > landingSpots[i].transform.position.y - 1 &&
+                transform.position.x > landingSpots[i].transform.position.x - 1 &&
+                transform.position.y < landingSpots[i].transform.position.y + 1)
+            {
+                Debug.Log("fart: " + i);
+                if (partyClass.changePosition(dragPosition, i))
+                {
+                    partyClass.activeParty[dragPosition].transform.position = landingSpots[dragPosition].transform.position;
+                    partyClass.activeParty[dragPosition].titanPosition = dragPosition;
+                    dragPosition = i;
+                    partyClass.activeParty[i].titanPosition = i;
+                    transform.position = landingSpots[i].transform.position;
+                }
+                else
+                {
+                    dragPosition = i;
+                    titanClass.titanPosition = i;
+                    transform.position = landingSpots[i].transform.position;
+                }
+                break;
+            }
+        }
+        
     }
+
+    public void Start()
+    {
+        Debug.Log("L1: " + landingSpots[0].transform.position);
+    }
+
+    
 }

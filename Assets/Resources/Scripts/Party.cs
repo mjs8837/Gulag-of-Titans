@@ -9,7 +9,7 @@ public class Party : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        activeParty = new List<Titan>(6);
+        //activeParty = new List<Titan>(6);
         reserveParty = new List<Titan>(3);
     }
 
@@ -33,5 +33,29 @@ public class Party : MonoBehaviour
         reserveParty.Add(titanToAdd);
     }
 
+    // Returns whether or not another titan was already in that slot
+    public bool changePosition(int oldPos, int newPos)
+    {
+        if (activeParty[newPos] != null)
+        {
+            Titan otherTitan = activeParty[newPos];
+            activeParty[newPos] = activeParty[oldPos];
+            activeParty[oldPos] = otherTitan;
+            return true;
+        }
+        else
+        {
+            activeParty[newPos] = activeParty[oldPos];
+            activeParty[oldPos] = null;
+            return false;
+        }
+    }
 
+    public void listActiveParty()
+    {
+        for (int i = 0; i < activeParty.Count; i++)
+        {
+            Debug.Log("Titan " + i + ": " + activeParty[i]);
+        }
+    }
 }
