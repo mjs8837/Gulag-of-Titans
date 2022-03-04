@@ -79,6 +79,7 @@ public class Titan : MonoBehaviour
         if (health <= 0 || fatigue <= 0)
         {
             OnDeath(party, enemy);
+            Destroy(gameObject);
             return true;
         }
 
