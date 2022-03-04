@@ -44,9 +44,13 @@ public class Battle : MonoBehaviour
         //End turn Phase
 
         //Deaths
-        enemy.DeathCheck(activeParty, enemy);
+        if(enemy.DeathCheck(activeParty, enemy) == true)
+        {
+            EndBattle();
+        }
+        
 
-        for(int i = 0; i < 3; i++){
+        for (int i = 0; i < 3; i++){
             if(activeParty[i] == null)
             {
              
