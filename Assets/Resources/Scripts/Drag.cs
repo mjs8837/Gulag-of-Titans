@@ -64,6 +64,10 @@ public class Drag : MonoBehaviour
             Vector3 rayPoint = ray.GetPoint(distance);
             transform.position = rayPoint;
         }
+        else if (!dragging)
+        {
+            dragPosition = titanClass.titanPosition;
+        }
     }
 
     public void Drop()
