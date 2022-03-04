@@ -7,9 +7,45 @@ public class Party : MonoBehaviour
     public List<Titan> activeParty;
     public List<Titan> reserveParty;
     // Start is called before the first frame update
+    public Titan angel;
+    public Titan william;
+    public Titan caleb;
+    public Titan moosh;
+    public Titan redvine;
+    public Titan goblin;
+
     void Start()
     {
-        //activeParty = new List<Titan>(6);
+        /*
+        activeParty = new List<Titan>();
+        angel.GetComponent<Drag>().partyClass = this;
+        william.GetComponent<Drag>().partyClass = this;
+        caleb.GetComponent<Drag>().partyClass = this;
+        moosh.GetComponent<Drag>().partyClass = this;
+        redvine.GetComponent<Drag>().partyClass = this;
+        goblin.GetComponent<Drag>().partyClass = this;
+
+
+        angel.GetComponent<Drag>().dragPosition = 0;
+        william.GetComponent<Drag>().dragPosition = 1;
+        caleb.GetComponent<Drag>().dragPosition = 2;
+        moosh.GetComponent<Drag>().dragPosition = 3;
+        redvine.GetComponent<Drag>().dragPosition = 4;
+        goblin.GetComponent<Drag>().dragPosition = 5;
+
+        activeParty.Add(angel);
+        activeParty.Add(william);
+        activeParty.Add(caleb);
+        activeParty.Add(moosh);
+        activeParty.Add(redvine);
+        activeParty.Add(goblin);
+
+        for(int i = 0; i < activeParty.Count; i++)
+        {
+            Instantiate(activeParty[i].gameObject);
+        }
+        
+        */
         reserveParty = new List<Titan>(3);
     }
 

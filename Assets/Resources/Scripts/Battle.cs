@@ -12,6 +12,7 @@ public class Battle : MonoBehaviour
     void Start()
     {
         activeParty = partyClass.activeParty;
+        
     }
 
     // Update is called once per frame
