@@ -38,11 +38,17 @@ public class Titan : MonoBehaviour
         {
             if (Random.Range(0.0f, 1.0f) <= 0.5f)
             {
-                ChangeHealth(damage, party[0]);
+                if (party[0] != null)
+                {
+                    ChangeHealth(damage, party[0]);
+                }
             }
             else
             {
-                ChangeHealth(damage, party[3]);
+                if (party[3] != null)
+                {
+                    ChangeHealth(damage, party[3]);
+                }
             }
         }
 
@@ -50,7 +56,10 @@ public class Titan : MonoBehaviour
         {
             for (int i = 0; i < party.Count; i++)
             {
-                ChangeHealth(damage, party[i]);
+                if (party[i] != null)
+                {
+                    ChangeHealth(damage, party[i]);
+                }
             }
 
         }

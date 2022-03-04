@@ -11,6 +11,11 @@ public class Goblin : Titan
         health = 3;
         totalHealth = 3;
         fatigue = 2;
+
+        if (isEnemy)
+        {
+            health = health * 4.0f;
+        }
     }
 
     public override void Attack(Titan enemy, float damage)

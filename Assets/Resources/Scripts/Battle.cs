@@ -7,6 +7,7 @@ public class Battle : MonoBehaviour
     [SerializeField] Party partyClass;
     [SerializeField] Titan enemy;
     List<Titan> activeParty;
+    [SerializeField] GameObject battleButton;
 
     // Start is called before the first frame update
     void Start()
@@ -133,6 +134,6 @@ public class Battle : MonoBehaviour
 
     public void EndBattle()
     {
-
+        Destroy(battleButton);
     }
 }
