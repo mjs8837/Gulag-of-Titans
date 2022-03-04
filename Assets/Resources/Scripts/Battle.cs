@@ -22,8 +22,7 @@ public class Battle : MonoBehaviour
     }
 
     public void Turn()
-    {
-        
+    {        
 
         //Beginning Phase
 
