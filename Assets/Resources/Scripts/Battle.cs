@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Battle : MonoBehaviour
 {
 
     [SerializeField] Party partyClass;
     [SerializeField] Titan enemy;
     List<Titan> activeParty;
+
     // Start is called before the first frame update
     void Start()
     {
         activeParty = partyClass.activeParty;
-        
     }
 
     // Update is called once per frame
