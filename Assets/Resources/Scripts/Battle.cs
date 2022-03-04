@@ -59,11 +59,16 @@ public class Battle : MonoBehaviour
                 {
                     activeParty[0] = activeParty[1];
                     activeParty[1] = activeParty[2];
+                    activeParty[0].titanPosition = 0;
+                    activeParty[1].titanPosition = 1;
+
                     activeParty[2] = null;
                 }
                 else if(i == 1)
                 {
                     activeParty[1] = activeParty[2];
+                    activeParty[1].titanPosition = 1;
+
                     activeParty[2] = null;
                 }
                 else
@@ -88,10 +93,14 @@ public class Battle : MonoBehaviour
                     activeParty[3] = activeParty[4];
                     activeParty[4] = activeParty[5];
                     activeParty[5] = null;
+                    activeParty[3].titanPosition = 3;
+                    activeParty[4].titanPosition = 4;
                 }
                 else if (i == 1)
                 {
-                    activeParty[4] = activeParty[4];
+                    activeParty[4] = activeParty[5];
+                    activeParty[4].titanPosition = 4;
+
                     activeParty[5] = null;
                 }
                 else
