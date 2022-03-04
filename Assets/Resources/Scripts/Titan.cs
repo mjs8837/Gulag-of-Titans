@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Titan : MonoBehaviour
 {
@@ -10,6 +12,10 @@ public class Titan : MonoBehaviour
     public float fatigue;
     public bool isEnemy;
     public int titanPosition;
+    public Text attackUI;
+    public Text fatigueUI;
+    public Text healthUI;
+    Sprite[] ui;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +26,7 @@ public class Titan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     //Creating a parent function for enemy attacks
