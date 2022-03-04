@@ -35,7 +35,7 @@ public class Drag : MonoBehaviour
 
     public void Update()
     {
-        // Debug
+        // Pressing 'K' gets you a list of titans!
         if (Input.GetKey(KeyCode.K))
         {
             partyClass.listActiveParty();
@@ -68,16 +68,19 @@ public class Drag : MonoBehaviour
 
     public void Drop()
     {
+        // Checks each landing spot when you drop a titan
         for (int i = 0; i < landingSpots.Length; i++)
         {
+            // If it is in a landing spot,
             if (transform.position.x < landingSpots[i].transform.position.x + 1 && 
                 transform.position.y > landingSpots[i].transform.position.y - 1 &&
                 transform.position.x > landingSpots[i].transform.position.x - 1 &&
                 transform.position.y < landingSpots[i].transform.position.y + 1)
             {
-                Debug.Log("fart: " + i);
+                // First changes the array values of the titans through changePosition()
                 if (partyClass.changePosition(dragPosition, i))
                 {
+                    // Then actually swaps the titans visually
                     partyClass.activeParty[dragPosition].transform.position = landingSpots[dragPosition].transform.position;
                     partyClass.activeParty[dragPosition].titanPosition = dragPosition;
                     dragPosition = i;
@@ -86,6 +89,7 @@ public class Drag : MonoBehaviour
                 }
                 else
                 {
+                    // If there wasn't a titan in the other spot, it just moves the titan into the spot
                     dragPosition = i;
                     titanClass.titanPosition = i;
                     transform.position = landingSpots[i].transform.position;
@@ -95,11 +99,4 @@ public class Drag : MonoBehaviour
         }
         
     }
-
-    public void Start()
-    {
-        Debug.Log("L1: " + landingSpots[0].transform.position);
-    }
-
-    
 }

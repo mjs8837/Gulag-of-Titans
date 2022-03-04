@@ -36,6 +36,7 @@ public class Party : MonoBehaviour
     // Returns whether or not another titan was already in that slot
     public bool changePosition(int oldPos, int newPos)
     {
+        // Basically just swaps the array values if there already was a titan in the space
         if (activeParty[newPos] != null)
         {
             Titan otherTitan = activeParty[newPos];
@@ -43,6 +44,7 @@ public class Party : MonoBehaviour
             activeParty[oldPos] = otherTitan;
             return true;
         }
+        // If there wasn't it just changes the array value of the moved titan
         else
         {
             activeParty[newPos] = activeParty[oldPos];
@@ -51,6 +53,7 @@ public class Party : MonoBehaviour
         }
     }
 
+    // Prints a list of the titans in the active party
     public void listActiveParty()
     {
         for (int i = 0; i < activeParty.Count; i++)
