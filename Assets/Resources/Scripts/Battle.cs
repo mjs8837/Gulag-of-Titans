@@ -28,7 +28,10 @@ public class Battle : MonoBehaviour
         enemy.OnBeginTurn(activeParty, enemy);
         for (int i = 0; i < activeParty.Count; i++)
         {
-            activeParty[i].OnBeginTurn(activeParty, enemy);
+            if (activeParty[i] != null)
+            {
+                activeParty[i].OnBeginTurn(activeParty, enemy);
+            }
         }
 
         //WAIT 
