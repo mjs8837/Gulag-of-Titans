@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363645471655730185}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.929985, y: -4.26, z: 0}
-  m_LocalScale: {x: 1.3499999, y: 1.3499999, z: 0.1004}
+  m_LocalPosition: {x: -2.364, y: -4.257, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0.1004}
   m_Children: []
   m_Father: {fileID: 3525778307341637252}
   m_RootOrder: 1
@@ -107,8 +107,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763224510464036373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.4420166, y: -4.302, z: 0}
-  m_LocalScale: {x: 1.3533999, y: 1.3533999, z: 0.085099995}
+  m_LocalPosition: {x: 2.384, y: -4.257, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0.085099995}
   m_Children: []
   m_Father: {fileID: 3525778307341637252}
   m_RootOrder: 2
@@ -189,8 +189,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3030138129109759635}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -4.3, z: 0}
-  m_LocalScale: {x: 1.4404998, y: 1.4404998, z: 0.12980999}
+  m_LocalPosition: {x: 0.029, y: -4.255, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0.12980999}
   m_Children: []
   m_Father: {fileID: 3525778307341637252}
   m_RootOrder: 0
@@ -274,7 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4856761127137618230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.041802, y: 8.086805, z: 0}
+  m_LocalPosition: {x: -13.003, y: 7.989, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 1648386374319426916}
@@ -403,3 +403,6 @@ MonoBehaviour:
   fatigue: 0
   isEnemy: 0
   titanPosition: 0
+  attackUI: {fileID: 0}
+  fatigueUI: {fileID: 0}
+  healthUI: {fileID: 0}
