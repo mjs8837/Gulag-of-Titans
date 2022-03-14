@@ -565,6 +565,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1799581633}
     - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
+      propertyPath: healthUI
+      value: 
+      objectReference: {fileID: 1799581633}
+    - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
       propertyPath: titanPosition
       value: 3
       objectReference: {fileID: 0}
@@ -743,6 +747,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
       propertyPath: hp
+      value: 
+      objectReference: {fileID: 1270374699}
+    - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
+      propertyPath: healthUI
       value: 
       objectReference: {fileID: 1270374699}
     - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
@@ -972,6 +980,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
       propertyPath: hp
+      value: 
+      objectReference: {fileID: 939667061}
+    - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
+      propertyPath: healthUI
       value: 
       objectReference: {fileID: 939667061}
     - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
@@ -1235,6 +1247,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 788008243}
     - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
+      propertyPath: healthUI
+      value: 
+      objectReference: {fileID: 788008243}
+    - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
       propertyPath: titanPosition
       value: 2
       objectReference: {fileID: 0}
@@ -1357,6 +1373,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
       propertyPath: hp
+      value: 
+      objectReference: {fileID: 342076478}
+    - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
+      propertyPath: healthUI
       value: 
       objectReference: {fileID: 342076478}
     - target: {fileID: 3052760486920631501, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
@@ -1726,6 +1746,10 @@ PrefabInstance:
       propertyPath: isEnemy
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5054705297971153584, guid: 33655b2aed0dfbf46a021b710214dfe7, type: 3}
+      propertyPath: healthUI
+      value: 
+      objectReference: {fileID: 1496632223}
     m_RemovedComponents:
     - {fileID: 3880225286923292362, guid: 33655b2aed0dfbf46a021b710214dfe7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 33655b2aed0dfbf46a021b710214dfe7, type: 3}
@@ -1997,6 +2021,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
       propertyPath: hp
+      value: 
+      objectReference: {fileID: 1093911866}
+    - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
+      propertyPath: healthUI
       value: 
       objectReference: {fileID: 1093911866}
     - target: {fileID: 2688341021364768471, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}

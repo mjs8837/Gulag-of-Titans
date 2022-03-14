@@ -101,6 +101,7 @@ public class Titan : MonoBehaviour
         // If their health or fatigue is empty, triggers their on death effects (if applicable) then destroys them and returns true
         if (health <= 0 || fatigue <= 0)
         {
+            Destroy(healthUI);
             OnDeath(party, enemy);
             Destroy(gameObject);
             return true;

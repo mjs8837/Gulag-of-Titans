@@ -8,16 +8,19 @@ public class TestBattle : MonoBehaviour
     [SerializeField] Titan enemy;
     List<Titan> activeParty;
     [SerializeField] GameObject battleButton;
+    bool battling;
 
     // Start is called before the first frame update
     void Start()
     {
         activeParty = partyClass.activeParty;
+        battling = true;
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.M))
+        // Pushes battle forward
+        if (Input.GetKeyUp(KeyCode.M) && battling)
         {
             Turn();
         }
@@ -126,5 +129,6 @@ public class TestBattle : MonoBehaviour
     {
         Debug.Log("You win!");
         Destroy(battleButton);
+        battling = false;
     }
 }
