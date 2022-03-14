@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Generic : Titan
 {
+    public Text hp;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +18,13 @@ public class Generic : Titan
         if (isEnemy)
         {
             health = health * 2.0f;
+            totalHealth = health;
         }
+    }
+
+    void Update()
+    {
+        hp.text = "HP: " + health + " / " + totalHealth;
     }
 
     public override void Attack(Titan enemy, float damage)
