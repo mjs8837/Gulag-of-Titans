@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleStart : MonoBehaviour
+public class StartTestBattle : MonoBehaviour
 {
     [SerializeField] GameObject gameManager;
 
     private void OnMouseDown()
     {
-        gameManager.GetComponent<Battle>().Turn();
+        gameManager.GetComponent<TestBattle>().Turn();
     }
 
     private void OnMouseEnter()

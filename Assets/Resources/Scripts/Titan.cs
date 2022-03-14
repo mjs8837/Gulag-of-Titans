@@ -32,10 +32,13 @@ public class Titan : MonoBehaviour
     //Creating a parent function for enemy attacks
     public virtual void Attack(List<Titan> party)
     {
-        float attackChance = Random.Range(0.0f, 10.0f);
+        // Gets a random number to determine the targets
+        float attackChance = Random.Range(0.0f, 1.0f);
 
-        if (attackChance >= 0.0f && attackChance < 5.0f)
+        // 50% chance to attack 1 party member at the front
+        if (attackChance >= 0.0f && attackChance < 0.5f)
         {
+            // 50% chance to attack either slot 0 or slot 3 party member
             if (Random.Range(0.0f, 1.0f) <= 0.5f)
             {
                 if (party[0] != null)
@@ -52,7 +55,8 @@ public class Titan : MonoBehaviour
             }
         }
 
-        if (attackChance >= 5.0f && attackChance < 7.5f)
+        // 25% chance to attack every party member
+        if (attackChance >= 0.5f && attackChance < 0.75f)
         {
             for (int i = 0; i < party.Count; i++)
             {
@@ -64,8 +68,10 @@ public class Titan : MonoBehaviour
 
         }
 
-        if (attackChance >= 7.5f)
+        // 25% chance to attack 1 party member at the front for double damage
+        if (attackChance >= 0.75f)
         {
+            // 50% chance to attack either slot 0 or slot 3 party member
             if (Random.Range(0.0f, 1.0f) <= 0.5f)
             {
                 ChangeHealth(damage * 2.0f, party[0]);
@@ -77,27 +83,28 @@ public class Titan : MonoBehaviour
         }
     }
 
-    //Creating a parent function for friendly attacks
+    // Creating a parent function for friendly attacks
     public virtual void Attack(Titan enemy, float damage)
     {
         ChangeHealth(damage, enemy);
     }
 
-    //Creating a parent health function for child classes that can't be overridden, but can be called
+    // Creating a parent health function for child classes that can't be overridden, but can be called
     protected void ChangeHealth(float healthChange, Titan target)
     {
         target.health -= healthChange;
     }
 
+    // Checks if the titan has died
     public bool DeathCheck(List<Titan> party, Titan enemy)
     {
+        // If their health or fatigue is empty, triggers their on death effects (if applicable) then destroys them and returns true
         if (health <= 0 || fatigue <= 0)
         {
             OnDeath(party, enemy);
             Destroy(gameObject);
             return true;
         }
-
         return false;
     }
 
