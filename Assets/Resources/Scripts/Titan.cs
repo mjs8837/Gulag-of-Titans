@@ -20,9 +20,7 @@ public class Titan : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        healthUI.text = health.ToString();
-        fatigueUI.text = fatigue.ToString();
-        healthUI.text = health.ToString();
+
     }
 
     // Update is called once per frame
