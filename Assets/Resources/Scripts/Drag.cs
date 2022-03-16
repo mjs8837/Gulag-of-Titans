@@ -84,12 +84,8 @@ public class Drag : MonoBehaviour
                 // First changes the array values of the titans through changePosition()
                 if (partyClass.changePosition(dragPosition, i))
                 {
-                    // Then actually swaps the titans visually
-                    partyClass.activeParty[dragPosition].transform.position = landingSpots[dragPosition].transform.position;
-                    partyClass.activeParty[dragPosition].titanPosition = dragPosition;
-                    dragPosition = i;
-                    partyClass.activeParty[i].titanPosition = i;
-                    transform.position = landingSpots[i].transform.position;
+                    // Calls Update Position to update their visuals
+                    UpdatePosition(dragPosition, i);
                 }
                 else
                 {
@@ -101,6 +97,15 @@ public class Drag : MonoBehaviour
                 break;
             }
         }
-        
+    }
+
+    public void UpdatePosition(int dragPosition, int i)
+    {
+        // Then actually swaps the titans visually
+        partyClass.activeParty[dragPosition].transform.position = landingSpots[dragPosition].transform.position;
+        partyClass.activeParty[dragPosition].titanPosition = dragPosition;
+        dragPosition = i;
+        partyClass.activeParty[i].titanPosition = i;
+        transform.position = landingSpots[i].transform.position;
     }
 }
