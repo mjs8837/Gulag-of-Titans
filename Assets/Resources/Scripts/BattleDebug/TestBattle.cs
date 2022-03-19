@@ -9,6 +9,7 @@ public class TestBattle : MonoBehaviour
     List<Titan> activeParty;
     [SerializeField] GameObject battleButton;
     bool battling;
+    public GameObject[] landingSpots;
 
     // Start is called before the first frame update
     void Start()
@@ -63,9 +64,11 @@ public class TestBattle : MonoBehaviour
                 {
                     activeParty[0] = activeParty[1];
                     activeParty[0].titanPosition = 0;
+                    activeParty[0].transform.position = landingSpots[0].transform.position;
 
                     activeParty[1] = activeParty[2];
                     activeParty[1].titanPosition = 1;
+                    activeParty[1].transform.position = landingSpots[1].transform.position;
 
                     activeParty[2] = null;
                 }
@@ -73,6 +76,7 @@ public class TestBattle : MonoBehaviour
                 {
                     activeParty[1] = activeParty[2];
                     activeParty[1].titanPosition = 1;
+                    activeParty[1].transform.position = landingSpots[1].transform.position;
 
                     activeParty[2] = null;
                 }
@@ -92,9 +96,11 @@ public class TestBattle : MonoBehaviour
                 {
                     activeParty[3] = activeParty[4];
                     activeParty[3].titanPosition = 3;
+                    activeParty[3].transform.position = landingSpots[3].transform.position;
 
                     activeParty[4] = activeParty[5];
                     activeParty[4].titanPosition = 4;
+                    activeParty[4].transform.position = landingSpots[4].transform.position;
 
                     activeParty[5] = null;
                 }
@@ -102,6 +108,7 @@ public class TestBattle : MonoBehaviour
                 {
                     activeParty[4] = activeParty[5];
                     activeParty[4].titanPosition = 4;
+                    activeParty[4].transform.position = landingSpots[4].transform.position;
 
                     activeParty[5] = null;
                 }

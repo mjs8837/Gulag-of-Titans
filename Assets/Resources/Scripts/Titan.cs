@@ -29,6 +29,11 @@ public class Titan : MonoBehaviour
         
     }
 
+    public void TestAttack(List<Titan> party)
+    {
+        ChangeHealth(damage, party[3]);
+    }
+
     //Creating a parent function for enemy attacks
     public virtual void Attack(List<Titan> party)
     {
