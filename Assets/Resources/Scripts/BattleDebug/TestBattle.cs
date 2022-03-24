@@ -10,6 +10,7 @@ public class TestBattle : MonoBehaviour
     [SerializeField] GameObject battleButton;
     bool battling;
     public GameObject[] landingSpots;
+    public GameObject testPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,10 @@ public class TestBattle : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.M) && battling)
         {
             Turn();
+        }
+        if (Input.GetKeyUp(KeyCode.I))
+        {
+            GameObject instant = Instantiate(testPrefab, new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0), new Quaternion(0, 0, 0, 0));
         }
     }
 
