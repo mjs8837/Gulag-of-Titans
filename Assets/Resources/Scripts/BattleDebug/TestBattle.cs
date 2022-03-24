@@ -58,25 +58,48 @@ public class TestBattle : MonoBehaviour
         // Checks if any party members in the top row have died
         for (int i = 0; i < 3; i++)
         {
-            if (activeParty[i] != null && activeParty[i].DeathCheck(activeParty, enemy))
+            if (activeParty[i] != null && activeParty[i].DeathCheck(activeParty, enemy) == true)
             {
                 if (i == 0)
                 {
-                    activeParty[0] = activeParty[1];
-                    activeParty[0].titanPosition = 0;
-                    activeParty[0].transform.position = landingSpots[0].transform.position;
+                    if (activeParty[1] != null)
+                    {
+                        activeParty[0] = activeParty[1];
+                        activeParty[0].titanPosition = 0;
+                        activeParty[0].transform.position = landingSpots[0].transform.position;
+                    }
+                    else
+                    {
+                        activeParty[0] = null;
+                    }
 
-                    activeParty[1] = activeParty[2];
-                    activeParty[1].titanPosition = 1;
-                    activeParty[1].transform.position = landingSpots[1].transform.position;
+                    if (activeParty[2] != null)
+                    {
+                        activeParty[1] = activeParty[2];
+                        activeParty[1].titanPosition = 1;
+                        activeParty[1].transform.position = landingSpots[1].transform.position;
+                    }
+                    else
+                    {
+                        activeParty[1] = null;
+                    }
+
 
                     activeParty[2] = null;
                 }
                 else if (i == 1)
                 {
-                    activeParty[1] = activeParty[2];
-                    activeParty[1].titanPosition = 1;
-                    activeParty[1].transform.position = landingSpots[1].transform.position;
+                    if (activeParty[2] != null)
+                    {
+                        activeParty[1] = activeParty[2];
+                        activeParty[1].titanPosition = 1;
+                        activeParty[1].transform.position = landingSpots[1].transform.position;
+
+                    }
+                    else
+                    {
+                        activeParty[1] = null;
+                    } 
 
                     activeParty[2] = null;
                 }
@@ -90,25 +113,49 @@ public class TestBattle : MonoBehaviour
         // Checks if any party members in the bottom row have died
         for (int i = 3; i < 6; i++)
         {
-            if (activeParty[i] != null && activeParty[i].DeathCheck(activeParty, enemy))
+            if (activeParty[i] != null && activeParty[i].DeathCheck(activeParty, enemy) == true)
             {
                 if (i == 3)
                 {
-                    activeParty[3] = activeParty[4];
-                    activeParty[3].titanPosition = 3;
-                    activeParty[3].transform.position = landingSpots[3].transform.position;
+                    if (activeParty[4] != null)
+                    {
+                        activeParty[3] = activeParty[4];
+                        activeParty[3].titanPosition = 3;
+                        activeParty[3].transform.position = landingSpots[3].transform.position;
+                    }
+                    else
+                    {
+                        activeParty[3] = null;
+                    }
 
-                    activeParty[4] = activeParty[5];
-                    activeParty[4].titanPosition = 4;
-                    activeParty[4].transform.position = landingSpots[4].transform.position;
+                    if (activeParty[5] != null)
+                    {
+                        activeParty[4] = activeParty[5];
+                        activeParty[4].titanPosition = 4;
+                        activeParty[4].transform.position = landingSpots[4].transform.position;
+                    }
+                    else
+                    {
+                        activeParty[4] = null;
+                    }
+
 
                     activeParty[5] = null;
                 }
                 else if (i == 4)
                 {
-                    activeParty[4] = activeParty[5];
-                    activeParty[4].titanPosition = 4;
-                    activeParty[4].transform.position = landingSpots[4].transform.position;
+                    if (activeParty[5] != null)
+                    {
+                       activeParty[4] = activeParty[5];
+                       activeParty[4].titanPosition = 4;
+                       activeParty[4].transform.position = landingSpots[4].transform.position;
+                    }
+                    else
+                    {
+                        activeParty[4] = null;
+                    }
+
+                   
 
                     activeParty[5] = null;
                 }
