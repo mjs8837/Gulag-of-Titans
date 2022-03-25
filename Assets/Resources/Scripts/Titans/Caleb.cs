@@ -12,7 +12,8 @@ public class Caleb : Titan
         totalHealth = 5;
         stamina = 6;
         titanName = "Caleb";
-        abilityDescription = "rock lobster";
+        abilityDescription = "When I take damage, I gain +2|+0.";
+        abilityName = "Tortured";
 
         UpdateUI();
     }
@@ -35,6 +36,11 @@ public class Caleb : Titan
     public override void OnBeginTurn(List<Titan> party, Titan enemy)
     {
         base.OnBeginTurn(party, enemy);
+    }
+    public override void ChangeHealth(float healthChange, Titan target)
+    {
+        target.health -= healthChange;
+        damage += 2;
     }
 
     public override void OnHit(List<Titan> party, Titan enemy)

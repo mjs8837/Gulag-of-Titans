@@ -12,7 +12,8 @@ public class William : Titan
         totalHealth = 5;
         stamina = 4;
         titanName = "William";
-        abilityDescription = "flaming homo";
+        abilityDescription = "At the start of the round, I gain -1|-1.";
+        abilityName = "Twice as Bright";
 
         UpdateUI();
     }

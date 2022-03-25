@@ -9,6 +9,7 @@ public class Titan : MonoBehaviour
 {
     public string titanName;
     public string abilityDescription;
+    public string abilityName;
     public float health;
     public float totalHealth;
     public float damage;
@@ -99,10 +100,9 @@ public class Titan : MonoBehaviour
     }
 
     // Creating a parent health function for child classes that can't be overridden, but can be called
-    protected void ChangeHealth(float healthChange, Titan target)
+    public virtual void ChangeHealth(float healthChange, Titan target)
     {
         target.health -= healthChange;
-        UpdateUI();
     }
 
     // Checks if the titan has died

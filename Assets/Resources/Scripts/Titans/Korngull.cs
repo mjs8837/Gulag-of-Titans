@@ -12,7 +12,8 @@ public class Korngull : Titan
         totalHealth = 2;
         stamina = 3;
         titanName = "Korngull";
-        abilityDescription = "purple twink";
+        abilityDescription = "When I die, deal 5 to the enemy titan.";
+        abilityName = "Bulbous Sacs";
 
         UpdateUI();
     }

@@ -12,11 +12,12 @@ public class Goblin : Titan
         totalHealth = 3;
         stamina = 2;
         titanName = "Goblin";
-        abilityDescription = "WITH A KNIFE";
+        abilityDescription = "IT HAS A KNIFE GET DOWN!";
+        abilityName = "WITH A KNIFE";
 
         if (isEnemy)
         {
-            health = health * 10.0f;
+            health = health * 6.0f;
         }
 
         UpdateUI();

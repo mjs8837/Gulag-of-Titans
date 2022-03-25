@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TestBattle : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class TestBattle : MonoBehaviour
     bool battling;
     public GameObject[] landingSpots;
     public GameObject testPrefab;
+    public GameObject winScreen;
+    public TextMeshPro winScreenText;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +32,10 @@ public class TestBattle : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.I))
         {
             GameObject instant = Instantiate(testPrefab, new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0), new Quaternion(0, 0, 0, 0));
+        }
+        if (Input.GetKeyUp(KeyCode.H))
+        {
+            Debug.Log("Enemy Health: " + enemy.health);
         }
     }
 
@@ -182,10 +189,21 @@ public class TestBattle : MonoBehaviour
                 activeParty[i].OnEndTurn(activeParty, enemy);
             }
         }
+
+        for (int i = 0; i < activeParty.Count; i++)
+        {
+            if (activeParty[i] != null)
+            {
+                activeParty[i].UpdateUI();
+            }
+        }
+        enemy.UpdateUI();
     }
 
     public void EndBattle()
     {
+        winScreenText.text = "You Win!";
+        winScreen.transform.position = Vector3.zero;
         Debug.Log("You win!");
         Destroy(battleButton);
         battling = false;

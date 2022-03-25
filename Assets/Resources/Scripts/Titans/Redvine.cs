@@ -12,7 +12,8 @@ public class Redvine : Titan
         totalHealth = 3;
         stamina = 4;
         titanName = "Redvine";
-        abilityDescription = "twizzler";
+        abilityDescription = "When I appear, deal 2 damage to the enemy titan.";
+        abilityName = "Caress";
 
         UpdateUI();
     }
