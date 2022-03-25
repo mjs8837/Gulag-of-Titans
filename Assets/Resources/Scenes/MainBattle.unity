@@ -262,7 +262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: pee pee
+  m_text: win blurb
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -416,11 +416,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 209740280377472008, guid: 33d469dd47ae4c14ab537e8d079a1714, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4419997
+      value: -1.51
       objectReference: {fileID: 0}
     - target: {fileID: 209740280377472008, guid: 33d469dd47ae4c14ab537e8d079a1714, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.34199998
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 209740280377472008, guid: 33d469dd47ae4c14ab537e8d079a1714, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1424,11 +1424,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4211671455183939972, guid: 630a86660d3a85a429fe81acdfe84272, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.542952
+      value: -1.47
       objectReference: {fileID: 0}
     - target: {fileID: 4211671455183939972, guid: 630a86660d3a85a429fe81acdfe84272, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.831354
+      value: -2.76
       objectReference: {fileID: 0}
     - target: {fileID: 4211671455183939972, guid: 630a86660d3a85a429fe81acdfe84272, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1521,11 +1521,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3525778307341637252, guid: 936e18a836a43fc4996c70f039da1dad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.46
+      value: -4.48
       objectReference: {fileID: 0}
     - target: {fileID: 3525778307341637252, guid: 936e18a836a43fc4996c70f039da1dad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.28
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3525778307341637252, guid: 936e18a836a43fc4996c70f039da1dad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1635,7 +1635,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: poo poo
+  m_text: description
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2171,7 +2171,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Press M to progress a turn  in battle!\nDrag and drop titans around into
+  m_text: "Press M to progress a turn in battle!\nDrag and drop titans around into
     \nthe landing spots to move them!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2414,7 +2414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4441834706198895493, guid: da5ff138eb699374294b9a87fef920a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.591263
+      value: -4.52
       objectReference: {fileID: 0}
     - target: {fileID: 4441834706198895493, guid: da5ff138eb699374294b9a87fef920a4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2599,7 +2599,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133926388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.031, y: -0.0195, z: 560}
+  m_LocalPosition: {x: 0.1, y: -0.0195, z: 560}
   m_LocalScale: {x: 1.1431, y: 0.9585, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
