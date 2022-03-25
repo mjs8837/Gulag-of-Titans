@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class Titan : MonoBehaviour
 {
+    public string titanName;
+    public string abilityDescription;
     public float health;
     public float totalHealth;
     public float damage;
@@ -14,7 +17,7 @@ public class Titan : MonoBehaviour
     public int titanPosition;
     public Text attackUI;
     public Text fatigueUI;
-    public Text healthUI;
+    public TextMeshPro healthUI;
     Sprite[] ui;
 
     // Start is called before the first frame update

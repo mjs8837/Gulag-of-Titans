@@ -12,6 +12,8 @@ public class Generic : Titan
         health = 3;
         totalHealth = 3;
         fatigue = 3;
+        titanName = "generic";
+        abilityDescription = "farts a lot";
 
         if (isEnemy)
         {
