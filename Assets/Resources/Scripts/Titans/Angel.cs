@@ -12,7 +12,7 @@ public class Angel : Titan
         damage = 4;
         health = 1;
         totalHealth = 1;
-        fatigue = 4;
+        stamina = 4;
         firstHitTaken = false;
     }
 

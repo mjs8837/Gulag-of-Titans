@@ -12,18 +12,20 @@ public class Titan : MonoBehaviour
     public float health;
     public float totalHealth;
     public float damage;
-    public float fatigue;
+    public float stamina;
     public bool isEnemy;
     public int titanPosition;
-    public Text attackUI;
-    public Text fatigueUI;
+    public TextMeshPro attackUI;
+    public TextMeshPro staminaUI;
     public TextMeshPro healthUI;
     Sprite[] ui;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        attackUI.text = damage.ToString();
+        staminaUI.text = stamina.ToString();
+        healthUI.text = health.ToString();
     }
 
     // Update is called once per frame
@@ -106,8 +108,8 @@ public class Titan : MonoBehaviour
     // Checks if the titan has died
     public bool DeathCheck(List<Titan> party, Titan enemy)
     {
-        // If their health or fatigue is empty, triggers their on death effects (if applicable) then destroys them and returns true
-        if (health <= 0 || fatigue <= 0)
+        // If their health or stamina is empty, triggers their on death effects (if applicable) then destroys them and returns true
+        if (health <= 0 || stamina <= 0)
         {
             Destroy(healthUI);
             OnDeath(party, enemy);
@@ -137,7 +139,7 @@ public class Titan : MonoBehaviour
     {
         if (!isEnemy)
         {
-            fatigue -= 1;
+            stamina -= 1;
         }
     }
 

@@ -10,7 +10,7 @@ public class MK : Titan
         damage = 2;
         health = 3;
         totalHealth = 3;
-        fatigue = 2;
+        stamina = 2;
     }
 
     public override void Attack(Titan enemy, float damage)

@@ -10,7 +10,7 @@ public class Moosh : Titan
         damage = 3;
         health = 4;
         totalHealth = 4;
-        fatigue = 3;
+        stamina = 3;
     }
 
     public override void Attack(Titan enemy, float damage)

@@ -11,7 +11,7 @@ public class Generic : Titan
         damage = 1;
         health = 3;
         totalHealth = 3;
-        fatigue = 3;
+        stamina = 3;
         titanName = "generic";
         abilityDescription = "farts a lot";
 
