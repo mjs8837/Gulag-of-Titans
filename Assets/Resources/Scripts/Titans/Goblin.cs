@@ -10,12 +10,17 @@ public class Goblin : Titan
         damage = 2;
         health = 3;
         totalHealth = 3;
-        fatigue = 2;
+        stamina = 2;
+        titanName = "Goblin";
+        abilityDescription = "IT HAS A KNIFE GET DOWN!";
+        abilityName = "WITH A KNIFE";
 
         if (isEnemy)
         {
-            health = health * 4.0f;
+            health = health * 6.0f;
         }
+
+        UpdateUI();
     }
 
     public override void Attack(Titan enemy, float damage)

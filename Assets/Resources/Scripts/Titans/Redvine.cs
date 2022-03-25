@@ -10,7 +10,12 @@ public class Redvine : Titan
         damage = 2;
         health = 3;
         totalHealth = 3;
-        fatigue = 4;
+        stamina = 4;
+        titanName = "Redvine";
+        abilityDescription = "When I appear, deal 2 damage to the enemy titan.";
+        abilityName = "Caress";
+
+        UpdateUI();
     }
 
     public override void Attack(Titan enemy, float damage)

@@ -12,8 +12,13 @@ public class Angel : Titan
         damage = 4;
         health = 1;
         totalHealth = 1;
-        fatigue = 4;
+        stamina = 4;
         firstHitTaken = false;
+        titanName = "Angel";
+        abilityDescription = "The first time I take damage, I ignore it instead.";
+        abilityName = "Unholy Mantle";
+
+        UpdateUI();
     }
 
     public override void Attack(Titan enemy, float damage)

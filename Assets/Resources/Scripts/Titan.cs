@@ -2,19 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class Titan : MonoBehaviour
 {
+    public string titanName;
+    public string abilityDescription;
+    public string abilityName;
     public float health;
     public float totalHealth;
     public float damage;
-    public float fatigue;
+    public float stamina;
     public bool isEnemy;
     public int titanPosition;
-    public Text attackUI;
-    public Text fatigueUI;
-    public Text healthUI;
+    public TextMeshPro attackUI;
+    public TextMeshPro staminaUI;
+    public TextMeshPro healthUI;
     Sprite[] ui;
 
     // Start is called before the first frame update
@@ -27,6 +31,12 @@ public class Titan : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void TestAttack(List<Titan> party)
+    {
+        ChangeHealth(damage, party[0]);
+        ChangeHealth(damage, party[3]);
     }
 
     //Creating a parent function for enemy attacks
@@ -90,7 +100,7 @@ public class Titan : MonoBehaviour
     }
 
     // Creating a parent health function for child classes that can't be overridden, but can be called
-    protected void ChangeHealth(float healthChange, Titan target)
+    public virtual void ChangeHealth(float healthChange, Titan target)
     {
         target.health -= healthChange;
     }
@@ -98,8 +108,8 @@ public class Titan : MonoBehaviour
     // Checks if the titan has died
     public bool DeathCheck(List<Titan> party, Titan enemy)
     {
-        // If their health or fatigue is empty, triggers their on death effects (if applicable) then destroys them and returns true
-        if (health <= 0 || fatigue <= 0)
+        // If their health or stamina is empty, triggers their on death effects (if applicable) then destroys them and returns true
+        if (health <= 0 || stamina <= 0)
         {
             Destroy(healthUI);
             OnDeath(party, enemy);
@@ -129,7 +139,7 @@ public class Titan : MonoBehaviour
     {
         if (!isEnemy)
         {
-            fatigue -= 1;
+            //stamina -= 1;
         }
     }
 
@@ -138,6 +148,10 @@ public class Titan : MonoBehaviour
 
     }
 
-    //Moosh
-    //Goblin
+    public virtual void UpdateUI()
+    {
+        attackUI.text = damage.ToString();
+        staminaUI.text = stamina.ToString();
+        healthUI.text = health.ToString();
+    }
 }

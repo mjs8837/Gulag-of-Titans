@@ -10,7 +10,12 @@ public class William : Titan
         damage = 5;
         health = 5;
         totalHealth = 5;
-        fatigue = 4;
+        stamina = 4;
+        titanName = "William";
+        abilityDescription = "At the start of the round, I gain -1|-1.";
+        abilityName = "Twice as Bright";
+
+        UpdateUI();
     }
 
     public override void Attack(Titan enemy, float damage)

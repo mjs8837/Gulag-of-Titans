@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Resources/Scenes/Map.unity
+    path: Assets/Resources/Scenes/Old/Map.unity
     guid: 84aa558294f08ef40be82c778b24998a
   - enabled: 1
-    path: Assets/Resources/Scenes/Battle1.unity
+    path: Assets/Resources/Scenes/Old/Battle1.unity
     guid: ab0b89f974181b448a36681c3e76776e
   - enabled: 1
-    path: Assets/Resources/Scenes/Battle2.unity
+    path: Assets/Resources/Scenes/Old/Battle2.unity
     guid: dbdff5660dce44743b6d6f9a6ed0ceae
   - enabled: 1
-    path: Assets/Resources/Scenes/Battle3.unity
+    path: Assets/Resources/Scenes/Old/Battle3.unity
     guid: 3a5603f5f7ae11a4a99f273d9971542a
   - enabled: 1
     path: Assets/Resources/Scenes/MainScene.unity

@@ -10,7 +10,12 @@ public class Caleb : Titan
         damage = 0;
         health = 5;
         totalHealth = 5;
-        fatigue = 6;
+        stamina = 6;
+        titanName = "Caleb";
+        abilityDescription = "When I take damage, I gain +2|+0.";
+        abilityName = "Tortured";
+
+        UpdateUI();
     }
 
     public override void Attack(Titan enemy, float damage)
@@ -31,6 +36,11 @@ public class Caleb : Titan
     public override void OnBeginTurn(List<Titan> party, Titan enemy)
     {
         base.OnBeginTurn(party, enemy);
+    }
+    public override void ChangeHealth(float healthChange, Titan target)
+    {
+        target.health -= healthChange;
+        damage += 2;
     }
 
     public override void OnHit(List<Titan> party, Titan enemy)

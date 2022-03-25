@@ -10,7 +10,12 @@ public class Korngull : Titan
         damage = 4;
         health = 2;
         totalHealth = 2;
-        fatigue = 3;
+        stamina = 3;
+        titanName = "Korngull";
+        abilityDescription = "When I die, deal 5 to the enemy titan.";
+        abilityName = "Bulbous Sacs";
+
+        UpdateUI();
     }
 
     public override void Attack(Titan enemy, float damage)
