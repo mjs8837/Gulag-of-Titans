@@ -11,6 +11,8 @@ public class Redvine : Titan
         health = 3;
         totalHealth = 3;
         stamina = 4;
+        titanName = "Redvine";
+        abilityDescription = "twizzler";
 
         UpdateUI();
     }

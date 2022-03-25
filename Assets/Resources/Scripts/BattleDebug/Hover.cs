@@ -13,7 +13,7 @@ public class Hover : MonoBehaviour
 
     public void OnMouseOver()
     {
-        descriptionDisplay.text = "Name: " + titanClass.name + "\nAbility: " + titanClass.abilityDescription;
+        descriptionDisplay.text = "Name: " + titanClass.titanName + "\nAbility: " + titanClass.abilityDescription;
         descriptionDisplay.enabled = true;
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

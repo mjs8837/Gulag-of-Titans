@@ -11,6 +11,8 @@ public class Caleb : Titan
         health = 5;
         totalHealth = 5;
         stamina = 6;
+        titanName = "Caleb";
+        abilityDescription = "rock lobster";
 
         UpdateUI();
     }

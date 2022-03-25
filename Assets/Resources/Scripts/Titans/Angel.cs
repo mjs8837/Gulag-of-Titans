@@ -14,6 +14,8 @@ public class Angel : Titan
         totalHealth = 1;
         stamina = 4;
         firstHitTaken = false;
+        titanName = "Angel";
+        abilityDescription = "Holy shit";
 
         UpdateUI();
     }

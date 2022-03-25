@@ -11,6 +11,8 @@ public class MK : Titan
         health = 3;
         totalHealth = 3;
         stamina = 2;
+        titanName = "Mk 3";
+        abilityDescription = "mark zuckerburger";
 
         UpdateUI();
     }

@@ -11,6 +11,8 @@ public class William : Titan
         health = 5;
         totalHealth = 5;
         stamina = 4;
+        titanName = "William";
+        abilityDescription = "flaming homo";
 
         UpdateUI();
     }

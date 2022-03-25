@@ -11,6 +11,8 @@ public class Moosh : Titan
         health = 4;
         totalHealth = 4;
         stamina = 3;
+        titanName = "Moosh";
+        abilityDescription = "licks you";
 
         UpdateUI();
     }

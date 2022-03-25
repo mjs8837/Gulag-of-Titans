@@ -11,6 +11,8 @@ public class Korngull : Titan
         health = 2;
         totalHealth = 2;
         stamina = 3;
+        titanName = "Korngull";
+        abilityDescription = "purple twink";
 
         UpdateUI();
     }
