@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &48507355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4695902476633208154, guid: da5ff138eb699374294b9a87fef920a4, type: 3}
+  m_PrefabInstance: {fileID: 1805051886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &95497888
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +525,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2672471303569628166, guid: 230334260cf8396499d0b516c7dfa289, type: 3}
   m_PrefabInstance: {fileID: 1340236577}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &484850595 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9136188078787083998, guid: da5ff138eb699374294b9a87fef920a4, type: 3}
+  m_PrefabInstance: {fileID: 1805051886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &537256930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -704,6 +726,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &931005250 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7803740035945215044, guid: da5ff138eb699374294b9a87fef920a4, type: 3}
+  m_PrefabInstance: {fileID: 1805051886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &947633961 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -7711263264660248746, guid: 936e18a836a43fc4996c70f039da1dad, type: 3}
@@ -1573,11 +1606,15 @@ PrefabInstance:
     - target: {fileID: -4645389684486154012, guid: da5ff138eb699374294b9a87fef920a4, type: 3}
       propertyPath: attackUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 48507355}
     - target: {fileID: -4645389684486154012, guid: da5ff138eb699374294b9a87fef920a4, type: 3}
       propertyPath: healthUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 931005250}
+    - target: {fileID: -4645389684486154012, guid: da5ff138eb699374294b9a87fef920a4, type: 3}
+      propertyPath: staminaUI
+      value: 
+      objectReference: {fileID: 484850595}
     - target: {fileID: -4645389684486154012, guid: da5ff138eb699374294b9a87fef920a4, type: 3}
       propertyPath: titanPosition
       value: 5

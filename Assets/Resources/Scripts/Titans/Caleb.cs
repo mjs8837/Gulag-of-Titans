@@ -11,6 +11,8 @@ public class Caleb : Titan
         health = 5;
         totalHealth = 5;
         stamina = 6;
+
+        UpdateUI();
     }
 
     public override void Attack(Titan enemy, float damage)

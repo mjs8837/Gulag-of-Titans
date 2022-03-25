@@ -11,6 +11,8 @@ public class Moosh : Titan
         health = 4;
         totalHealth = 4;
         stamina = 3;
+
+        UpdateUI();
     }
 
     public override void Attack(Titan enemy, float damage)

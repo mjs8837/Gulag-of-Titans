@@ -14,6 +14,8 @@ public class Angel : Titan
         totalHealth = 1;
         stamina = 4;
         firstHitTaken = false;
+
+        UpdateUI();
     }
 
     public override void Attack(Titan enemy, float damage)

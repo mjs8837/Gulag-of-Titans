@@ -23,9 +23,7 @@ public class Titan : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        attackUI.text = damage.ToString();
-        staminaUI.text = stamina.ToString();
-        healthUI.text = health.ToString();
+
     }
 
     // Update is called once per frame
@@ -103,6 +101,7 @@ public class Titan : MonoBehaviour
     protected void ChangeHealth(float healthChange, Titan target)
     {
         target.health -= healthChange;
+        UpdateUI();
     }
 
     // Checks if the titan has died
@@ -148,6 +147,10 @@ public class Titan : MonoBehaviour
 
     }
 
-    //Moosh
-    //Goblin
+    public virtual void UpdateUI()
+    {
+        attackUI.text = damage.ToString();
+        staminaUI.text = stamina.ToString();
+        healthUI.text = health.ToString();
+    }
 }

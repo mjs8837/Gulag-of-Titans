@@ -11,6 +11,8 @@ public class William : Titan
         health = 5;
         totalHealth = 5;
         stamina = 4;
+
+        UpdateUI();
     }
 
     public override void Attack(Titan enemy, float damage)

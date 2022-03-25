@@ -11,6 +11,8 @@ public class Korngull : Titan
         health = 2;
         totalHealth = 2;
         stamina = 3;
+
+        UpdateUI();
     }
 
     public override void Attack(Titan enemy, float damage)

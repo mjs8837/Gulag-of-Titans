@@ -11,6 +11,8 @@ public class Redvine : Titan
         health = 3;
         totalHealth = 3;
         stamina = 4;
+
+        UpdateUI();
     }
 
     public override void Attack(Titan enemy, float damage)
