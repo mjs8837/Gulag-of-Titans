@@ -48,7 +48,7 @@ public class TestBattle : MonoBehaviour
 
         // Attack Phase
         // Enemy attacks party
-        enemy.Attack(activeParty);
+        enemy.TestAttack(activeParty);
         // Front two members attack enemy
         activeParty[0].Attack(enemy, activeParty[0].damage);
         activeParty[3].Attack(enemy, activeParty[3].damage);

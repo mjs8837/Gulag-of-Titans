@@ -34,7 +34,8 @@ public class Titan : MonoBehaviour
 
     public void TestAttack(List<Titan> party)
     {
-        ChangeHealth(damage, party[3]);
+        ChangeHealth(1, party[0]);
+        ChangeHealth(1, party[3]);
     }
 
     //Creating a parent function for enemy attacks
@@ -138,7 +139,7 @@ public class Titan : MonoBehaviour
     {
         if (!isEnemy)
         {
-            stamina -= 1;
+            //stamina -= 1;
         }
     }
 
