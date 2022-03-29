@@ -689,6 +689,7 @@ GameObject:
   - component: {fileID: 3072433256661980588}
   - component: {fileID: 3245292092192439019}
   - component: {fileID: 946035251878428168}
+  - component: {fileID: 5154216429473666976}
   m_Layer: 0
   m_Name: 4Mk 3
   m_TagString: Untagged
@@ -829,6 +830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titanName: 
   abilityDescription: 
+  abilityName: 
   health: 0
   totalHealth: 0
   damage: 0
@@ -838,6 +840,21 @@ MonoBehaviour:
   attackUI: {fileID: 8065341146246000329}
   staminaUI: {fileID: 7117080996852649186}
   healthUI: {fileID: 9144083516610607528}
+--- !u!114 &5154216429473666976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641574494850956170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3ac329ce348d54c8fbc335448e5c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titanClass: {fileID: 0}
+  descriptionDisplay: {fileID: 0}
+  holder: {fileID: 0}
 --- !u!1 &8768138477958769927
 GameObject:
   m_ObjectHideFlags: 0

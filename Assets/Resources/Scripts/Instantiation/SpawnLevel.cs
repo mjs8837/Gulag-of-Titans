@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SpawnLevel : MonoBehaviour
 {
@@ -11,24 +12,33 @@ public class SpawnLevel : MonoBehaviour
     // Landing spot variables
     public GameObject landingSpotPrefab;
     public GameObject landingSpotHolder;
-    public GameObject[] landingSpotList;
+    private GameObject[] landingSpotList;
 
     // Titan variables
     public Titan[] titanList;
     public GameObject titanHolder;
     private Titan titanObject;
-    [SerializeField] private Drag[] dragList;
+
+    // Drag and hover variables
+    private Drag[] dragList;
+    private Hover[] hoverList;
+    public TextMeshPro descDisplay;
+    public GameObject descHolder;
 
     // Party class
-    public Party baseParty;
+    private Party baseParty;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Sets up arrays & gets party variable
+        // Sets up arrays
         landingSpotList = new GameObject[6];
         dragList = new Drag[6];
+        hoverList = new Hover[6];
+
+        // Gets variables
         baseParty = GetComponent<Party>();
+         
 
         // Landing spots instantiation
         // Top row
@@ -63,9 +73,10 @@ public class SpawnLevel : MonoBehaviour
             placement.x = -2 - (i * 3);
             placement.y = 0;
             titanObject = Instantiate(titanList[i + 1], placement, Quaternion.identity, titanHolder.transform);
-            
-            // Adds its drag script to the drag list
+
+            // Adds its drag script to the drag list & hover script to the hover list
             dragList[i] = titanObject.GetComponent<Drag>();
+            hoverList[i] = titanObject.GetComponent<Hover>();
             
             // Adds the titan and its drag class to the party class
             baseParty.activeParty.Add(titanObject);
@@ -74,6 +85,11 @@ public class SpawnLevel : MonoBehaviour
             // Changes titan and drag position so drag works
             titanObject.titanPosition = i;
             dragList[i].dragPosition = i;
+
+            // Sets up hover
+            hoverList[i].titanClass = titanObject;
+            hoverList[i].descriptionDisplay = descDisplay;
+            hoverList[i].holder = descHolder;
         }
         for (int i = 0; i < 3; i++)
         {
@@ -82,8 +98,9 @@ public class SpawnLevel : MonoBehaviour
             placement.y = -3;
             titanObject = Instantiate(titanList[i + 4], placement, Quaternion.identity, titanHolder.transform);
             
-            // Adds its drag script to the drag list
+            // Adds its drag script to the drag list & hover script to the hover list
             dragList[i + 3] = titanObject.GetComponent<Drag>();
+            hoverList[i + 3] = titanObject.GetComponent<Hover>();
 
             // Adds the titan and its drag class to the party class
             baseParty.activeParty.Add(titanObject);
@@ -92,6 +109,11 @@ public class SpawnLevel : MonoBehaviour
             // Changes titan and drag position so drag works
             titanObject.titanPosition = i + 3;
             dragList[i + 3].dragPosition = i + 3;
+
+            // Sets up hover
+            hoverList[i + 3].titanClass = titanObject;
+            hoverList[i + 3].descriptionDisplay = descDisplay;
+            hoverList[i + 3].holder = descHolder;
         }
   
         // Adds the landing spots to each titan

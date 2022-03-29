@@ -814,6 +814,7 @@ GameObject:
   - component: {fileID: 9017657297177908399}
   - component: {fileID: 747629812392443486}
   - component: {fileID: 2642199993874202431}
+  - component: {fileID: 2536972939274510818}
   m_Layer: 0
   m_Name: 2Goblin
   m_TagString: Untagged
@@ -954,6 +955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titanName: 
   abilityDescription: 
+  abilityName: 
   health: 0
   totalHealth: 0
   damage: 0
@@ -963,3 +965,18 @@ MonoBehaviour:
   attackUI: {fileID: 539870609218899924}
   staminaUI: {fileID: 283523421624591288}
   healthUI: {fileID: 493735526147558772}
+--- !u!114 &2536972939274510818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147462645214859498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3ac329ce348d54c8fbc335448e5c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titanClass: {fileID: 0}
+  descriptionDisplay: {fileID: 0}
+  holder: {fileID: 0}

@@ -474,6 +474,7 @@ GameObject:
   - component: {fileID: 2974158955366306769}
   - component: {fileID: 7410619752105223546}
   - component: {fileID: -4645389684486154012}
+  - component: {fileID: 6104331818942997461}
   m_Layer: 0
   m_Name: 1Caleb
   m_TagString: Untagged
@@ -614,6 +615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titanName: 
   abilityDescription: 
+  abilityName: 
   health: 0
   totalHealth: 0
   damage: 0
@@ -623,6 +625,21 @@ MonoBehaviour:
   attackUI: {fileID: 4695902476633208154}
   staminaUI: {fileID: 9136188078787083998}
   healthUI: {fileID: 7803740035945215044}
+--- !u!114 &6104331818942997461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6426160792523416912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3ac329ce348d54c8fbc335448e5c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titanClass: {fileID: 0}
+  descriptionDisplay: {fileID: 0}
+  holder: {fileID: 0}
 --- !u!1 &8573041221752731490
 GameObject:
   m_ObjectHideFlags: 0

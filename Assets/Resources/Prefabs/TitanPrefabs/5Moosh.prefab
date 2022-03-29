@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 3527309724571355143}
   - component: {fileID: 7154109906494406549}
   - component: {fileID: -7711263264660248746}
+  - component: {fileID: 965316885186862144}
   m_Layer: 0
   m_Name: 5Moosh
   m_TagString: Untagged
@@ -402,6 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titanName: 
   abilityDescription: 
+  abilityName: 
   health: 0
   totalHealth: 0
   damage: 0
@@ -411,6 +413,21 @@ MonoBehaviour:
   attackUI: {fileID: 2858629838594830399}
   staminaUI: {fileID: 8038515150609102092}
   healthUI: {fileID: 3677630090513846527}
+--- !u!114 &965316885186862144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856761127137618230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3ac329ce348d54c8fbc335448e5c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titanClass: {fileID: 0}
+  descriptionDisplay: {fileID: 0}
+  holder: {fileID: 0}
 --- !u!1 &7222976010711913989
 GameObject:
   m_ObjectHideFlags: 0
