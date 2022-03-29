@@ -6,13 +6,13 @@ using TMPro;
 public class TestBattle : MonoBehaviour
 {
     [SerializeField] Party partyClass;
-    [SerializeField] Titan enemy;
+    public Titan enemy;
     List<Titan> activeParty;
     [SerializeField] GameObject battleButton;
-    bool battling;
+    private bool battling;
     public GameObject[] landingSpots;
-    public GameObject winScreen;
-    public TextMeshPro winScreenText;
+    public GameObject endScreen;
+    public TextMeshPro endScreenText;
 
     // Start is called before the first frame update
     void Start()
@@ -27,10 +27,6 @@ public class TestBattle : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.M) && battling)
         {
             Turn();
-        }
-        if (Input.GetKeyUp(KeyCode.H))
-        {
-            Debug.Log("Enemy Health: " + enemy.health);
         }
     }
 
@@ -197,8 +193,8 @@ public class TestBattle : MonoBehaviour
 
     public void EndBattle()
     {
-        winScreenText.text = "You Win!";
-        winScreen.transform.position = Vector3.zero;
+        endScreenText.text = "You Win!";
+        endScreen.transform.position = Vector3.zero;
         Debug.Log("You win!");
         Destroy(battleButton);
         battling = false;

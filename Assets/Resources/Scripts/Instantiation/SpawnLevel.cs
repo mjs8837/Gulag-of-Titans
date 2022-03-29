@@ -12,7 +12,7 @@ public class SpawnLevel : MonoBehaviour
     // Landing spot variables
     public GameObject landingSpotPrefab;
     public GameObject landingSpotHolder;
-    private GameObject[] landingSpotList;
+    [SerializeField] private GameObject[] landingSpotList;
 
     // Titan variables
     public Titan[] titanList;
@@ -24,20 +24,30 @@ public class SpawnLevel : MonoBehaviour
     private Hover[] hoverList;
     public TextMeshPro descDisplay;
     public GameObject descHolder;
+    private Titan enemyTitan;
     private Hover enemyHover;
 
     // Party class
     private Party baseParty;
 
+    // Battles script variables
+    public TestBattle battleScript;
+
+    public int[] partyCode;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (partyCode.Length < 7)
+        {
+            partyCode = new int[] { 3, 4, 5, 6, 7, 1, 2 };
+        }
         SpawnLandingSpots();
         SpawnAllyTitans();
         SpawnEnemyTitan();
         SetUpBattle();
 
-
+        
     }
 
     // Spawns landing spots and adds them to an accessible list
@@ -87,7 +97,7 @@ public class SpawnLevel : MonoBehaviour
             // Sets up placement then instantiates the titan
             placement.x = -2 - (i * 3);
             placement.y = 0;
-            titanObject = Instantiate(titanList[i + 1], placement, Quaternion.identity, titanHolder.transform);
+            titanObject = Instantiate(titanList[partyCode[i]], placement, Quaternion.identity, titanHolder.transform);
 
             // Adds its drag script to the drag list & hover script to the hover list
             dragList[i] = titanObject.GetComponent<Drag>();
@@ -111,7 +121,7 @@ public class SpawnLevel : MonoBehaviour
             // Sets up placement then instantiates the titan
             placement.x = -2 - (i * 3);
             placement.y = -3;
-            titanObject = Instantiate(titanList[i + 4], placement, Quaternion.identity, titanHolder.transform);
+            titanObject = Instantiate(titanList[partyCode[i + 3]], placement, Quaternion.identity, titanHolder.transform);
 
             // Adds its drag script to the drag list & hover script to the hover list
             dragList[i + 3] = titanObject.GetComponent<Drag>();
@@ -144,21 +154,29 @@ public class SpawnLevel : MonoBehaviour
     void SpawnEnemyTitan()
     {
         // Spawns the titan, adjusts its scale, removes its drag component, and sets it to an enemy
-        titanObject = Instantiate(titanList[7], new Vector3(6, 0, 50), Quaternion.identity);
-        titanObject.transform.localScale = Vector3.one;
-        Destroy(titanObject.GetComponent<Drag>());
-        titanObject.isEnemy = true;
+        enemyTitan = Instantiate(titanList[partyCode[6]], new Vector3(6, 0, 50), Quaternion.identity);
+        enemyTitan.transform.localScale = Vector3.one;
+        Destroy(enemyTitan.GetComponent<Drag>());
+        enemyTitan.isEnemy = true;
 
         // Sets up the enemy's hover script
-        enemyHover = titanObject.GetComponent<Hover>();
-        enemyHover.titanClass = titanObject;
+        enemyHover = enemyTitan.GetComponent<Hover>();
+        enemyHover.titanClass = enemyTitan;
         enemyHover.descriptionDisplay = descDisplay;
         enemyHover.holder = descHolder;
     }
 
     void SetUpBattle()
     {
+        // Sets the enemy
+        battleScript.enemy = enemyTitan;
 
+        // Sets up landing spots
+        battleScript.landingSpots = new GameObject[6];
+        for (int i = 0; i < 6; i++)
+        {
+            battleScript.landingSpots[i] = landingSpotList[i];
+        }
     }
 
     // Update is called once per frame
