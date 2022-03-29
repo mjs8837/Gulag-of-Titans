@@ -768,7 +768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6828446846021449373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.682389, y: 13.513943, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 50}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 8578177957396591313}
@@ -919,7 +919,6 @@ MonoBehaviour:
   titanClass: {fileID: 0}
   descriptionDisplay: {fileID: 0}
   holder: {fileID: 0}
-  distance: 0
 --- !u!1 &8762970164905384369
 GameObject:
   m_ObjectHideFlags: 0

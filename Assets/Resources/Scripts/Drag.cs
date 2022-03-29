@@ -22,15 +22,24 @@ public class Drag : MonoBehaviour
     // If the player presses a titan it starts dragging
     public void OnMouseDown()
     {
-        distance = Vector3.Distance(transform.position, Camera.main.transform.position);
-        dragging = true;
+        // Only works if the player is not locked and has swaps
+        if (partyClass.unlocked && partyClass.currentSwaps > 0)
+        {
+            distance = Vector3.Distance(transform.position, Camera.main.transform.position);
+            dragging = true;
+        }
+        
     }
 
     // If the player stops holding a titan it stops dragging
     public void OnMouseUp()
     {
-        dragging = false;
-        Drop();
+        // Only works if the player is not locked and has swaps
+        if (partyClass.unlocked && partyClass.currentSwaps > 0)
+        {
+            dragging = false;
+            Drop();
+        }
     }
 
     public void Update()
@@ -81,6 +90,9 @@ public class Drag : MonoBehaviour
                 transform.position.x > landingSpots[i].transform.position.x - 1 &&
                 transform.position.y < landingSpots[i].transform.position.y + 1)
             {
+                // When a player drops a titan, they lose a swap and the counter gets updated
+                partyClass.currentSwaps--;
+                partyClass.UpdateCounter();
                 // First changes the array values of the titans through changePosition()
                 if (partyClass.changePosition(dragPosition, i))
                 {

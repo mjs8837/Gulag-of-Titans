@@ -1,11 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Party : MonoBehaviour
 {
     public List<Titan> activeParty;
     public List<Titan> reserveParty;
+    
+    // Swap variables
+    public int maxSwaps;
+    public int currentSwaps;
+    public bool unlocked;
+    [SerializeField] TextMeshPro swapCounter;
+
 
     public void addTitanActive(Titan titanToAdd, int position)
     {
@@ -48,5 +56,11 @@ public class Party : MonoBehaviour
         {
             Debug.Log("Titan " + i + ": " + activeParty[i]);
         }
+    }
+
+    // Updates the counter
+    public void UpdateCounter()
+    {
+        swapCounter.text = "Swaps: " + currentSwaps;
     }
 }

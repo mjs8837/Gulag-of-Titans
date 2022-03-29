@@ -7,26 +7,51 @@ public class TestBattle : MonoBehaviour
 {
     [SerializeField] Party partyClass;
     public Titan enemy;
-    List<Titan> activeParty;
-    [SerializeField] GameObject battleButton;
+    public List<Titan> activeParty;
     private bool battling;
+    private bool gameOver;
     public GameObject[] landingSpots;
     public GameObject endScreen;
     public TextMeshPro endScreenText;
+
+    [SerializeField] SpriteRenderer stateBox;
+    [SerializeField] TextMeshPro stateText;
 
     // Start is called before the first frame update
     void Start()
     {
         activeParty = partyClass.activeParty;
-        battling = true;
+        gameOver = false;
+
+        // Defaults the player to battling
+        battling = false;
+        SwitchState();
+
+        // Sets up max swaps and displays counter
+        partyClass.maxSwaps = 2;
+        partyClass.currentSwaps = partyClass.maxSwaps;
+        partyClass.UpdateCounter();
     }
 
     private void Update()
     {
-        // Pushes battle forward
-        if (Input.GetKeyUp(KeyCode.M) && battling)
+        if (!gameOver)
         {
-            Turn();
+            // Pushes battle forward
+            if (Input.GetKeyUp(KeyCode.M) && battling)
+            {
+                Turn();
+            }
+            // Switches states
+            if (Input.GetKeyUp(KeyCode.R))
+            {
+                SwitchState();
+            }
+            // Manually unlocks party
+            if (Input.GetKeyUp(KeyCode.L))
+            {
+                partyClass.unlocked = !(partyClass.unlocked);
+            }
         }
     }
 
@@ -188,15 +213,46 @@ public class TestBattle : MonoBehaviour
                 activeParty[i].UpdateUI();
             }
         }
+        // Updates enemy's UI
         enemy.UpdateUI();
+        // Gives the player a swap if they haven't reached the limit
+        if (partyClass.currentSwaps < partyClass.maxSwaps)
+        {
+            partyClass.currentSwaps++;
+            partyClass.UpdateCounter();
+        }
+    }
+
+    // Switches the player between battling and swapping
+    public void SwitchState()
+    {
+        // Switchs boolean
+        battling = !battling;
+        if (battling)
+        {
+            // Changes color and text
+            stateBox.color = new Color32(250, 165, 55, 255);
+            stateText.text = "Battling!";
+            // Locks the party
+            partyClass.unlocked = false;
+            
+        }
+        else
+        {
+            // Changes color and text
+            stateBox.color = new Color32(170, 51, 255, 255);
+            stateText.text = "Swapping!";
+            // Unlocks the party and reverses battling boolean
+            partyClass.unlocked = true;
+            battling = false;
+        }
+        
     }
 
     public void EndBattle()
     {
         endScreenText.text = "You Win!";
         endScreen.transform.position = Vector3.zero;
-        Debug.Log("You win!");
-        Destroy(battleButton);
         battling = false;
     }
 }
