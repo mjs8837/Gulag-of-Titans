@@ -17,9 +17,12 @@ public class TestBattle : MonoBehaviour
     [SerializeField] SpriteRenderer stateBox;
     [SerializeField] TextMeshPro stateText;
 
+    public bool firstTurn;
+
     // Start is called before the first frame update
     void Start()
     {
+        firstTurn = true;
         activeParty = partyClass.activeParty;
         gameOver = false;
 
@@ -31,12 +34,23 @@ public class TestBattle : MonoBehaviour
         partyClass.maxSwaps = 2;
         partyClass.currentSwaps = partyClass.maxSwaps;
         partyClass.UpdateCounter();
+        
     }
 
     private void Update()
     {
         if (!gameOver)
         {
+            if (firstTurn == true)
+            {
+                for (int i = 0; i < activeParty.Count; i++)
+                {
+                    activeParty[i].OnAppear(activeParty, enemy);
+                }
+                firstTurn = false;
+                enemy.UpdateUI();
+            }
+
             // Pushes battle forward
             if (Input.GetKeyUp(KeyCode.M) && battling)
             {
@@ -57,6 +71,9 @@ public class TestBattle : MonoBehaviour
 
     public void Turn()
     {
+       
+        
+        
         // Beginning Phase
         // Activates enemy's beginning of turn ability (if applicable)
         enemy.OnBeginTurn(activeParty, enemy);

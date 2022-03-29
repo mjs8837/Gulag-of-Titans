@@ -31,7 +31,7 @@ public class Redvine : Titan
     public override void OnAppear(List<Titan> party, Titan enemy)
     {
         Attack(enemy, 2.0f);
-        base.OnAppear(party, enemy);
+       base.OnAppear(party, enemy);
     }
 
     public override void OnBeginTurn(List<Titan> party, Titan enemy)

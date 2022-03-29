@@ -164,6 +164,9 @@ public class SpawnLevel : MonoBehaviour
         enemyHover.titanClass = enemyTitan;
         enemyHover.descriptionDisplay = descDisplay;
         enemyHover.holder = descHolder;
+
+
+
     }
 
     void SetUpBattle()
@@ -176,7 +179,11 @@ public class SpawnLevel : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             battleScript.landingSpots[i] = landingSpotList[i];
+
+
         }
+
+
     }
 
     // Update is called once per frame
