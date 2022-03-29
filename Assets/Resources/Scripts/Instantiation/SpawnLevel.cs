@@ -20,15 +20,15 @@ public class SpawnLevel : MonoBehaviour
     [SerializeField] private Drag[] dragList;
 
     // Party class
-    public Party partyClass;
+    public Party baseParty;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Sets up arrays
+        // Sets up arrays & gets party variable
         landingSpotList = new GameObject[6];
         dragList = new Drag[6];
-        partyClass.activeParty = new List<Titan>();
+        baseParty = GetComponent<Party>();
 
         // Landing spots instantiation
         // Top row
@@ -63,8 +63,17 @@ public class SpawnLevel : MonoBehaviour
             placement.x = -2 - (i * 3);
             placement.y = 0;
             titanObject = Instantiate(titanList[i + 1], placement, Quaternion.identity, titanHolder.transform);
+            
             // Adds its drag script to the drag list
             dragList[i] = titanObject.GetComponent<Drag>();
+            
+            // Adds the titan and its drag class to the party class
+            baseParty.activeParty.Add(titanObject);
+            dragList[i].partyClass = baseParty;
+
+            // Changes titan and drag position so drag works
+            titanObject.titanPosition = i;
+            dragList[i].dragPosition = i;
         }
         for (int i = 0; i < 3; i++)
         {
@@ -72,14 +81,22 @@ public class SpawnLevel : MonoBehaviour
             placement.x = -2 - (i * 3);
             placement.y = -3;
             titanObject = Instantiate(titanList[i + 4], placement, Quaternion.identity, titanHolder.transform);
+            
             // Adds its drag script to the drag list
             dragList[i + 3] = titanObject.GetComponent<Drag>();
+
+            // Adds the titan and its drag class to the party class
+            baseParty.activeParty.Add(titanObject);
+            dragList[i + 3].partyClass = baseParty;
+
+            // Changes titan and drag position so drag works
+            titanObject.titanPosition = i + 3;
+            dragList[i + 3].dragPosition = i + 3;
         }
   
-        // Drag Fixing
+        // Adds the landing spots to each titan
         for (int i = 0; i < 6; i++)
         {
-            dragList[i].dragPosition = 2;
             for (int k = 0; k < 6; k++)
             {
                 dragList[i].landingSpots[k] = landingSpotList[k];

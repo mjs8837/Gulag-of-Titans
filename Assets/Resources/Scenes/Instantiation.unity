@@ -536,7 +536,6 @@ GameObject:
   - component: {fileID: 574025872}
   - component: {fileID: 574025873}
   - component: {fileID: 574025874}
-  - component: {fileID: 574025875}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -584,28 +583,8 @@ MonoBehaviour:
   - {fileID: -2315289063733096803, guid: 630a86660d3a85a429fe81acdfe84272, type: 3}
   titanHolder: {fileID: 1978713629}
   dragList: []
-  partyClass: {fileID: 0}
+  baseParty: {fileID: 0}
 --- !u!114 &574025874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 574025871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a2f0ea100480bc4db9ae5cf5520a9b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeParty: []
-  reserveParty: []
-  angel: {fileID: 0}
-  william: {fileID: 0}
-  caleb: {fileID: 0}
-  moosh: {fileID: 0}
-  redvine: {fileID: 0}
-  goblin: {fileID: 0}
---- !u!114 &574025875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
