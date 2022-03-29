@@ -6,7 +6,6 @@ public class SpawnLevel : MonoBehaviour
 {
     // Generic variables
     private Vector3 placement;
-    private string objectName;
     private GameObject newObject;
 
     // Landing spot variables
@@ -16,45 +15,72 @@ public class SpawnLevel : MonoBehaviour
 
     // Titan variables
     public Titan[] titanList;
-    public Drag[] dragList;
     public GameObject titanHolder;
     private Titan titanObject;
-    private Drag dragObject;
+    [SerializeField] private Drag[] dragList;
+
+    // Party class
+    public Party partyClass;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Sets up arrays
+        landingSpotList = new GameObject[6];
+        dragList = new Drag[6];
+        partyClass.activeParty = new List<Titan>();
+
         // Landing spots instantiation
         // Top row
         for (int i = 0; i < 3; i++)
         {
+            // Sets up placement then instantiates the prefab
             placement.x = -2 - (i * 3);
+            placement.y = 0;
             newObject = Instantiate(landingSpotPrefab, placement, Quaternion.identity, landingSpotHolder.transform);
-            objectName = "Landing" + i;
-            newObject.name = objectName;
+            // Names the object
+            newObject.name = "Landing" + i;
+            // Adds it to the list of landings
             landingSpotList[i] = newObject;
         }
         // Bottom row
         for (int i = 0; i < 3; i++)
         {
+            // Sets up placement then instantiates the prefab
             placement.x = -2 - (i * 3);
             placement.y = -3;
             newObject = Instantiate(landingSpotPrefab, placement, Quaternion.identity, landingSpotHolder.transform);
-            objectName = "Landing" + (i + 3);
-            newObject.name = objectName;
+            // Names the object
+            newObject.name = "Landing" + (i + 3);
+            // Adds it to the list of landings
             landingSpotList[i + 3] = newObject;
         }
 
         // Titan spawning
-        placement.x = -3;
-        placement.y = 0;
-        titanObject = Instantiate(titanList[3], placement, Quaternion.identity, titanHolder.transform);
-        titanObject.titanPosition = 0;
-
+        for (int i = 0; i < 3; i++)
+        {
+            // Sets up placement then instantiates the titan
+            placement.x = -2 - (i * 3);
+            placement.y = 0;
+            titanObject = Instantiate(titanList[i + 1], placement, Quaternion.identity, titanHolder.transform);
+            // Adds its drag script to the drag list
+            dragList[i] = titanObject.GetComponent<Drag>();
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            // Sets up placement then instantiates the titan
+            placement.x = -2 - (i * 3);
+            placement.y = -3;
+            titanObject = Instantiate(titanList[i + 4], placement, Quaternion.identity, titanHolder.transform);
+            // Adds its drag script to the drag list
+            dragList[i + 3] = titanObject.GetComponent<Drag>();
+        }
+  
         // Drag Fixing
         for (int i = 0; i < 6; i++)
         {
-            for (int k = 0; i < 6; k++)
+            dragList[i].dragPosition = 2;
+            for (int k = 0; k < 6; k++)
             {
                 dragList[i].landingSpots[k] = landingSpotList[k];
             }
