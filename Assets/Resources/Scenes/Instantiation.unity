@@ -328,6 +328,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8198000812940433781, guid: c2ab98c2bf516734a9582c04b43eb986, type: 3}
+      propertyPath: enemyIndexCode
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198000812940433781, guid: c2ab98c2bf516734a9582c04b43eb986, type: 3}
       propertyPath: partyCode.Array.size
       value: 0
       objectReference: {fileID: 0}

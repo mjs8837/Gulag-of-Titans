@@ -65,6 +65,11 @@ public class TestBattle : MonoBehaviour
             {
                 partyClass.unlocked = !(partyClass.unlocked);
             }
+            if (Input.GetKeyUp(KeyCode.H))
+            {
+                enemy.health += 10;
+                enemy.UpdateUI();
+            }
         }
     }
 
@@ -100,7 +105,7 @@ public class TestBattle : MonoBehaviour
         // Checks if the enemy is dead and ends the battle if so
         if (enemy.DeathCheck(activeParty, enemy))
         {
-            EndBattle();
+            WinBattle();
         }
 
         // Checks if any party members in the top row have died
@@ -241,6 +246,10 @@ public class TestBattle : MonoBehaviour
             partyClass.currentSwaps++;
             partyClass.UpdateCounter();
         }
+        if (CheckLoss(activeParty))
+        {
+            LoseBattle();
+        }
     }
 
     // Switches the player between battling and swapping
@@ -269,9 +278,28 @@ public class TestBattle : MonoBehaviour
         
     }
 
-    public void EndBattle()
+    public void WinBattle()
     {
         endScreenText.text = "You Win!";
+        endScreen.transform.position = Vector3.zero;
+        battling = false;
+    }
+
+    public bool CheckLoss(List<Titan> activeParty)
+    {
+        for (int i = 0; i < activeParty.Count; i++)
+        {
+            if (activeParty[i] != null)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void LoseBattle()
+    {
+        endScreenText.text = "You Lose!";
         endScreen.transform.position = Vector3.zero;
         battling = false;
     }
