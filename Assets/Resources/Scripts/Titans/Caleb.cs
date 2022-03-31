@@ -7,14 +7,23 @@ public class Caleb : Titan
     // Start is called before the first frame update
     void Start()
     {
-        damage = 0;
-        health = 5;
-        totalHealth = 5;
-        stamina = 6;
+        damage = 0.0f;
+        health = 5.0f;
+        totalHealth = 5.0f;
+        stamina = 6.0f;
         titanName = "Caleb";
         titanIndex = 1;
         abilityDescription = "When I take damage, I gain +2|+0.";
         abilityName = "Tortured";
+
+        if (isEnemy)
+        {
+            abilityDescription = "No ability for now.";
+            abilityName = "No ability for now";
+            health = 20.0f;
+            totalHealth = 20.0f;
+            damage = 4.0f;
+        }
 
         UpdateUI();
     }
@@ -41,12 +50,15 @@ public class Caleb : Titan
     public override void ChangeHealth(float healthChange, Titan target)
     {
         target.health -= healthChange;
-        damage += 2;
+
+        if (!isEnemy)
+        {
+            damage += 2;
+        }
     }
 
     public override void OnHit(List<Titan> party, Titan enemy)
     {
-        damage += 2;
         base.OnHit(party, enemy);
     }
 

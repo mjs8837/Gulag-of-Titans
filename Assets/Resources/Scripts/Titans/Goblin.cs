@@ -18,7 +18,10 @@ public class Goblin : Titan
 
         if (isEnemy)
         {
-            health = health * 6.0f;
+            abilityDescription = "No ability for now.";
+            abilityName = "No ability for now";
+            health = 20.0f;
+            totalHealth = 20.0f;
         }
 
         UpdateUI();

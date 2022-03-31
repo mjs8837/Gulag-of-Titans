@@ -7,14 +7,22 @@ public class William : Titan
     // Start is called before the first frame update
     void Start()
     {
-        damage = 5;
-        health = 5;
-        totalHealth = 5;
-        stamina = 4;
+        damage = 5.0f;
+        health = 5.0f;
+        totalHealth = 5.0f;
+        stamina = 4.0f;
         titanName = "William";
         titanIndex = 7;
         abilityDescription = "At the start of the round, I gain -1|-1.";
         abilityName = "Twice as Bright";
+
+        if (isEnemy)
+        {
+            abilityDescription = "No ability for now.";
+            abilityName = "No ability for now";
+            health = 20.0f;
+            totalHealth = 20.0f;
+        }
 
         UpdateUI();
     }
@@ -36,8 +44,12 @@ public class William : Titan
 
     public override void OnBeginTurn (List<Titan> party, Titan enemy)
     {
-        health -= 1;
-        damage -= 1;
+        if (!isEnemy)
+        {
+            health -= 1;
+            damage -= 1;
+        }
+
         base.OnBeginTurn(party, enemy);
     }
 

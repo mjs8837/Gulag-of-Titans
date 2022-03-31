@@ -9,15 +9,23 @@ public class Angel : Titan
     // Start is called before the first frame update
     void Start()
     {
-        damage = 4;
-        health = 1;
-        totalHealth = 1;
-        stamina = 4;
+        damage = 4.0f;
+        health = 1.0f;
+        totalHealth = 1.0f;
+        stamina = 4.0f;
         firstHitTaken = false;
         titanName = "Angel";
         titanIndex = 0;
         abilityDescription = "The first time I take damage, I ignore it instead.";
         abilityName = "Unholy Mantle";
+
+        if (isEnemy)
+        {
+            abilityDescription = "No ability for now.";
+            abilityName = "No ability for now";
+            health = 20.0f;
+            totalHealth = 20.0f;
+        }
 
         UpdateUI();
     }
@@ -44,12 +52,17 @@ public class Angel : Titan
 
     public override void OnHit(List<Titan> party, Titan enemy)
     {
-        if (firstHitTaken)
+        if (!isEnemy)
         {
-            base.OnHit(party, enemy);
+            if (firstHitTaken)
+            {
+                base.OnHit(party, enemy);
+            }
+
+            firstHitTaken = false;
         }
 
-        firstHitTaken = false;
+        base.OnHit(party, enemy);
     }
 
     public override void OnEndTurn(List<Titan> party, Titan enemy)

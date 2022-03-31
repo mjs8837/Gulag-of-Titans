@@ -7,14 +7,22 @@ public class Redvine : Titan
     // Start is called before the first frame update
     void Start()
     {
-        damage = 2;
-        health = 3;
-        totalHealth = 3;
-        stamina = 4;
+        damage = 2.0f;
+        health = 3.0f;
+        totalHealth = 3.0f;
+        stamina = 4.0f;
         titanName = "Redvine";
         titanIndex = 6;
         abilityDescription = "When I appear, deal 2 damage to the enemy titan.";
         abilityName = "Caress";
+
+        if (isEnemy)
+        {
+            abilityDescription = "No ability for now.";
+            abilityName = "No ability for now";
+            health = 20.0f;
+            totalHealth = 20.0f;
+        }
 
         UpdateUI();
     }
@@ -31,7 +39,11 @@ public class Redvine : Titan
 
     public override void OnAppear(List<Titan> party, Titan enemy)
     {
-        Attack(enemy, 2.0f);
+       if (!isEnemy)
+       {
+           Attack(enemy, 2.0f);
+       }
+
        base.OnAppear(party, enemy);
     }
 

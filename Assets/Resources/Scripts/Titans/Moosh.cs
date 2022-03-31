@@ -7,14 +7,23 @@ public class Moosh : Titan
     // Start is called before the first frame update
     void Start()
     {
-        damage = 3;
-        health = 4;
-        totalHealth = 4;
-        stamina = 3;
+        damage = 3.0f;
+        health = 4.0f;
+        totalHealth = 4.0f;
+        stamina = 3.0f;
         titanName = "Moosh";
         titanIndex = 5;
         abilityDescription = "When I die give the unit behind me +2|+2.";
         abilityName = "Sporulation";
+
+        if (isEnemy)
+        {
+            abilityDescription = "No ability for now.";
+            abilityName = "No ability for now";
+            health = 28.0f;
+            totalHealth = 28.0f;
+            damage = 5.0f;
+        }
 
         UpdateUI();
     }
@@ -51,15 +60,21 @@ public class Moosh : Titan
 
     public override void OnDeath(List<Titan> party, Titan enemy)
     {
-        int index = party.IndexOf(this);
-
-        if (index < 2 || index < 5)
+        if (!isEnemy)
         {
-            index += 1;
-        }
+            int index = party.IndexOf(this);
 
-        party[index].damage += 2;
-        party[index].health += 2;
+            if (index < 2 || index < 5)
+            {
+                index += 1;
+            }
+
+            if (party[index] != null)
+            {
+                party[index].damage += 2;
+                party[index].health += 2;
+            }
+        }
 
         base.OnDeath(party, enemy);
     }

@@ -7,14 +7,22 @@ public class Korngull : Titan
     // Start is called before the first frame update
     void Start()
     {
-        damage = 4;
-        health = 2;
-        totalHealth = 2;
-        stamina = 3;
+        damage = 4.0f;
+        health = 2.0f;
+        totalHealth = 2.0f;
+        stamina = 3.0f;
         titanName = "Korngull";
         titanIndex = 3;
         abilityDescription = "When I die, deal 5 to the enemy titan.";
         abilityName = "Bulbous Sacs";
+
+        if (isEnemy)
+        {
+            abilityDescription = "No ability for now.";
+            abilityName = "No ability for now";
+            health = 20.0f;
+            totalHealth = 20.0f;
+        }
 
         UpdateUI();
     }
@@ -51,7 +59,11 @@ public class Korngull : Titan
 
     public override void OnDeath(List<Titan> party, Titan enemy)
     {
-        Attack(enemy, 5.0f);
+        if (!isEnemy)
+        {
+            Attack(enemy, 5.0f);
+        }
+        
         base.OnDeath(party, enemy);
     }
 }

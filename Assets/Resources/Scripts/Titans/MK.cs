@@ -7,14 +7,23 @@ public class MK : Titan
     // Start is called before the first frame update
     void Start()
     {
-        damage = 2;
-        health = 3;
-        totalHealth = 3;
-        stamina = 2;
+        damage = 2.0f;
+        health = 3.0f;
+        totalHealth = 3.0f;
+        stamina = 2.0f;
         titanName = "Mk 3";
         titanIndex = 4;
         abilityDescription = "When I appear, give the enemy titan -1|-0.";
         abilityName = "Warden";
+
+        if (isEnemy)
+        {
+            abilityDescription = "No ability for now.";
+            abilityName = "No ability for now";
+            health = 25.0f;
+            totalHealth = 25.0f;
+            damage = 3.0f;
+        }
 
         UpdateUI();
     }
@@ -31,6 +40,11 @@ public class MK : Titan
 
     public override void OnAppear(List<Titan> party, Titan enemy)
     {
+        if (!isEnemy)
+        {
+            enemy.damage -= 1.0f;
+        }
+
         base.OnAppear(party, enemy);
     }
 
