@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class SelectTitan : MonoBehaviour
 {
     [SerializeField] Titan titanClass;
+    [SerializeField] SpriteRenderer sprite;
 
     [SerializeField] SwitchScene switchSceneClass;
+    [SerializeField] CustomManager customManagerClass;
 
     public static int[] partyCodeMaster;
 
@@ -31,14 +33,24 @@ public class SelectTitan : MonoBehaviour
         }
     }
 
+    private void OnMouseEnter()
+    {
+        sprite.color = new Color32(169, 169, 169, 255);
+    }
+
+    private void OnMouseExit()
+    {
+        sprite.color = new Color32(255, 255, 255, 255);
+    }
+
     private void OnMouseDown()
     {
         if (switchSceneClass.codeIndex < 7)
         {
             switchSceneClass.partyCodeScene[switchSceneClass.codeIndex] = titanClass.titanIndex;
             switchSceneClass.codeIndex++;
-            Debug.Log("Test" + titanClass.titanIndex);
+
+            customManagerClass.AddToList(titanClass);
         }
-        
     }
 }
