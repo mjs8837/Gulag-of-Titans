@@ -34,13 +34,14 @@ public class SpawnLevel : MonoBehaviour
     public TestBattle battleScript;
 
     private int[] partyCode = SelectTitan.partyCodeMaster;
+    [SerializeField] int enemyIndexCode;
 
     // Start is called before the first frame update
     void Start()
     {
         if (partyCode == null)
         {
-            partyCode = new int[] { 3, 4, 5, 6, 7, 1, 2 };
+            partyCode = new int[] { 3, 4, 5, 6, 7, 1, enemyIndexCode };
         }
         SpawnLandingSpots();
         SpawnAllyTitans();
