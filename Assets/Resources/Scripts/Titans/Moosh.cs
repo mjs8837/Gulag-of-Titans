@@ -12,6 +12,7 @@ public class Moosh : Titan
         totalHealth = 4;
         stamina = 3;
         titanName = "Moosh";
+        titanIndex = 5;
         abilityDescription = "When I die give the unit behind me +2|+2.";
         abilityName = "Sporulation";
 

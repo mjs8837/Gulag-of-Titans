@@ -12,6 +12,7 @@ public class William : Titan
         totalHealth = 5;
         stamina = 4;
         titanName = "William";
+        titanIndex = 7;
         abilityDescription = "At the start of the round, I gain -1|-1.";
         abilityName = "Twice as Bright";
 

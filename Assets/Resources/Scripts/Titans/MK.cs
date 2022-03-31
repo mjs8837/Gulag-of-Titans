@@ -12,6 +12,7 @@ public class MK : Titan
         totalHealth = 3;
         stamina = 2;
         titanName = "Mk 3";
+        titanIndex = 4;
         abilityDescription = "When I appear, give the enemy titan -1|-0.";
         abilityName = "Warden";
 

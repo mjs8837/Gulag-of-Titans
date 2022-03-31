@@ -12,6 +12,7 @@ public class Redvine : Titan
         totalHealth = 3;
         stamina = 4;
         titanName = "Redvine";
+        titanIndex = 6;
         abilityDescription = "When I appear, deal 2 damage to the enemy titan.";
         abilityName = "Caress";
 

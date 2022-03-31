@@ -15,6 +15,7 @@ public class Angel : Titan
         stamina = 4;
         firstHitTaken = false;
         titanName = "Angel";
+        titanIndex = 0;
         abilityDescription = "The first time I take damage, I ignore it instead.";
         abilityName = "Unholy Mantle";
 

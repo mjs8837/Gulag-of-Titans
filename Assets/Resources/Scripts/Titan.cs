@@ -16,6 +16,7 @@ public class Titan : MonoBehaviour
     public float stamina;
     public bool isEnemy;
     public int titanPosition;
+    public int titanIndex;
     public TextMeshPro attackUI;
     public TextMeshPro staminaUI;
     public TextMeshPro healthUI;
