@@ -246,8 +246,10 @@ public class TestBattle : MonoBehaviour
             partyClass.currentSwaps++;
             partyClass.UpdateCounter();
         }
+        // Checks if there are any members in the party
         if (CheckLoss(activeParty))
         {
+            // Loses battle if so
             LoseBattle();
         }
     }
@@ -278,27 +280,34 @@ public class TestBattle : MonoBehaviour
         
     }
 
+    // Displays win screen
     public void WinBattle()
     {
+        // Edits the end screen text and moves it to the player's view
         endScreenText.text = "You Win!";
         endScreen.transform.position = Vector3.zero;
         battling = false;
     }
 
+    // Checks if there are any party members still in the array
     public bool CheckLoss(List<Titan> activeParty)
     {
         for (int i = 0; i < activeParty.Count; i++)
         {
             if (activeParty[i] != null)
             {
+                // If there is then the player did not lose
                 return false;
             }
         }
+        // If there isn't then they did lose
         return true;
     }
 
+    // Displays lsoe screen
     public void LoseBattle()
     {
+        // Edits the end screen text and moves it to the player's view
         endScreenText.text = "You Lose!";
         endScreen.transform.position = Vector3.zero;
         battling = false;

@@ -96,7 +96,7 @@ MonoBehaviour:
   descDisplay: {fileID: 6586417477814637634}
   descHolder: {fileID: 6586417477814637635}
   battleScript: {fileID: 4599772836939647398}
-  partyCode: 
+  enemyIndexCode: 0
 --- !u!114 &8198000812940433782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +135,7 @@ MonoBehaviour:
   endScreenText: {fileID: 4658132860978646005}
   stateBox: {fileID: 2996718771887196463}
   stateText: {fileID: 2996718772279198298}
+  firstTurn: 0
 --- !u!1 &8198000813053344535
 GameObject:
   m_ObjectHideFlags: 0
