@@ -8,25 +8,24 @@ public class SelectTitan : MonoBehaviour
     [SerializeField] Titan titanClass;
 
     [SerializeField] SwitchScene switchSceneClass;
-    private int codeIndex;
 
-    private static int[] test;
+    public static int[] partyCode;
 
     // Start is called before the first frame update
     void Start()
     {
         switchSceneClass.partyCode = new int[6];
-        codeIndex = 0;
+        switchSceneClass.codeIndex = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (codeIndex == 6)
+        if (switchSceneClass.codeIndex == 6)
         {
             if (Input.GetKeyDown(KeyCode.N))
             {
-                test = switchSceneClass.partyCode;
+                partyCode = switchSceneClass.partyCode;
                 SceneManager.LoadScene("Instantiation");
             }
         }
@@ -34,11 +33,12 @@ public class SelectTitan : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (codeIndex < 6)
+        if (switchSceneClass.codeIndex < 6)
         {
-            switchSceneClass.partyCode[codeIndex] = titanClass.titanIndex;
-            codeIndex++;
+            switchSceneClass.partyCode[switchSceneClass.codeIndex] = titanClass.titanIndex;
+            switchSceneClass.codeIndex++;
+            Debug.Log("Test" + titanClass.titanIndex);
         }
-        Debug.Log("Test" + titanClass.titanIndex);  
+        
     }
 }

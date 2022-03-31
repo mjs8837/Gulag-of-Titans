@@ -90,9 +90,14 @@ public class TestBattle : MonoBehaviour
         // Enemy attacks party
         enemy.TestAttack(activeParty);
         // Front two members attack enemy
-        activeParty[0].Attack(enemy, activeParty[0].damage);
-        activeParty[3].Attack(enemy, activeParty[3].damage);
-
+        if (activeParty[0] != null)
+        {
+            activeParty[0].Attack(enemy, activeParty[0].damage);
+        }
+        if (activeParty[3] != null)
+        {
+            activeParty[3].Attack(enemy, activeParty[3].damage);
+        }
         // Death Phase
         // Checks if the enemy is dead and ends the battle if so
         if (enemy.DeathCheck(activeParty, enemy))

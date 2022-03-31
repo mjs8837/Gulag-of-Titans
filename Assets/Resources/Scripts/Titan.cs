@@ -36,8 +36,14 @@ public class Titan : MonoBehaviour
 
     public void TestAttack(List<Titan> party)
     {
-        ChangeHealth(damage, party[0]);
-        ChangeHealth(damage, party[3]);
+        if (party[0] != null)
+        {
+            ChangeHealth(damage, party[0]);
+        }
+        if (party[3] != null)
+        {
+            ChangeHealth(damage, party[3]);
+        }
     }
 
     //Creating a parent function for enemy attacks

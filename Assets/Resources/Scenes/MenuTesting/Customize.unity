@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titanClass: {fileID: 329378339}
-  switchSceneClass: {fileID: 0}
+  switchSceneClass: {fileID: 155661545}
 --- !u!114 &329378339 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 997867927053776684, guid: 037a681d799b17546b9c1a3562fbb81f, type: 3}
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titanClass: {fileID: 418019317}
-  switchSceneClass: {fileID: 0}
+  switchSceneClass: {fileID: 155661545}
 --- !u!114 &418019317 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -4645389684486154012, guid: da5ff138eb699374294b9a87fef920a4, type: 3}
@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titanClass: {fileID: 703570509}
-  switchSceneClass: {fileID: 0}
+  switchSceneClass: {fileID: 155661545}
 --- !u!114 &703570509 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -3312504294006450499, guid: 230334260cf8396499d0b516c7dfa289, type: 3}
@@ -535,7 +535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titanClass: {fileID: 761325625}
-  switchSceneClass: {fileID: 0}
+  switchSceneClass: {fileID: 155661545}
 --- !u!114 &761325625 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 946035251878428168, guid: 33d469dd47ae4c14ab537e8d079a1714, type: 3}
@@ -570,7 +570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titanClass: {fileID: 974732061}
-  switchSceneClass: {fileID: 0}
+  switchSceneClass: {fileID: 155661545}
 --- !u!114 &974732061 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -7711263264660248746, guid: 936e18a836a43fc4996c70f039da1dad, type: 3}
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titanClass: {fileID: 1196961105}
-  switchSceneClass: {fileID: 0}
+  switchSceneClass: {fileID: 155661545}
 --- !u!114 &1196961105 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2642199993874202431, guid: ffd75c3e12ad0a54cbc9b334569b4053, type: 3}
@@ -841,7 +841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titanClass: {fileID: 1241867819}
-  switchSceneClass: {fileID: 0}
+  switchSceneClass: {fileID: 155661545}
 --- !u!114 &1241867819 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7391399599065446922, guid: 31e4ce2b6604a214297d060f01232101, type: 3}
@@ -1053,7 +1053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titanClass: {fileID: 1965462202}
-  switchSceneClass: {fileID: 0}
+  switchSceneClass: {fileID: 155661545}
 --- !u!114 &1965462202 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -2315289063733096803, guid: 630a86660d3a85a429fe81acdfe84272, type: 3}

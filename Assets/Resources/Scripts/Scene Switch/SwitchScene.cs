@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class SwitchScene : MonoBehaviour
 {
     public int[] partyCode;
+    public int codeIndex;
 
     [SerializeField] Button startButton;
     [SerializeField] Button customizeButton;
@@ -14,6 +15,7 @@ public class SwitchScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        codeIndex = 0;
         if (startButton != null)
         {
             startButton.onClick.AddListener(delegate { SceneManager.LoadScene("Instantiation"); });
