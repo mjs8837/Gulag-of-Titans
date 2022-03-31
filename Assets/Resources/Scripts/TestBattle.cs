@@ -34,7 +34,6 @@ public class TestBattle : MonoBehaviour
         partyClass.maxSwaps = 2;
         partyClass.currentSwaps = partyClass.maxSwaps;
         partyClass.UpdateCounter();
-        
     }
 
     private void Update()
@@ -71,9 +70,6 @@ public class TestBattle : MonoBehaviour
 
     public void Turn()
     {
-       
-        
-        
         // Beginning Phase
         // Activates enemy's beginning of turn ability (if applicable)
         enemy.OnBeginTurn(activeParty, enemy);

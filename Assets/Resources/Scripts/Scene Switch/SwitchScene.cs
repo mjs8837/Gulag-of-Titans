@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour
 {
-    public int[] partyCode;
+    public int[] partyCodeScene;
     public int codeIndex;
 
     [SerializeField] Button startButton;

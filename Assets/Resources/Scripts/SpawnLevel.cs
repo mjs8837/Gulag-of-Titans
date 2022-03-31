@@ -33,12 +33,12 @@ public class SpawnLevel : MonoBehaviour
     // Battles script variables
     public TestBattle battleScript;
 
-    public int[] partyCode;
+    private int[] partyCode = SelectTitan.partyCodeMaster;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (partyCode.Length < 7)
+        if (partyCode == null)
         {
             partyCode = new int[] { 3, 4, 5, 6, 7, 1, 2 };
         }
@@ -46,8 +46,6 @@ public class SpawnLevel : MonoBehaviour
         SpawnAllyTitans();
         SpawnEnemyTitan();
         SetUpBattle();
-
-        
     }
 
     // Spawns landing spots and adds them to an accessible list
