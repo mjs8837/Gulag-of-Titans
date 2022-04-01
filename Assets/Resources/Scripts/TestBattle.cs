@@ -290,10 +290,10 @@ public class TestBattle : MonoBehaviour
         endScreen.transform.position = Vector3.zero;
         battling = false;
 
-        Invoke("WinBattleSceneChange", 2);
+        Invoke("BattleSceneChange", 2);
     }
 
-    private void WinBattleSceneChange()
+    private void BattleSceneChange()
     {
         SceneManager.LoadScene("Map");
     }
@@ -320,5 +320,7 @@ public class TestBattle : MonoBehaviour
         endScreenText.text = "You Lose!";
         endScreen.transform.position = Vector3.zero;
         battling = false;
+
+        Invoke("BattleSceneChange", 2);
     }
 }
