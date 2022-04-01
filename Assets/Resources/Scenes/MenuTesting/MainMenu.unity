@@ -345,7 +345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6615708267971946837, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
       propertyPath: m_Name
-      value: Instantiation
+      value: Map
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}

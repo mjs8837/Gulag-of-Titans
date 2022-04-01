@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class TestBattle : MonoBehaviour
@@ -287,6 +289,13 @@ public class TestBattle : MonoBehaviour
         endScreenText.text = "You Win!";
         endScreen.transform.position = Vector3.zero;
         battling = false;
+
+        Invoke("WinBattleSceneChange", 2);
+    }
+
+    private void WinBattleSceneChange()
+    {
+        SceneManager.LoadScene("Map");
     }
 
     // Checks if there are any party members still in the array
