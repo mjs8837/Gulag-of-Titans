@@ -21,8 +21,15 @@ public class SwitchScene : MonoBehaviour
         
     }
 
-    public void Test()
+    public void RemoveTitan()
     {
-
+        if (codeIndex >= 0 && codeIndex < 8)
+        {
+            codeIndex--;
+            if (codeIndex < 0)
+            {
+                codeIndex = 0;
+            }
+        }
     }
 }
