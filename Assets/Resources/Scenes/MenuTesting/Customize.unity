@@ -268,6 +268,15 @@ MonoBehaviour:
   - {fileID: 4856761127137618230, guid: 936e18a836a43fc4996c70f039da1dad, type: 3}
   - {fileID: 860696246504197254, guid: 31e4ce2b6604a214297d060f01232101, type: 3}
   - {fileID: 3066878145884210405, guid: 630a86660d3a85a429fe81acdfe84272, type: 3}
+  shownTitans:
+  - {fileID: 329378339}
+  - {fileID: 418019317}
+  - {fileID: 1196961105}
+  - {fileID: 703570509}
+  - {fileID: 761325625}
+  - {fileID: 974732061}
+  - {fileID: 1241867819}
+  - {fileID: 1965462202}
   selectedTitans: []
   slotIndexer: 0
 --- !u!1 &167853472
