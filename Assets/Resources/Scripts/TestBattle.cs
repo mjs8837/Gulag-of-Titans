@@ -53,14 +53,9 @@ public class TestBattle : MonoBehaviour
             }
 
             // Pushes battle forward
-            if (Input.GetKeyUp(KeyCode.M) && battling)
+            if (Input.GetKeyUp(KeyCode.R) && battling)
             {
                 Turn();
-            }
-            // Switches states
-            if (Input.GetKeyUp(KeyCode.R))
-            {
-                SwitchState();
             }
             // Manually unlocks party
             if (Input.GetKeyUp(KeyCode.L))
