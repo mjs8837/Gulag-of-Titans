@@ -10,7 +10,6 @@ public class Goblin : Titan
         damage = 2;
         health = 3;
         totalHealth = 3;
-        stamina = 2;
         titanName = "Goblin";
         titanIndex = 2;
         abilityDescription = "IT HAS A KNIFE GET DOWN!";

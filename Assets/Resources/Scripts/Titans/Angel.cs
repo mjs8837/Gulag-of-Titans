@@ -12,7 +12,6 @@ public class Angel : Titan
         damage = 4.0f;
         health = 1.0f;
         totalHealth = 1.0f;
-        stamina = 4.0f;
         firstHitTaken = false;
         titanName = "Angel";
         titanIndex = 0;

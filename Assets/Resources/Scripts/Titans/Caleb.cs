@@ -10,7 +10,6 @@ public class Caleb : Titan
         damage = 0.0f;
         health = 5.0f;
         totalHealth = 5.0f;
-        stamina = 6.0f;
         titanName = "Caleb";
         titanIndex = 1;
         abilityDescription = "When I take damage, I gain +2|+0.";

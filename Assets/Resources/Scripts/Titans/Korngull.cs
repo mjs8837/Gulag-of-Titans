@@ -10,7 +10,6 @@ public class Korngull : Titan
         damage = 4.0f;
         health = 2.0f;
         totalHealth = 2.0f;
-        stamina = 3.0f;
         titanName = "Korngull";
         titanIndex = 3;
         abilityDescription = "When I die, deal 5 to the enemy titan.";
