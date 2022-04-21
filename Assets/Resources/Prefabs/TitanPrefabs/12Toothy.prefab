@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xBound: 3
-  yBound: -4.5
+  yBound: 2.5
   isBound: 0
   landingSpots: []
   partyClass: {fileID: 0}
@@ -148,6 +148,7 @@ MonoBehaviour:
   health: 0
   totalHealth: 0
   damage: 0
+  poisonStack: 0
   isEnemy: 0
   titanPosition: 0
   titanIndex: 0

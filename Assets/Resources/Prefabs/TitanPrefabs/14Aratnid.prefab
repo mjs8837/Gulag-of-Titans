@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xBound: 3
-  yBound: -4.5
+  yBound: 2.5
   isBound: 0
   landingSpots: []
   partyClass: {fileID: 0}
