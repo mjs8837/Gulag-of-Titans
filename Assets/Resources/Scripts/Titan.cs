@@ -13,6 +13,7 @@ public class Titan : MonoBehaviour
     public float health;
     public float totalHealth;
     public float damage;
+    public float poisonStack;
     public bool isEnemy;
     public int titanPosition;
     public int titanIndex;
@@ -142,10 +143,8 @@ public class Titan : MonoBehaviour
 
     public virtual void OnEndTurn(List<Titan> party, Titan enemy)
     {
-        if (!isEnemy)
-        {
-            //stamina -= 1;
-        }
+        health -= poisonStack;
+        poisonStack -= 1;
     }
 
     public virtual void OnDeath(List<Titan> party, Titan enemy)
