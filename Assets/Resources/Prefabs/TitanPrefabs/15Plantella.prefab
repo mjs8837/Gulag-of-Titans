@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 1270906348420192137}
   - component: {fileID: 7381215633756356190}
   - component: {fileID: 8963295515502011986}
+  - component: {fileID: 4890033361902102081}
   - component: {fileID: -8161942739655128329}
   m_Layer: 0
   m_Name: 15Plantella
@@ -559,8 +560,23 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   partyClass: {fileID: 0}
-  titanClass: {fileID: 0}
+  titanClass: {fileID: -8161942739655128329}
   dragPosition: 0
+--- !u!114 &4890033361902102081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6911655212622934552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3ac329ce348d54c8fbc335448e5c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titanClass: {fileID: 0}
+  descriptionDisplay: {fileID: 0}
+  holder: {fileID: 0}
 --- !u!114 &-8161942739655128329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,6 +602,7 @@ MonoBehaviour:
   attackUI: {fileID: 6380321366187405070}
   healthUI: {fileID: 6084983325794903393}
   hurtUI: {fileID: 4808663862904345968, guid: 60559620cacefd84fb6b48ef4bc85a49, type: 3}
+  hurtNumberList: []
   sprite: {fileID: 1270906348420192137}
   hurt: 0
 --- !u!1 &7463768813934595198

@@ -180,8 +180,6 @@ public class SpawnLevel : MonoBehaviour
 
 
         }
-
-
     }
 
     // Update is called once per frame

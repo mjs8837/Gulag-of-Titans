@@ -20,6 +20,7 @@ public class Titan : MonoBehaviour
     public TextMeshPro attackUI;
     public TextMeshPro healthUI;
     public TextMeshPro hurtUI;
+    public TextMeshPro[] hurtNumberList;
 
     public SpriteRenderer sprite;
     public bool hurt;
@@ -111,23 +112,21 @@ public class Titan : MonoBehaviour
     // Creating a parent health function for child classes that can't be overridden, but can be called
     public virtual void ChangeHealth(float healthChange, Titan target)
     {
+        if (healthChange < 0)
+        {
+            hurtUI.color = Color.green;
+            hurtUI.text = "+" + Mathf.Abs(healthChange);
 
+            //hurtNumberList[2] = Instantiate(hurtUI, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
+            //StartCoroutine(RemoveNumber(hurtNumberList[1]));
+        }
+        else
+        {
+            hurtUI.color = Color.red;
+            hurtUI.text = "-" + Mathf.Abs(healthChange);
 
-            if (healthChange < 0)
-            {
-                hurtUI.color = Color.green;
-                hurtUI.text = "+" + Mathf.Abs(healthChange);
-                Instantiate(hurtUI, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
-
-            }
-            else
-            {
-                hurtUI.color = Color.red;
-                hurtUI.text = "-" + Mathf.Abs(healthChange);
-                Instantiate(hurtUI, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
-            }
-
-        
+            //hurtNumberList[1] = Instantiate(hurtUI, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
+        }
 
         target.health -= healthChange;
         if (target.health > 0)
@@ -200,5 +199,11 @@ public class Titan : MonoBehaviour
         yield return new WaitForSeconds(0.15f);
         target.sprite.color = Color.white;
         hurt = false;
+    }
+
+    public IEnumerator RemoveNumber(TextMeshPro number)
+    {
+        yield return new WaitForSeconds(0.4f);
+        Destroy(number);
     }
 }

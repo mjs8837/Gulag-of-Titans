@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8939060558094011813}
   - component: {fileID: 4538313148515108323}
-  - component: {fileID: 7765739126360953199}
-  - component: {fileID: 6456464513694051273}
   - component: {fileID: 3726657089324417616}
+  - component: {fileID: 6456464513694051273}
+  - component: {fileID: 8336905731742924672}
+  - component: {fileID: 7765739126360953199}
   m_Layer: 0
   m_Name: 9Beholder
   m_TagString: Untagged
@@ -87,52 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7765739126360953199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997486819048972009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf0ff2620dcb9164ea9f2a48f75e6365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titanName: 
-  abilityDescription: 
-  abilityName: 
-  health: 0
-  totalHealth: 0
-  damage: 0
-  poisonStack: 0
-  isEnemy: 0
-  titanPosition: 0
-  titanIndex: 0
-  attackUI: {fileID: 1043747253380557865}
-  healthUI: {fileID: 5978488167187124204}
-  hurtUI: {fileID: 4808663862904345968, guid: 60559620cacefd84fb6b48ef4bc85a49, type: 3}
-  sprite: {fileID: 4538313148515108323}
-  hurt: 0
---- !u!114 &6456464513694051273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997486819048972009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ec2820d626edb9419389a6654e8bef0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xBound: 3
-  yBound: 2.5
-  isBound: 0
-  landingSpots: []
-  partyClass: {fileID: 0}
-  titanClass: {fileID: 0}
-  dragPosition: 0
 --- !u!61 &3726657089324417616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,6 +114,74 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.4, y: 6.4}
   m_EdgeRadius: 0
+--- !u!114 &6456464513694051273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997486819048972009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec2820d626edb9419389a6654e8bef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xBound: 3
+  yBound: 2.5
+  isBound: 0
+  landingSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  partyClass: {fileID: 0}
+  titanClass: {fileID: 7765739126360953199}
+  dragPosition: 0
+--- !u!114 &8336905731742924672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997486819048972009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3ac329ce348d54c8fbc335448e5c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titanClass: {fileID: 0}
+  descriptionDisplay: {fileID: 0}
+  holder: {fileID: 0}
+--- !u!114 &7765739126360953199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997486819048972009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0ff2620dcb9164ea9f2a48f75e6365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titanName: 
+  abilityDescription: 
+  abilityName: 
+  health: 0
+  totalHealth: 0
+  damage: 0
+  poisonStack: 0
+  isEnemy: 0
+  titanPosition: 0
+  titanIndex: 0
+  attackUI: {fileID: 1043747253380557865}
+  healthUI: {fileID: 5978488167187124204}
+  hurtUI: {fileID: 4808663862904345968, guid: 60559620cacefd84fb6b48ef4bc85a49, type: 3}
+  hurtNumberList: []
+  sprite: {fileID: 4538313148515108323}
+  hurt: 0
 --- !u!1 &5635481559087065756
 GameObject:
   m_ObjectHideFlags: 0

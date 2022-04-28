@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 8535699852114604857}
   - component: {fileID: 5513971612395857254}
   - component: {fileID: 5438828100973840378}
+  - component: {fileID: 6575867156653774429}
   - component: {fileID: 1760772369143859482}
   m_Layer: 0
   m_Name: 10Slime
@@ -298,10 +299,31 @@ MonoBehaviour:
   xBound: 3
   yBound: 2.5
   isBound: 0
-  landingSpots: []
+  landingSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   partyClass: {fileID: 0}
-  titanClass: {fileID: 0}
+  titanClass: {fileID: 1760772369143859482}
   dragPosition: 0
+--- !u!114 &6575867156653774429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4593447473444762952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3ac329ce348d54c8fbc335448e5c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titanClass: {fileID: 0}
+  descriptionDisplay: {fileID: 0}
+  holder: {fileID: 0}
 --- !u!114 &1760772369143859482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,6 +349,7 @@ MonoBehaviour:
   attackUI: {fileID: 4639820941547664064}
   healthUI: {fileID: 3520056601970904575}
   hurtUI: {fileID: 4808663862904345968, guid: 60559620cacefd84fb6b48ef4bc85a49, type: 3}
+  hurtNumberList: []
   sprite: {fileID: 8535699852114604857}
   hurt: 0
 --- !u!1 &6934430779470817945

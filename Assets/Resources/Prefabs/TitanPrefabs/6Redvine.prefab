@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7045469421929740446}
   - component: {fileID: 280011813863586174}
   - component: {fileID: 1124639055490115430}
-  - component: {fileID: 7391399599065446922}
   - component: {fileID: 3446373333197295513}
+  - component: {fileID: 7391399599065446922}
   m_Layer: 0
   m_Name: 6Redvine
   m_TagString: Untagged
@@ -139,6 +139,21 @@ MonoBehaviour:
   partyClass: {fileID: 0}
   titanClass: {fileID: 7391399599065446922}
   dragPosition: 0
+--- !u!114 &3446373333197295513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860696246504197254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3ac329ce348d54c8fbc335448e5c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titanClass: {fileID: 0}
+  descriptionDisplay: {fileID: 0}
+  holder: {fileID: 0}
 --- !u!114 &7391399599065446922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,23 +179,9 @@ MonoBehaviour:
   attackUI: {fileID: 9205404652027400204}
   healthUI: {fileID: 6785455556518728302}
   hurtUI: {fileID: 4808663862904345968, guid: 60559620cacefd84fb6b48ef4bc85a49, type: 3}
+  hurtNumberList: []
   sprite: {fileID: 7045469421929740446}
   hurt: 0
---- !u!114 &3446373333197295513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860696246504197254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c3ac329ce348d54c8fbc335448e5c2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titanClass: {fileID: 0}
-  descriptionDisplay: {fileID: 0}
-  holder: {fileID: 0}
 --- !u!1 &1823724303115181058
 GameObject:
   m_ObjectHideFlags: 0

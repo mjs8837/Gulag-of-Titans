@@ -42,8 +42,8 @@ GameObject:
   - component: {fileID: 8198000812940433781}
   - component: {fileID: 8198000812940433782}
   - component: {fileID: 4599772836939647398}
-  - component: {fileID: 3566440070787428148}
   - component: {fileID: -5220666858627816277}
+  - component: {fileID: 6227983164972901525}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -97,6 +97,7 @@ MonoBehaviour:
   - {fileID: 3415302621354543446, guid: 7aa9173843a7b1b4d81e5af28e863e7a, type: 3}
   - {fileID: 7765739126360953199, guid: 14788c79197033d44b14e075084a7cb7, type: 3}
   - {fileID: 1760772369143859482, guid: d476246b2ac6a2c4684b99a03ed552f4, type: 3}
+  - {fileID: 1172834854167296751, guid: 8e4ec316f72875b40ae2d878cba295d2, type: 3}
   - {fileID: -8740199931725069661, guid: d1af81cef00f5e645a503e0fc5312953, type: 3}
   - {fileID: 2198587532545540222, guid: 2972f1ee4707ec84199681ba98287da4, type: 3}
   - {fileID: -3018227745914893752, guid: 112e4c35f26f1e744a5a8b913c010b0c, type: 3}
@@ -144,19 +145,6 @@ MonoBehaviour:
   endScreen: {fileID: 4658132860978646004}
   endScreenText: {fileID: 4658132860978646005}
   firstTurn: 0
---- !u!114 &3566440070787428148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8198000812940433771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f6ab8467dda6bc458d3c64d3408aefc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  woodsBackground: {fileID: -5220666858627816277}
 --- !u!82 &-5220666858627816277
 AudioSource:
   m_ObjectHideFlags: 0
@@ -253,6 +241,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6227983164972901525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8198000812940433771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6ab8467dda6bc458d3c64d3408aefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: -5220666858627816277}
 --- !u!1 &8198000813053344535
 GameObject:
   m_ObjectHideFlags: 0

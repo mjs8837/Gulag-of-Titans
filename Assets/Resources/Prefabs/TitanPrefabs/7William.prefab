@@ -95,8 +95,8 @@ GameObject:
   - component: {fileID: 1429761668679862106}
   - component: {fileID: 4294926912013669307}
   - component: {fileID: 8172425876180667304}
-  - component: {fileID: -2315289063733096803}
   - component: {fileID: 5908876529876439439}
+  - component: {fileID: -2315289063733096803}
   m_Layer: 0
   m_Name: 7William
   m_TagString: Untagged
@@ -222,6 +222,21 @@ MonoBehaviour:
   partyClass: {fileID: 0}
   titanClass: {fileID: -2315289063733096803}
   dragPosition: 0
+--- !u!114 &5908876529876439439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3066878145884210405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3ac329ce348d54c8fbc335448e5c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titanClass: {fileID: 0}
+  descriptionDisplay: {fileID: 0}
+  holder: {fileID: 0}
 --- !u!114 &-2315289063733096803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,23 +262,9 @@ MonoBehaviour:
   attackUI: {fileID: 3909917178268007528}
   healthUI: {fileID: 2168753432910218232}
   hurtUI: {fileID: 4808663862904345968, guid: 60559620cacefd84fb6b48ef4bc85a49, type: 3}
+  hurtNumberList: []
   sprite: {fileID: 1429761668679862106}
   hurt: 0
---- !u!114 &5908876529876439439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3066878145884210405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c3ac329ce348d54c8fbc335448e5c2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titanClass: {fileID: 0}
-  descriptionDisplay: {fileID: 0}
-  holder: {fileID: 0}
 --- !u!1 &4824456457422670021
 GameObject:
   m_ObjectHideFlags: 0

@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 8524594748246037421}
   - component: {fileID: 6718821202504012222}
   - component: {fileID: 3549952024306043888}
+  - component: {fileID: -5674232532728325187}
   - component: {fileID: -8740199931725069661}
   m_Layer: 0
   m_Name: 12Toothy
@@ -381,10 +382,31 @@ MonoBehaviour:
   xBound: 3
   yBound: 2.5
   isBound: 0
-  landingSpots: []
+  landingSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   partyClass: {fileID: 0}
-  titanClass: {fileID: 0}
+  titanClass: {fileID: -8740199931725069661}
   dragPosition: 0
+--- !u!114 &-5674232532728325187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4843815363870199091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3ac329ce348d54c8fbc335448e5c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titanClass: {fileID: 0}
+  descriptionDisplay: {fileID: 0}
+  holder: {fileID: 0}
 --- !u!114 &-8740199931725069661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,6 +432,7 @@ MonoBehaviour:
   attackUI: {fileID: 7915336590453563253}
   healthUI: {fileID: 8300909495079184371}
   hurtUI: {fileID: 4808663862904345968, guid: 60559620cacefd84fb6b48ef4bc85a49, type: 3}
+  hurtNumberList: []
   sprite: {fileID: 8524594748246037421}
   hurt: 0
 --- !u!1 &5168530933955459865
