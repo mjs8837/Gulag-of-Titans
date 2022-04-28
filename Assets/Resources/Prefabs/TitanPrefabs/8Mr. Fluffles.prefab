@@ -128,6 +128,7 @@ MonoBehaviour:
   titanIndex: 0
   attackUI: {fileID: 0}
   healthUI: {fileID: 0}
+  hurtUI: {fileID: 4808663862904345968, guid: 60559620cacefd84fb6b48ef4bc85a49, type: 3}
   sprite: {fileID: 1813625328152000350}
   hurt: 0
 --- !u!61 &-3832254355573279757
