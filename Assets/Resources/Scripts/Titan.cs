@@ -19,6 +19,8 @@ public class Titan : MonoBehaviour
     public int titanIndex;
     public TextMeshPro attackUI;
     public TextMeshPro healthUI;
+    public TextMeshPro hurtUI;
+
     public SpriteRenderer sprite;
     public bool hurt;
 
@@ -109,6 +111,8 @@ public class Titan : MonoBehaviour
     // Creating a parent health function for child classes that can't be overridden, but can be called
     public virtual void ChangeHealth(float healthChange, Titan target)
     {
+        Instantiate(hurtUI, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+
         target.health -= healthChange;
         if (target.health > 0)
         {
@@ -178,8 +182,8 @@ public class Titan : MonoBehaviour
 
     public virtual void UpdateUI()
     {
-        //attackUI.text = damage.ToString();
-        //healthUI.text = health.ToString();
+       attackUI.text = damage.ToString();
+       healthUI.text = health.ToString();
     }
 
     public IEnumerator MakeWhite(Titan target)
