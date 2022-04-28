@@ -111,7 +111,23 @@ public class Titan : MonoBehaviour
     // Creating a parent health function for child classes that can't be overridden, but can be called
     public virtual void ChangeHealth(float healthChange, Titan target)
     {
-        Instantiate(hurtUI, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+
+
+            if (healthChange < 0)
+            {
+                hurtUI.color = Color.green;
+                hurtUI.text = "+" + Mathf.Abs(healthChange);
+                Instantiate(hurtUI, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
+
+            }
+            else
+            {
+                hurtUI.color = Color.red;
+                hurtUI.text = "-" + Mathf.Abs(healthChange);
+                Instantiate(hurtUI, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
+            }
+
+        
 
         target.health -= healthChange;
         if (target.health > 0)

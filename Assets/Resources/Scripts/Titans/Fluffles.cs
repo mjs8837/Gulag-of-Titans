@@ -53,7 +53,7 @@ public class Fluffles : Titan
 
             if (party[index] != null && index != 3)
             {
-                party[index].health += 3;
+                party[index].ChangeHealth(-3, party[index]);
             }
         }
 
