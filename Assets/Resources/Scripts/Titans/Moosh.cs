@@ -10,7 +10,6 @@ public class Moosh : Titan
         damage = 3.0f;
         health = 4.0f;
         totalHealth = 4.0f;
-        stamina = 3.0f;
         titanName = "Moosh";
         titanIndex = 5;
         abilityDescription = "When I die give the unit behind me +2|+2.";
@@ -64,7 +63,7 @@ public class Moosh : Titan
         {
             int index = party.IndexOf(this);
 
-            if (index < 2 || index < 5)
+            if (index < 2 || index <= 5)
             {
                 index += 1;
             }

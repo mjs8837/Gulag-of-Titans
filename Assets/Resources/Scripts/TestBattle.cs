@@ -91,12 +91,10 @@ public class TestBattle : MonoBehaviour
         if (activeParty[0] != null)
         {
             activeParty[0].Attack(enemy, activeParty[0].damage);
-            activeParty[0].stamina--;
         }
         if (activeParty[3] != null)
         {
             activeParty[3].Attack(enemy, activeParty[3].damage);
-            activeParty[3].stamina--;
         }
         // Death Phase
         // Checks if the enemy is dead and ends the battle if so

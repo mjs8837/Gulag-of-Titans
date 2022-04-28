@@ -2,25 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Redvine : Titan
+public class Slime : Titan
 {
-    // Start is called before the first frame update
+    bool firstDeath;
+
     void Start()
     {
-        damage = 2.0f;
-        health = 3.0f;
-        totalHealth = 3.0f;
-        titanName = "Redvine";
-        titanIndex = 6;
-        abilityDescription = "When I appear, deal 2 damage to the enemy titan.";
-        abilityName = "Caress";
+        damage = 4.0f;
+        health = 4.0f;
+        totalHealth = 4.0f;
+        titanName = "Slime";
+        titanIndex = 10;
+        abilityDescription = "When I die, revive me with half my original health and attack.";
+        abilityName = "Split";
+        firstDeath = false;
 
         if (isEnemy)
         {
             abilityDescription = "No ability for now.";
             abilityName = "No ability for now";
-            health = 20.0f;
-            totalHealth = 20.0f;
+            health = 22.0f;
+            totalHealth = 22.0f;
         }
 
         UpdateUI();
@@ -38,12 +40,7 @@ public class Redvine : Titan
 
     public override void OnAppear(List<Titan> party, Titan enemy)
     {
-       if (!isEnemy)
-       {
-           Attack(enemy, 2.0f);
-       }
-
-       base.OnAppear(party, enemy);
+        base.OnAppear(party, enemy);
     }
 
     public override void OnBeginTurn(List<Titan> party, Titan enemy)
@@ -64,5 +61,23 @@ public class Redvine : Titan
     public override void OnDeath(List<Titan> party, Titan enemy)
     {
         base.OnDeath(party, enemy);
+    }
+
+    public override bool DeathCheck(List<Titan> party, Titan enemy)
+    {
+        if (health <= 0.0f && !firstDeath)
+        {
+            firstDeath = true;
+            health = 2.0f;
+            totalHealth = 2.0f;
+            damage = 2.0f;
+        }
+
+        if (firstDeath)
+        {
+            return base.DeathCheck(party, enemy);
+        }
+
+        return false;
     }
 }

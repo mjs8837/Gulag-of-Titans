@@ -10,7 +10,6 @@ public class William : Titan
         damage = 5.0f;
         health = 5.0f;
         totalHealth = 5.0f;
-        stamina = 4.0f;
         titanName = "William";
         titanIndex = 7;
         abilityDescription = "At the start of the round, I gain -1|-1.";

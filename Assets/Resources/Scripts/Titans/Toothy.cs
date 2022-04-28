@@ -2,25 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Redvine : Titan
+public class Toothy : Titan
 {
-    // Start is called before the first frame update
     void Start()
     {
         damage = 2.0f;
-        health = 3.0f;
-        totalHealth = 3.0f;
-        titanName = "Redvine";
-        titanIndex = 6;
-        abilityDescription = "When I appear, deal 2 damage to the enemy titan.";
-        abilityName = "Caress";
+        health = 5.0f;
+        totalHealth = 5.0f;
+        titanName = "Toothy";
+        titanIndex = 12;
+        abilityDescription = "When I deal damage, heal me for the damage dealt";
+        abilityName = "Ravenous";
 
         if (isEnemy)
         {
             abilityDescription = "No ability for now.";
             abilityName = "No ability for now";
-            health = 20.0f;
-            totalHealth = 20.0f;
+            health = 30.0f;
+            totalHealth = 30.0f;
         }
 
         UpdateUI();
@@ -28,6 +27,15 @@ public class Redvine : Titan
 
     public override void Attack(Titan enemy, float damage)
     {
+        if ((health + damage) <= totalHealth)
+        {
+            health += damage;
+        }
+        else
+        {
+            health = totalHealth;
+        }
+
         base.Attack(enemy, damage);
     }
 
@@ -38,12 +46,7 @@ public class Redvine : Titan
 
     public override void OnAppear(List<Titan> party, Titan enemy)
     {
-       if (!isEnemy)
-       {
-           Attack(enemy, 2.0f);
-       }
-
-       base.OnAppear(party, enemy);
+        base.OnAppear(party, enemy);
     }
 
     public override void OnBeginTurn(List<Titan> party, Titan enemy)

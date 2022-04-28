@@ -13,12 +13,11 @@ public class Titan : MonoBehaviour
     public float health;
     public float totalHealth;
     public float damage;
-    public float stamina;
+    public float poisonStack;
     public bool isEnemy;
     public int titanPosition;
     public int titanIndex;
     public TextMeshPro attackUI;
-    public TextMeshPro staminaUI;
     public TextMeshPro healthUI;
     Sprite[] ui;
 
@@ -113,10 +112,10 @@ public class Titan : MonoBehaviour
     }
 
     // Checks if the titan has died
-    public bool DeathCheck(List<Titan> party, Titan enemy)
+    public virtual bool DeathCheck(List<Titan> party, Titan enemy)
     {
         // If their health or stamina is empty, triggers their on death effects (if applicable) then destroys them and returns true
-        if (health <= 0 || stamina <= 0)
+        if (health <= 0)
         {
             Destroy(healthUI);
             OnDeath(party, enemy);
@@ -144,10 +143,8 @@ public class Titan : MonoBehaviour
 
     public virtual void OnEndTurn(List<Titan> party, Titan enemy)
     {
-        if (!isEnemy)
-        {
-            //stamina -= 1;
-        }
+        health -= poisonStack;
+        poisonStack -= 1;
     }
 
     public virtual void OnDeath(List<Titan> party, Titan enemy)
@@ -158,7 +155,6 @@ public class Titan : MonoBehaviour
     public virtual void UpdateUI()
     {
         attackUI.text = damage.ToString();
-        staminaUI.text = stamina.ToString();
         healthUI.text = health.ToString();
     }
 }

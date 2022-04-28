@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Redvine : Titan
+public class Carrot : Titan
 {
-    // Start is called before the first frame update
     void Start()
     {
-        damage = 2.0f;
-        health = 3.0f;
-        totalHealth = 3.0f;
-        titanName = "Redvine";
-        titanIndex = 6;
-        abilityDescription = "When I appear, deal 2 damage to the enemy titan.";
-        abilityName = "Caress";
+        damage = 3.0f;
+        health = 1.0f;
+        totalHealth = 1.0f;
+        titanName = "Carrot";
+        titanIndex = 16;
+        abilityDescription = "When I die, add 2 stacks of poison to the enemy.";
+        abilityName = "Food Poisoning";
 
         if (isEnemy)
         {
@@ -28,6 +27,7 @@ public class Redvine : Titan
 
     public override void Attack(Titan enemy, float damage)
     {
+        enemy.poisonStack += 1;
         base.Attack(enemy, damage);
     }
 
@@ -38,12 +38,7 @@ public class Redvine : Titan
 
     public override void OnAppear(List<Titan> party, Titan enemy)
     {
-       if (!isEnemy)
-       {
-           Attack(enemy, 2.0f);
-       }
-
-       base.OnAppear(party, enemy);
+        base.OnAppear(party, enemy);
     }
 
     public override void OnBeginTurn(List<Titan> party, Titan enemy)
@@ -63,6 +58,7 @@ public class Redvine : Titan
 
     public override void OnDeath(List<Titan> party, Titan enemy)
     {
+        enemy.poisonStack += 2;
         base.OnDeath(party, enemy);
     }
 }

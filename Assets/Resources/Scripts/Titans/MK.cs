@@ -7,13 +7,12 @@ public class MK : Titan
     // Start is called before the first frame update
     void Start()
     {
-        damage = 2.0f;
-        health = 3.0f;
-        totalHealth = 3.0f;
-        stamina = 2.0f;
+        damage = 3.0f;
+        health = 2.0f;
+        totalHealth = 2.0f;
         titanName = "Mk 3";
         titanIndex = 4;
-        abilityDescription = "When I appear, give the enemy titan -1|-0.";
+        abilityDescription = "If the unit in front of me dies, I attack the enemy.";
         abilityName = "Warden";
 
         if (isEnemy)
@@ -40,11 +39,6 @@ public class MK : Titan
 
     public override void OnAppear(List<Titan> party, Titan enemy)
     {
-        if (!isEnemy)
-        {
-            enemy.damage -= 1.0f;
-        }
-
         base.OnAppear(party, enemy);
     }
 
@@ -60,6 +54,16 @@ public class MK : Titan
 
     public override void OnEndTurn(List<Titan> party, Titan enemy)
     {
+        int index = party.IndexOf(this);
+
+        if (index != 0 && index != 3)
+        {
+            if (party[index - 1].health <= 0)
+            {
+                Attack(enemy, damage);
+            }
+        }
+
         base.OnEndTurn(party, enemy);
     }
 

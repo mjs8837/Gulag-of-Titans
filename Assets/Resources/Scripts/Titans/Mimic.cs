@@ -2,25 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Redvine : Titan
+public class Mimic : Titan
 {
-    // Start is called before the first frame update
+    bool firstHitTaken;
+
     void Start()
     {
-        damage = 2.0f;
-        health = 3.0f;
-        totalHealth = 3.0f;
-        titanName = "Redvine";
-        titanIndex = 6;
-        abilityDescription = "When I appear, deal 2 damage to the enemy titan.";
-        abilityName = "Caress";
+        damage = 3.0f;
+        health = 2.0f;
+        totalHealth = 2.0f;
+        titanName = "Mimic";
+        titanIndex = 11;
+        abilityDescription = "The first time I take damage, I attack the enemy";
+        abilityName = "Surprise!";
+        firstHitTaken = false;
 
         if (isEnemy)
         {
             abilityDescription = "No ability for now.";
             abilityName = "No ability for now";
-            health = 20.0f;
-            totalHealth = 20.0f;
+            health = 30.0f;
+            totalHealth = 30.0f;
         }
 
         UpdateUI();
@@ -38,12 +40,7 @@ public class Redvine : Titan
 
     public override void OnAppear(List<Titan> party, Titan enemy)
     {
-       if (!isEnemy)
-       {
-           Attack(enemy, 2.0f);
-       }
-
-       base.OnAppear(party, enemy);
+        base.OnAppear(party, enemy);
     }
 
     public override void OnBeginTurn(List<Titan> party, Titan enemy)
@@ -53,6 +50,16 @@ public class Redvine : Titan
 
     public override void OnHit(List<Titan> party, Titan enemy)
     {
+        if (!isEnemy)
+        {
+            if (!firstHitTaken)
+            {
+                Attack(enemy, damage);         
+            }
+
+            base.OnHit(party, enemy);
+        }
+
         base.OnHit(party, enemy);
     }
 
