@@ -291,6 +291,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8198000812940433780}
     m_Modifications:
+    - target: {fileID: 3659801013278159225, guid: c590d1fc529b86c4eb9662f170a70a69, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fd412947c3165a247936c218102f52a2, type: 2}
+    - target: {fileID: 3659801013278159225, guid: c590d1fc529b86c4eb9662f170a70a69, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4298825883663360008, guid: fd412947c3165a247936c218102f52a2, type: 2}
+    - target: {fileID: 3659801013278159230, guid: c590d1fc529b86c4eb9662f170a70a69, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 4298825883663360008, guid: fd412947c3165a247936c218102f52a2, type: 2}
     - target: {fileID: 3659801013663260004, guid: c590d1fc529b86c4eb9662f170a70a69, type: 3}
       propertyPath: m_Name
       value: Swap UI
@@ -364,6 +376,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8198000812940433780}
     m_Modifications:
+    - target: {fileID: 8041710652648757452, guid: 6696a33a6b66f5e48ba06c132ec71f71, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 4298825883663360008, guid: fd412947c3165a247936c218102f52a2, type: 2}
     - target: {fileID: 8041710652648757453, guid: 6696a33a6b66f5e48ba06c132ec71f71, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -452,6 +468,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: End Screen
       objectReference: {fileID: 0}
+    - target: {fileID: 8041710652648757455, guid: 6696a33a6b66f5e48ba06c132ec71f71, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fd412947c3165a247936c218102f52a2, type: 2}
+    - target: {fileID: 8041710652648757455, guid: 6696a33a6b66f5e48ba06c132ec71f71, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4298825883663360008, guid: fd412947c3165a247936c218102f52a2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6696a33a6b66f5e48ba06c132ec71f71, type: 3}
 --- !u!1 &4658132860978646004 stripped
@@ -566,6 +590,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3072160287590738009, guid: 17d85c1c88fed0644ac62264f5af7151, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 4298825883663360008, guid: fd412947c3165a247936c218102f52a2, type: 2}
+    - target: {fileID: 3072160287590738022, guid: 17d85c1c88fed0644ac62264f5af7151, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fd412947c3165a247936c218102f52a2, type: 2}
+    - target: {fileID: 3072160287590738022, guid: 17d85c1c88fed0644ac62264f5af7151, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4298825883663360008, guid: fd412947c3165a247936c218102f52a2, type: 2}
     - target: {fileID: 3072160287590738023, guid: 17d85c1c88fed0644ac62264f5af7151, type: 3}
       propertyPath: m_Name
       value: HoverDescription

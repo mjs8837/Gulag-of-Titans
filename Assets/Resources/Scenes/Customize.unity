@@ -309,6 +309,7 @@ MonoBehaviour:
   sprite: {fileID: 57155530}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!1 &117859029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4593447473444762952, guid: d476246b2ac6a2c4684b99a03ed552f4, type: 3}
@@ -366,6 +367,7 @@ MonoBehaviour:
   sprite: {fileID: 117859034}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!1 &155661544
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,7 +599,7 @@ Transform:
   - {fileID: 1996744168}
   - {fileID: 1100281546}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &222977043
 PrefabInstance:
@@ -833,6 +835,7 @@ MonoBehaviour:
   sprite: {fileID: 329378340}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!114 &329378339 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 997867927053776684, guid: 037a681d799b17546b9c1a3562fbb81f, type: 3}
@@ -849,6 +852,24 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 8336304916211420050, guid: 037a681d799b17546b9c1a3562fbb81f, type: 3}
   m_PrefabInstance: {fileID: 1626061741}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &360761597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6615708267971946837, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+  m_PrefabInstance: {fileID: 1434843547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &360761599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360761597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b780f62762dd11346a3863ab5c06defa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchSceneClass: {fileID: 155661545}
 --- !u!1 &363956744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1048,7 @@ MonoBehaviour:
   sprite: {fileID: 418019318}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!114 &418019317 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -4645389684486154012, guid: da5ff138eb699374294b9a87fef920a4, type: 3}
@@ -1064,15 +1086,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.575567
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0952452
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1263,6 +1285,7 @@ MonoBehaviour:
   sprite: {fileID: 645712044}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!1 &703570505 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2776877008016026983, guid: 230334260cf8396499d0b516c7dfa289, type: 3}
@@ -1289,6 +1312,7 @@ MonoBehaviour:
   sprite: {fileID: 703570510}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!114 &703570509 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -3312504294006450499, guid: 230334260cf8396499d0b516c7dfa289, type: 3}
@@ -1331,6 +1355,7 @@ MonoBehaviour:
   sprite: {fileID: 761325626}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!114 &761325625 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 946035251878428168, guid: 33d469dd47ae4c14ab537e8d079a1714, type: 3}
@@ -1431,7 +1456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3072160287590738008, guid: 17d85c1c88fed0644ac62264f5af7151, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3072160287590738008, guid: 17d85c1c88fed0644ac62264f5af7151, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1532,7 +1557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
       propertyPath: m_LocalScale.x
@@ -1615,6 +1640,7 @@ MonoBehaviour:
   sprite: {fileID: 974732062}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!114 &974732061 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -7711263264660248746, guid: 936e18a836a43fc4996c70f039da1dad, type: 3}
@@ -1758,6 +1784,7 @@ MonoBehaviour:
   sprite: {fileID: 1100281550}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!1 &1100794410 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7924226543299144044, guid: 2972f1ee4707ec84199681ba98287da4, type: 3}
@@ -1795,6 +1822,7 @@ MonoBehaviour:
   sprite: {fileID: 1100794415}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!212 &1100794415 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6699327235811365402, guid: 2972f1ee4707ec84199681ba98287da4, type: 3}
@@ -1911,6 +1939,7 @@ MonoBehaviour:
   sprite: {fileID: 1196961106}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!114 &1196961105 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2642199993874202431, guid: ffd75c3e12ad0a54cbc9b334569b4053, type: 3}
@@ -1962,7 +1991,7 @@ Transform:
   - {fileID: 1929187162}
   - {fileID: 1407701225}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1224507069
 GameObject:
@@ -2073,6 +2102,7 @@ MonoBehaviour:
   sprite: {fileID: 1241867820}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!114 &1241867819 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7391399599065446922, guid: 31e4ce2b6604a214297d060f01232101, type: 3}
@@ -2339,6 +2369,84 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1434843547
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5309164031485093578, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_text
+      value: Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309164031485093578, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_fontSize
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309164031485093578, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990579727465697118, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615708267971946837, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+      propertyPath: m_Name
+      value: Instantiation
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5061341879095266617, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 757a9fbea57def540a6d72ca63c33ce9, type: 3}
 --- !u!1001 &1438491262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2584,6 +2692,7 @@ MonoBehaviour:
   sprite: {fileID: 1775750599}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!212 &1775750599 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6195464990606107019, guid: 8e4ec316f72875b40ae2d878cba295d2, type: 3}
@@ -2630,6 +2739,7 @@ MonoBehaviour:
   sprite: {fileID: 1919584521}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!114 &1919584520 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7765739126360953199, guid: 14788c79197033d44b14e075084a7cb7, type: 3}
@@ -2906,6 +3016,7 @@ MonoBehaviour:
   sprite: {fileID: 1965462203}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!114 &1965462202 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -2315289063733096803, guid: 630a86660d3a85a429fe81acdfe84272, type: 3}
@@ -3029,6 +3140,7 @@ MonoBehaviour:
   sprite: {fileID: 1996744172}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}
 --- !u!212 &1996744172 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1270906348420192137, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
@@ -3337,3 +3449,4 @@ MonoBehaviour:
   sprite: {fileID: 2081451003}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
+  continueButton: {fileID: 0}

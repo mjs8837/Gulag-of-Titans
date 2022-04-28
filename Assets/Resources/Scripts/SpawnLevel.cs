@@ -35,7 +35,7 @@ public class SpawnLevel : MonoBehaviour
 
     public AudioSource backgroundSong;
 
-    private int[] partyCode = SelectTitan.partyCodeMaster;
+    private int[] partyCode = CustomContinue.partyCodeMaster;
     [SerializeField] int enemyIndexCode;
 
     // Start is called before the first frame update

@@ -24,4 +24,14 @@ public class CustomDeleter : MonoBehaviour
         customManagerClass.RemoveFromList();
         switchSceneClass.RemoveTitan();
     }
+
+    private void OnMouseEnter()
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = Color.grey;
+    }
+
+    private void OnMouseExit()
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+    }
 }
