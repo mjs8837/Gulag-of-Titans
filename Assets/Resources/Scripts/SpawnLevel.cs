@@ -33,6 +33,8 @@ public class SpawnLevel : MonoBehaviour
     // Battles script variables
     public TestBattle battleScript;
 
+    public AudioSource backgroundSong;
+
     private int[] partyCode = SelectTitan.partyCodeMaster;
     [SerializeField] int enemyIndexCode;
 
