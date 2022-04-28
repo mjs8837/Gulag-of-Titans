@@ -46,12 +46,14 @@ public class Fluffles : Titan
         {
             int index = party.IndexOf(this);
 
-            if (index != 0 || index != 3)
+            if (index != 0 && index != 3)
             {
                 if (party[index] != null)
                 {
+                    Debug.Log(index);
                     index -= 1;
-                    party[index].ChangeHealth(-3, party[index]);
+                    Debug.Log(index);
+                    party[index].ChangeHealth(-2, party[index]);
                 }                
             }
 
