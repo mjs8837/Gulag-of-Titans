@@ -45,6 +45,16 @@ public class MK : Titan
     public override void OnBeginTurn(List<Titan> party, Titan enemy)
     {
         base.OnBeginTurn(party, enemy);
+        int index = party.IndexOf(this);
+        Debug.Log(index);
+        if (index != 0 && index != 3)
+        {
+            if (party[index - 1].health <= 0)
+            {
+                Debug.Log("hi");
+                Attack(enemy, damage);
+            }
+        }
     }
 
     public override void OnHit(List<Titan> party, Titan enemy)
@@ -54,15 +64,7 @@ public class MK : Titan
 
     public override void OnEndTurn(List<Titan> party, Titan enemy)
     {
-        int index = party.IndexOf(this);
 
-        if (index != 0 && index != 3)
-        {
-            if (party[index - 1].health <= 0)
-            {
-                Attack(enemy, damage);
-            }
-        }
 
         base.OnEndTurn(party, enemy);
     }

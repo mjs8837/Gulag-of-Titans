@@ -40,11 +40,11 @@ public class Titan : MonoBehaviour
     {
         if (party[0] != null)
         {
-            ChangeHealth(damage, party[0]);
+            party[0].ChangeHealth(damage, party[0]);
         }
         if (party[3] != null)
         {
-            ChangeHealth(damage, party[3]);
+            party[3].ChangeHealth(damage, party[3]);
         }
     }
 
@@ -105,13 +105,29 @@ public class Titan : MonoBehaviour
     // Creating a parent function for friendly attacks
     public virtual void Attack(Titan enemy, float damage)
     {
-        ChangeHealth(damage, enemy);
+        enemy.ChangeHealth(damage, enemy);
     }
 
     // Creating a parent health function for child classes that can't be overridden, but can be called
     public virtual void ChangeHealth(float healthChange, Titan target)
     {
-        Instantiate(hurtUI, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+
+
+            if (healthChange < 0)
+            {
+                hurtUI.color = Color.green;
+                hurtUI.text = "+" + Mathf.Abs(healthChange);
+                Instantiate(hurtUI, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
+
+            }
+            else
+            {
+                hurtUI.color = Color.red;
+                hurtUI.text = "-" + Mathf.Abs(healthChange);
+                Instantiate(hurtUI, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
+            }
+
+        
 
         target.health -= healthChange;
         if (target.health > 0)
