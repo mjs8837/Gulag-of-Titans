@@ -834,6 +834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3Korngull
       objectReference: {fileID: 0}
+    - target: {fileID: 2776877008016026983, guid: 230334260cf8396499d0b516c7dfa289, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8282795675127730324, guid: 230334260cf8396499d0b516c7dfa289, type: 3}
       propertyPath: holder
       value: 
@@ -1528,11 +1532,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9aaa860b02c2c4686e4f0ec360a169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &1704604182 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3659801013632668988, guid: c590d1fc529b86c4eb9662f170a70a69, type: 3}
-  m_PrefabInstance: {fileID: 3659801014127208234}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1708712395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2038,8 +2037,7 @@ MonoBehaviour:
   - {fileID: 1708712397}
   endScreen: {fileID: 1281332630}
   endScreenText: {fileID: 1281332631}
-  stateBox: {fileID: 1704604182}
-  stateText: {fileID: 2130491747}
+  firstTurn: 0
 --- !u!114 &2085515158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2062,7 +2060,6 @@ MonoBehaviour:
   reserveParty: []
   maxSwaps: 0
   currentSwaps: 0
-  unlocked: 0
   swapCounter: {fileID: 1386583635}
 --- !u!1001 &2118388169
 PrefabInstance:
@@ -2131,17 +2128,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4509748407066161163, guid: 7e8486c34ed9b00408e17bf5451a57d8, type: 3}
   m_PrefabInstance: {fileID: 2118388169}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2130491747 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3659801014021004873, guid: c590d1fc529b86c4eb9662f170a70a69, type: 3}
-  m_PrefabInstance: {fileID: 3659801014127208234}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3659801014127208234
 PrefabInstance:
   m_ObjectHideFlags: 0
