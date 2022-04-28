@@ -65,7 +65,8 @@ public class Slime : Titan
 
     public override bool DeathCheck(List<Titan> party, Titan enemy)
     {
-        if (health <= 0.0f && !firstDeath && !isEnemy)
+        if (isEnemy) { firstDeath = true; }
+        if (health <= 0.0f && !firstDeath)
         {
             firstDeath = true;
             health = 1.0f;

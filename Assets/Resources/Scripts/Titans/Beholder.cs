@@ -48,7 +48,7 @@ public class Beholder : Titan
 
             if (index != 0 && index != 3)
             {
-                Attack(enemy, damage);
+                Attack(enemy, 1);
             }
         }
 
