@@ -61,8 +61,10 @@ public class Korngull : Titan
         if (!isEnemy)
         {
             Attack(enemy, 5.0f);
+            
+
         }
-        
+
         base.OnDeath(party, enemy);
     }
 }
