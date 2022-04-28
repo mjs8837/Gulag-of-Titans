@@ -154,7 +154,7 @@ public class Titan : MonoBehaviour
 
     public virtual void UpdateUI()
     {
-        attackUI.text = damage.ToString();
-        healthUI.text = health.ToString();
+        //attackUI.text = damage.ToString();
+        //healthUI.text = health.ToString();
     }
 }
