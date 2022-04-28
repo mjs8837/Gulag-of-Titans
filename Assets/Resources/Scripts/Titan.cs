@@ -40,11 +40,11 @@ public class Titan : MonoBehaviour
     {
         if (party[0] != null)
         {
-            ChangeHealth(damage, party[0]);
+            party[0].ChangeHealth(damage, party[0]);
         }
         if (party[3] != null)
         {
-            ChangeHealth(damage, party[3]);
+            party[3].ChangeHealth(damage, party[3]);
         }
     }
 
@@ -105,7 +105,7 @@ public class Titan : MonoBehaviour
     // Creating a parent function for friendly attacks
     public virtual void Attack(Titan enemy, float damage)
     {
-        ChangeHealth(damage, enemy);
+        enemy.ChangeHealth(damage, enemy);
     }
 
     // Creating a parent health function for child classes that can't be overridden, but can be called
@@ -118,14 +118,7 @@ public class Titan : MonoBehaviour
         {
             target.sprite.color = Color.red;
             hurt = true;
-            if (isEnemy)
-            {
-                StartCoroutine(MakeBossWhite(target));
-            }
-            else
-            {
-                StartCoroutine(MakeWhite(target));
-            }
+            StartCoroutine(MakeWhite(target));
         }
     }
 
@@ -187,13 +180,6 @@ public class Titan : MonoBehaviour
     }
 
     public IEnumerator MakeWhite(Titan target)
-    {
-        yield return new WaitForSeconds(0.15f);
-        target.sprite.color = Color.white;
-        hurt = false;
-    }
-
-    public IEnumerator MakeBossWhite(Titan target)
     {
         yield return new WaitForSeconds(0.15f);
         target.sprite.color = Color.white;

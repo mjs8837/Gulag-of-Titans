@@ -421,7 +421,7 @@ public class TestBattle : MonoBehaviour
         return true;
     }
 
-    // Displays lsoe screen
+    // Displays lose screen
     public void LoseBattle()
     {
         // Edits the end screen text and moves it to the player's view
@@ -430,14 +430,5 @@ public class TestBattle : MonoBehaviour
         battling = false;
 
         Invoke("BattleSceneChange", 2);
-    }
-
-    IEnumerator Test()
-    {
-        Debug.Log("Start" + Time.time);
-
-        yield return new WaitForSeconds(3);
-
-        Debug.Log("PPee" + Time.time);
     }
 }
