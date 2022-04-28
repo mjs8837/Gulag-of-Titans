@@ -13,14 +13,21 @@ public class Titan : MonoBehaviour
     public float health;
     public float totalHealth;
     public float damage;
-    public float poisonStack;
+    public float poisonStack = 0;
     public bool isEnemy;
     public int titanPosition;
     public int titanIndex;
     public TextMeshPro attackUI;
     public TextMeshPro healthUI;
     public TextMeshPro hurtUI;
+<<<<<<< Updated upstream
     public TextMeshPro hurtSpot;
+=======
+    public TextMeshPro poisionUIText;
+    public SpriteRenderer poisionUIIMG;
+
+    public TextMeshPro[] hurtNumberList;
+>>>>>>> Stashed changes
 
     public SpriteRenderer sprite;
     public bool hurt;
@@ -163,7 +170,8 @@ public class Titan : MonoBehaviour
     {
         if (poisonStack > 0)
         {
-            health -= poisonStack;
+            Debug.Log(poisonStack);
+            ChangeHealth(poisonStack, this);
             poisonStack -= 1;
         }
     }
@@ -199,4 +207,22 @@ public class Titan : MonoBehaviour
         yield return new WaitForSeconds(0.75f);
         tmp.text = "";
     }
+
+    public virtual void OnPoison(List<Titan> party, Titan enemy, float newStacks)
+    {
+        GameObject poisionOBJ = GameObject.Find(enemy.name + "/PoisonIcon");
+        Debug.Log(poisionOBJ);
+        if (enemy.poisonStack == 0)
+        {
+            Debug.Log("bitch");
+
+            poisionOBJ.SetActive(true);
+            
+        }
+        poisonStack += newStacks;
+        GameObject poisionTXT = GameObject.Find("PosionText");
+
+
+    }
+
 }
