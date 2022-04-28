@@ -177,9 +177,9 @@ public class SpawnLevel : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             battleScript.landingSpots[i] = landingSpotList[i];
-
-
         }
+        battleScript.landingSpots[0].GetComponent<SpriteRenderer>().color = Color.green;
+        battleScript.landingSpots[3].GetComponent<SpriteRenderer>().color = Color.green;
     }
 
     // Update is called once per frame
