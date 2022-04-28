@@ -48,7 +48,7 @@ public class Caleb : Titan
     }
     public override void ChangeHealth(float healthChange, Titan target)
     {
-        target.health -= healthChange;
+        base.ChangeHealth(healthChange, target);
 
         if (!isEnemy)
         {

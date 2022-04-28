@@ -24,6 +24,7 @@ public class Angel : Titan
             abilityName = "No ability for now";
             health = 20.0f;
             totalHealth = 20.0f;
+            damage = 1.0f;
         }
 
         UpdateUI();
