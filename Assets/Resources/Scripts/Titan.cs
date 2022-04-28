@@ -24,7 +24,7 @@ public class Titan : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -143,8 +143,11 @@ public class Titan : MonoBehaviour
 
     public virtual void OnEndTurn(List<Titan> party, Titan enemy)
     {
-        health -= poisonStack;
-        poisonStack -= 1;
+        if (poisonStack > 0)
+        {
+            health -= poisonStack;
+            poisonStack -= 1;
+        }
     }
 
     public virtual void OnDeath(List<Titan> party, Titan enemy)

@@ -59,6 +59,21 @@ public class TestBattle : MonoBehaviour
                 enemy.health += 10;
                 enemy.UpdateUI();
             }
+            // List titans (debugging)
+            if (Input.GetKeyUp(KeyCode.L))
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    if (activeParty[i] != null)
+                    {
+                        Debug.Log("Member " + (i + 1) + ": " + activeParty[i]);
+                    }
+                    else
+                    {
+                        Debug.Log("Member " + (i + 1) + ": null");
+                    }
+                }
+            }
         }
     }
 
@@ -73,6 +88,122 @@ public class TestBattle : MonoBehaviour
             if (activeParty[i] != null)
             {
                 activeParty[i].OnBeginTurn(activeParty, enemy);
+            }
+        }
+
+        // Checks to move up top row
+        for (int i = 0; i < 3; i++)
+        {
+            if (activeParty[i] == null)
+            {
+                if (i == 0)
+                {
+                    if (activeParty[1] != null && activeParty[2] != null)
+                    {
+                        activeParty[0] = activeParty[1];
+                        activeParty[0].titanPosition = 0;
+                        activeParty[0].transform.position = landingSpots[0].transform.position;
+
+                        activeParty[1] = activeParty[2];
+                        activeParty[1].titanPosition = 1;
+                        activeParty[1].transform.position = landingSpots[1].transform.position;
+
+                        activeParty[2] = null;
+                    }
+                    else if (activeParty[1] == null && activeParty[2] != null)
+                    {
+                        activeParty[0] = activeParty[2];
+                        activeParty[0].titanPosition = 0;
+                        activeParty[0].transform.position = landingSpots[0].transform.position;
+
+                        activeParty[2] = null;
+                    }
+                    else if (activeParty[1] != null && activeParty[2] == null)
+                    {
+                        activeParty[0] = activeParty[1];
+                        activeParty[0].titanPosition = 0;
+                        activeParty[0].transform.position = landingSpots[0].transform.position;
+
+                        activeParty[1] = null;
+                    }
+                }
+                else if (i == 1)
+                {
+                    if (activeParty[0] != null && activeParty[2] != null)
+                    {
+                        activeParty[1] = activeParty[2];
+                        activeParty[1].titanPosition = 1;
+                        activeParty[1].transform.position = landingSpots[1].transform.position;
+
+                        activeParty[2] = null;
+                    }
+                    if (activeParty[0] == null && activeParty[2] != null)
+                    {
+                        activeParty[0] = activeParty[2];
+                        activeParty[0].titanPosition = 0;
+                        activeParty[0].transform.position = landingSpots[0].transform.position;
+
+                        activeParty[2] = null;
+                    }
+                }
+            }
+        }
+
+        // Checks to move up bottom row
+        for (int i = 3; i < 6; i++)
+        {
+            if (activeParty[i] == null)
+            {
+                if (i == 3)
+                {
+                    if (activeParty[4] != null && activeParty[5] != null)
+                    {
+                        activeParty[3] = activeParty[4];
+                        activeParty[3].titanPosition = 3;
+                        activeParty[3].transform.position = landingSpots[3].transform.position;
+
+                        activeParty[4] = activeParty[5];
+                        activeParty[4].titanPosition = 4;
+                        activeParty[4].transform.position = landingSpots[4].transform.position;
+
+                        activeParty[5] = null;
+                    }
+                    else if (activeParty[4] == null && activeParty[5] != null)
+                    {
+                        activeParty[3] = activeParty[5];
+                        activeParty[3].titanPosition = 3;
+                        activeParty[3].transform.position = landingSpots[3].transform.position;
+
+                        activeParty[5] = null;
+                    }
+                    else if (activeParty[4] != null && activeParty[5] == null)
+                    {
+                        activeParty[3] = activeParty[4];
+                        activeParty[3].titanPosition = 3;
+                        activeParty[3].transform.position = landingSpots[3].transform.position;
+
+                        activeParty[4] = null;
+                    }
+                }
+                else if (i == 4)
+                {
+                    if (activeParty[3] != null && activeParty[5] != null)
+                    {
+                        activeParty[4] = activeParty[5];
+                        activeParty[4].titanPosition = 4;
+                        activeParty[4].transform.position = landingSpots[4].transform.position;
+
+                        activeParty[5] = null;
+                    }
+                    if (activeParty[3] == null && activeParty[5] != null)
+                    {
+                        activeParty[3] = activeParty[5];
+                        activeParty[3].titanPosition = 3;
+                        activeParty[3].transform.position = landingSpots[3].transform.position;
+
+                        activeParty[5] = null;
+                    }
+                }
             }
         }
 
@@ -205,6 +336,7 @@ public class TestBattle : MonoBehaviour
                 }
             }
         }
+
 
         // End Phase
         // Activates enemy's end of turn ability (if applicable)
