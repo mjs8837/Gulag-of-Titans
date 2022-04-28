@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MK : Titan
 {
+    private int previousIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,16 +46,7 @@ public class MK : Titan
     public override void OnBeginTurn(List<Titan> party, Titan enemy)
     {
         base.OnBeginTurn(party, enemy);
-        int index = party.IndexOf(this);
-        Debug.Log(index);
-        if (index != 0 && index != 3)
-        {
-            if (party[index - 1].health <= 0)
-            {
-                Debug.Log("hi");
-                Attack(enemy, damage);
-            }
-        }
+        previousIndex = party.IndexOf(this);
     }
 
     public override void OnHit(List<Titan> party, Titan enemy)
@@ -64,7 +56,12 @@ public class MK : Titan
 
     public override void OnEndTurn(List<Titan> party, Titan enemy)
     {
+        int index = party.IndexOf(this);
 
+            if (previousIndex - party.IndexOf(this) == 1)
+            {
+                Attack(enemy, damage);
+            }
 
         base.OnEndTurn(party, enemy);
     }
