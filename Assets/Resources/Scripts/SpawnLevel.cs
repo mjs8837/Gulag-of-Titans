@@ -43,7 +43,7 @@ public class SpawnLevel : MonoBehaviour
     {
         if (partyCode == null)
         {
-            partyCode = new int[] { 3, 8, 5, 6, 7, 1, enemyIndexCode };
+            partyCode = new int[] { 3, 2, 5, 6, 7, 1, enemyIndexCode };
         }
         SpawnLandingSpots();
         SpawnAllyTitans();
