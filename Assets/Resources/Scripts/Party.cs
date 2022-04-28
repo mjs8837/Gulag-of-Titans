@@ -62,4 +62,13 @@ public class Party : MonoBehaviour
     {
         swapCounter.text = "Swaps: " + currentSwaps;
     }
+
+    public IEnumerator Test2()
+    {
+        Debug.Log("Start" + Time.time);
+
+        yield return new WaitForSeconds(3);
+
+        Debug.Log("PPee" + Time.time);
+    }
 }

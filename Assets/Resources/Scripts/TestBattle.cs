@@ -59,6 +59,11 @@ public class TestBattle : MonoBehaviour
                 enemy.health += 10;
                 enemy.UpdateUI();
             }
+            // Test
+            if (Input.GetKeyUp(KeyCode.T))
+            {
+                
+            }
             // List titans (debugging)
             if (Input.GetKeyUp(KeyCode.L))
             {
@@ -371,6 +376,18 @@ public class TestBattle : MonoBehaviour
             // Loses battle if so
             LoseBattle();
         }
+
+        for (int i = 0; i < activeParty.Count; i++)
+        {
+            if (activeParty[i] != null)
+            {
+                activeParty[i].CheckHurt();
+            }
+        }
+        if (enemy != null)
+        {
+            enemy.CheckHurt();
+        }
     }
 
     // Displays win screen
@@ -413,5 +430,14 @@ public class TestBattle : MonoBehaviour
         battling = false;
 
         Invoke("BattleSceneChange", 2);
+    }
+
+    IEnumerator Test()
+    {
+        Debug.Log("Start" + Time.time);
+
+        yield return new WaitForSeconds(3);
+
+        Debug.Log("PPee" + Time.time);
     }
 }

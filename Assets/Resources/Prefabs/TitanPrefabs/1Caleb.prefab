@@ -521,11 +521,14 @@ MonoBehaviour:
   health: 0
   totalHealth: 0
   damage: 0
+  poisonStack: 0
   isEnemy: 0
   titanPosition: 0
   titanIndex: 0
   attackUI: {fileID: 4695902476633208154}
   healthUI: {fileID: 7803740035945215044}
+  sprite: {fileID: 1044870075404969833}
+  hurt: 0
 --- !u!114 &6104331818942997461
 MonoBehaviour:
   m_ObjectHideFlags: 0

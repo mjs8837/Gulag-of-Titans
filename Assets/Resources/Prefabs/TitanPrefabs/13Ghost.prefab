@@ -128,6 +128,8 @@ MonoBehaviour:
   titanIndex: 0
   attackUI: {fileID: 0}
   healthUI: {fileID: 0}
+  sprite: {fileID: 6699327235811365402}
+  hurt: 0
 --- !u!61 &4119216409789020402
 BoxCollider2D:
   m_ObjectHideFlags: 0

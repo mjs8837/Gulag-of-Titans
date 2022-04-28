@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3415302621354543446}
   - component: {fileID: -3832254355573279757}
   m_Layer: 0
-  m_Name: 8Mr
+  m_Name: 8Mr. Fluffles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,11 +122,14 @@ MonoBehaviour:
   health: 0
   totalHealth: 0
   damage: 0
+  poisonStack: 0
   isEnemy: 0
   titanPosition: 0
   titanIndex: 0
   attackUI: {fileID: 0}
   healthUI: {fileID: 0}
+  sprite: {fileID: 1813625328152000350}
+  hurt: 0
 --- !u!61 &-3832254355573279757
 BoxCollider2D:
   m_ObjectHideFlags: 0

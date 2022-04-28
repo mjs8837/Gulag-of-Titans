@@ -19,12 +19,13 @@ public class Titan : MonoBehaviour
     public int titanIndex;
     public TextMeshPro attackUI;
     public TextMeshPro healthUI;
-    Sprite[] ui;
+    public SpriteRenderer sprite;
+    public bool hurt;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -109,6 +110,19 @@ public class Titan : MonoBehaviour
     public virtual void ChangeHealth(float healthChange, Titan target)
     {
         target.health -= healthChange;
+        if (target.health > 0)
+        {
+            target.sprite.color = Color.red;
+            hurt = true;
+            if (isEnemy)
+            {
+                StartCoroutine(MakeBossWhite(target));
+            }
+            else
+            {
+                StartCoroutine(MakeWhite(target));
+            }
+        }
     }
 
     // Checks if the titan has died
@@ -125,6 +139,13 @@ public class Titan : MonoBehaviour
         return false;
     }
 
+    public virtual void CheckHurt()
+    {
+        if (hurt)
+        {
+            StartCoroutine(MakeWhite(this));
+        }
+    }    
 
     public virtual void OnAppear(List<Titan> party, Titan enemy)
     {
@@ -159,5 +180,19 @@ public class Titan : MonoBehaviour
     {
         //attackUI.text = damage.ToString();
         //healthUI.text = health.ToString();
+    }
+
+    public IEnumerator MakeWhite(Titan target)
+    {
+        yield return new WaitForSeconds(0.15f);
+        target.sprite.color = Color.white;
+        hurt = false;
+    }
+
+    public IEnumerator MakeBossWhite(Titan target)
+    {
+        yield return new WaitForSeconds(0.15f);
+        target.sprite.color = Color.white;
+        hurt = false;
     }
 }
