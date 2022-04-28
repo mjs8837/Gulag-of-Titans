@@ -25,7 +25,6 @@ public class CustomManager : MonoBehaviour
             for (int i = 0; i < shownTitans.Length; i++)
             {
                 shownTitans[i].isEnemy = true;
-                Debug.Log("POOP");
             }
         }
         else

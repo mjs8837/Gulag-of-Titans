@@ -102,7 +102,7 @@ MonoBehaviour:
   isBound: 0
   landingSpots: []
   partyClass: {fileID: 0}
-  titanClass: {fileID: 0}
+  titanClass: {fileID: 3415302621354543446}
   dragPosition: 0
 --- !u!114 &3415302621354543446
 MonoBehaviour:
