@@ -43,8 +43,6 @@ public class Carrot : Titan
 
     public override void OnBeginTurn(List<Titan> party, Titan enemy)
     {
-        enemy.OnPoison(party, enemy, 2);
-
         base.OnBeginTurn(party, enemy);
     }
 
@@ -60,6 +58,7 @@ public class Carrot : Titan
 
     public override void OnDeath(List<Titan> party, Titan enemy)
     {
-
+        enemy.poisonStack += 2;
+        base.OnDeath(party, enemy);
     }
 }
