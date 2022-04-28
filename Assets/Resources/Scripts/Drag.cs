@@ -23,7 +23,7 @@ public class Drag : MonoBehaviour
     public void OnMouseDown()
     {
         // Only works if the player is not locked and has swaps
-        if (partyClass.unlocked && partyClass.currentSwaps > 0)
+        if (partyClass.currentSwaps > 0)
         {
             distance = Vector3.Distance(transform.position, Camera.main.transform.position);
             dragging = true;
@@ -35,7 +35,7 @@ public class Drag : MonoBehaviour
     public void OnMouseUp()
     {
         // Only works if the player is not locked and has swaps
-        if (partyClass.unlocked && partyClass.currentSwaps > 0)
+        if (partyClass.currentSwaps > 0)
         {
             dragging = false;
             Drop();

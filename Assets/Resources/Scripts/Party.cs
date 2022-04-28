@@ -11,7 +11,6 @@ public class Party : MonoBehaviour
     // Swap variables
     public int maxSwaps;
     public int currentSwaps;
-    public bool unlocked;
     [SerializeField] TextMeshPro swapCounter;
 
 

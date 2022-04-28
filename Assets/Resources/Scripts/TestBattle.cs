@@ -16,9 +16,6 @@ public class TestBattle : MonoBehaviour
     public GameObject endScreen;
     public TextMeshPro endScreenText;
 
-    [SerializeField] SpriteRenderer stateBox;
-    [SerializeField] TextMeshPro stateText;
-
     public bool firstTurn;
 
     // Start is called before the first frame update
@@ -29,8 +26,7 @@ public class TestBattle : MonoBehaviour
         gameOver = false;
 
         // Defaults the player to battling
-        battling = false;
-        SwitchState();
+        battling = true;
 
         // Sets up max swaps and displays counter
         partyClass.maxSwaps = 2;
@@ -57,11 +53,7 @@ public class TestBattle : MonoBehaviour
             {
                 Turn();
             }
-            // Manually unlocks party
-            if (Input.GetKeyUp(KeyCode.L))
-            {
-                partyClass.unlocked = !(partyClass.unlocked);
-            }
+            // Give enemy more health (debugging)
             if (Input.GetKeyUp(KeyCode.H))
             {
                 enemy.health += 10;
@@ -247,32 +239,6 @@ public class TestBattle : MonoBehaviour
             // Loses battle if so
             LoseBattle();
         }
-    }
-
-    // Switches the player between battling and swapping
-    public void SwitchState()
-    {
-        // Switchs boolean
-        battling = !battling;
-        if (battling)
-        {
-            // Changes color and text
-            stateBox.color = new Color32(250, 165, 55, 255);
-            stateText.text = "Battling!";
-            // Locks the party
-            partyClass.unlocked = false;
-            
-        }
-        else
-        {
-            // Changes color and text
-            stateBox.color = new Color32(170, 51, 255, 255);
-            stateText.text = "Swapping!";
-            // Unlocks the party and reverses battling boolean
-            partyClass.unlocked = true;
-            battling = false;
-        }
-        
     }
 
     // Displays win screen

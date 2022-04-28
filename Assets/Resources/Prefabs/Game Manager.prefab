@@ -133,8 +133,8 @@ MonoBehaviour:
   landingSpots: []
   endScreen: {fileID: 4658132860978646004}
   endScreenText: {fileID: 4658132860978646005}
-  stateBox: {fileID: 2996718771887196463}
-  stateText: {fileID: 2996718772279198298}
+  stateBox: {fileID: 0}
+  stateText: {fileID: 0}
   firstTurn: 0
 --- !u!1 &8198000813053344535
 GameObject:
@@ -231,22 +231,6 @@ Transform:
 --- !u!114 &2996718772744318314 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3659801013278159225, guid: c590d1fc529b86c4eb9662f170a70a69, type: 3}
-  m_PrefabInstance: {fileID: 1971523824946273299}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!212 &2996718771887196463 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3659801013632668988, guid: c590d1fc529b86c4eb9662f170a70a69, type: 3}
-  m_PrefabInstance: {fileID: 1971523824946273299}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2996718772279198298 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3659801014021004873, guid: c590d1fc529b86c4eb9662f170a70a69, type: 3}
   m_PrefabInstance: {fileID: 1971523824946273299}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
