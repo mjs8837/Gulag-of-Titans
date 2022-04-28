@@ -859,7 +859,7 @@ MonoBehaviour:
   attackUI: {fileID: 6380321366187405070}
   healthUI: {fileID: 6084983325794903393}
   hurtUI: {fileID: 4808663862904345968, guid: 60559620cacefd84fb6b48ef4bc85a49, type: 3}
-  hurtNumberList: []
+  hurtSpot: {fileID: 932228323744316553}
   sprite: {fileID: 1270906348420192137}
   hurt: 0
 --- !u!1 &6988232890889194549

@@ -60,9 +60,9 @@ public class TestBattle : MonoBehaviour
                 enemy.UpdateUI();
             }
             // Test
-            if (Input.GetKeyUp(KeyCode.T))
+            if (Input.GetKeyUp(KeyCode.S))
             {
-                
+                partyClass.currentSwaps += 10;
             }
             // List titans (debugging)
             if (Input.GetKeyUp(KeyCode.L))

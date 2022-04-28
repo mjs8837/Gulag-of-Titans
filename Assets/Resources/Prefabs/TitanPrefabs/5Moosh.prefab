@@ -604,7 +604,7 @@ MonoBehaviour:
   attackUI: {fileID: 6182432618192213986}
   healthUI: {fileID: 5861702449991590693}
   hurtUI: {fileID: 4808663862904345968, guid: 60559620cacefd84fb6b48ef4bc85a49, type: 3}
-  hurtNumberList: []
+  hurtSpot: {fileID: 1222907124028997853}
   sprite: {fileID: 6594649797997845074}
   hurt: 0
 --- !u!1 &4928139458535564896

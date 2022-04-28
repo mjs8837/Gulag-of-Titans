@@ -1029,7 +1029,7 @@ MonoBehaviour:
   attackUI: {fileID: 2539096314900630913}
   healthUI: {fileID: 3469719550273682402}
   hurtUI: {fileID: 4808663862904345968, guid: 60559620cacefd84fb6b48ef4bc85a49, type: 3}
-  hurtNumberList: []
+  hurtSpot: {fileID: 1305507284610398020}
   sprite: {fileID: 6195464990606107019}
   hurt: 0
 --- !u!1 &7264771342410389561

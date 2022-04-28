@@ -20,7 +20,7 @@ public class Titan : MonoBehaviour
     public TextMeshPro attackUI;
     public TextMeshPro healthUI;
     public TextMeshPro hurtUI;
-    public TextMeshPro[] hurtNumberList;
+    public TextMeshPro hurtSpot;
 
     public SpriteRenderer sprite;
     public bool hurt;
@@ -112,29 +112,22 @@ public class Titan : MonoBehaviour
     // Creating a parent health function for child classes that can't be overridden, but can be called
     public virtual void ChangeHealth(float healthChange, Titan target)
     {
-        if (healthChange < 0)
-        {
-            hurtUI.color = Color.green;
-            hurtUI.text = "+" + Mathf.Abs(healthChange);
 
-            //hurtNumberList[2] = Instantiate(hurtUI, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
-            //StartCoroutine(RemoveNumber(hurtNumberList[1]));
-        }
-        else
-        {
-            hurtUI.color = Color.red;
-            hurtUI.text = "-" + Mathf.Abs(healthChange);
+        hurtSpot.text = "-" + healthChange;
+        StartCoroutine(ClearText(hurtSpot));
 
-            //hurtNumberList[1] = Instantiate(hurtUI, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
-        }
-
+        // Changes the health
         target.health -= healthChange;
+
+        // Makes the target red
         if (target.health > 0)
         {
             target.sprite.color = Color.red;
             hurt = true;
             StartCoroutine(MakeWhite(target));
         }
+
+        
     }
 
     // Checks if the titan has died
@@ -149,15 +142,7 @@ public class Titan : MonoBehaviour
             return true;
         }
         return false;
-    }
-
-    public virtual void CheckHurt()
-    {
-        if (hurt)
-        {
-            StartCoroutine(MakeWhite(this));
-        }
-    }    
+    }   
 
     public virtual void OnAppear(List<Titan> party, Titan enemy)
     {
@@ -194,6 +179,14 @@ public class Titan : MonoBehaviour
        healthUI.text = health.ToString();
     }
 
+    public virtual void CheckHurt()
+    {
+        if (hurt)
+        {
+            StartCoroutine(MakeWhite(this));
+        }
+    }
+
     public IEnumerator MakeWhite(Titan target)
     {
         yield return new WaitForSeconds(0.15f);
@@ -201,9 +194,9 @@ public class Titan : MonoBehaviour
         hurt = false;
     }
 
-    public IEnumerator RemoveNumber(TextMeshPro number)
+    public IEnumerator ClearText(TextMeshPro tmp)
     {
-        yield return new WaitForSeconds(0.4f);
-        Destroy(number);
+        yield return new WaitForSeconds(0.75f);
+        tmp.text = "";
     }
 }
