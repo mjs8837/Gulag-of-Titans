@@ -8,12 +8,12 @@ public class Slime : Titan
 
     void Start()
     {
-        damage = 4.0f;
-        health = 4.0f;
-        totalHealth = 4.0f;
+        damage = 3.0f;
+        health = 3.0f;
+        totalHealth = 3.0f;
         titanName = "Slime";
         titanIndex = 10;
-        abilityDescription = "When I die, revive me with half my original health and attack.";
+        abilityDescription = "When I die, revive me with 2 attack and 1 health";
         abilityName = "Split";
         firstDeath = false;
 
@@ -65,11 +65,11 @@ public class Slime : Titan
 
     public override bool DeathCheck(List<Titan> party, Titan enemy)
     {
-        if (health <= 0.0f && !firstDeath)
+        if (health <= 0.0f && !firstDeath && !isEnemy)
         {
             firstDeath = true;
-            health = 2.0f;
-            totalHealth = 2.0f;
+            health = 1.0f;
+            totalHealth = 1.0f;
             damage = 2.0f;
         }
 

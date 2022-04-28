@@ -226,10 +226,7 @@ public class TestBattle : MonoBehaviour
         }
         // Death Phase
         // Checks if the enemy is dead and ends the battle if so
-        if (enemy.DeathCheck(activeParty, enemy))
-        {
-            WinBattle();
-        }
+        
 
         // Checks if any party members in the top row have died
         for (int i = 0; i < 3; i++)
@@ -341,7 +338,10 @@ public class TestBattle : MonoBehaviour
                 }
             }
         }
-
+        if (enemy.DeathCheck(activeParty, enemy))
+        {
+            WinBattle();
+        }
 
         // End Phase
         // Activates enemy's end of turn ability (if applicable)
