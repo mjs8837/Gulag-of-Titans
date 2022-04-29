@@ -173,6 +173,24 @@ public class Titan : MonoBehaviour
 
     }
 
+    public virtual void OnPoison(List<Titan> party, Titan enemy, float newStacks)
+    {
+        GameObject poisonOBJ = GameObject.Find("PoisonIcon");
+        GameObject enemyStuff = GameObject.Find(enemy.name.ToString());
+        //Debug.Log(GameObject.Find(enemy.name.ToString()));
+
+        if (enemy.poisonStack == 0)
+        {
+            //poisonOBJ.GetComponent<SpriteRenderer>().enabled = true;
+            enemyStuff.GetComponent<SpriteRenderer>().enabled = true;
+            Debug.Log(enemyStuff.GetComponent<SpriteRenderer>());
+            Debug.Log("bitch");
+        }
+
+        poisonStack += newStacks;
+        enemyStuff.GetComponentInChildren<TextMeshPro>().text = poisonStack.ToString();
+    }
+
     public virtual void UpdateUI()
     {
        attackUI.text = damage.ToString();
