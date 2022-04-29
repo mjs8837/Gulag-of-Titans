@@ -567,6 +567,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 4298825883663360008, guid: fd412947c3165a247936c218102f52a2, type: 2}
+    - target: {fileID: 8041710652648757455, guid: 6696a33a6b66f5e48ba06c132ec71f71, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6696a33a6b66f5e48ba06c132ec71f71, type: 3}
 --- !u!1 &4658132860978646004 stripped
