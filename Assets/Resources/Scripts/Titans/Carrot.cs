@@ -58,7 +58,7 @@ public class Carrot : Titan
 
     public override void OnDeath(List<Titan> party, Titan enemy)
     {
-        enemy.poisonStack += 2;
+        //enemy.OnPoison(party, enemy, 2);
         base.OnDeath(party, enemy);
     }
 }

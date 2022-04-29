@@ -37,7 +37,7 @@ public class Aratnid : Titan
 
     public override void OnAppear(List<Titan> party, Titan enemy)
     {
-        enemy.poisonStack += 1;
+        enemy.OnPoison(party, enemy, 1);
         base.OnAppear(party, enemy);
     }
 
