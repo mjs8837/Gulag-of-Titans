@@ -682,6 +682,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3072160287590738009, guid: 17d85c1c88fed0644ac62264f5af7151, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072160287590738009, guid: 17d85c1c88fed0644ac62264f5af7151, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 4298825883663360008, guid: fd412947c3165a247936c218102f52a2, type: 2}
@@ -696,6 +700,14 @@ PrefabInstance:
     - target: {fileID: 3072160287590738023, guid: 17d85c1c88fed0644ac62264f5af7151, type: 3}
       propertyPath: m_Name
       value: HoverDescription
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072160287631071450, guid: 17d85c1c88fed0644ac62264f5af7151, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072160288575943086, guid: 17d85c1c88fed0644ac62264f5af7151, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3072160288575943087, guid: 17d85c1c88fed0644ac62264f5af7151, type: 3}
       propertyPath: m_LocalPosition.z
