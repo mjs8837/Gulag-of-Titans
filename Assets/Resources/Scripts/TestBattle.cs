@@ -53,32 +53,32 @@ public class TestBattle : MonoBehaviour
             {
                 Turn();
             }
-            // Give enemy more health (debugging)
-            if (Input.GetKeyUp(KeyCode.H))
-            {
-                enemy.health += 10;
-                enemy.UpdateUI();
-            }
-            // Test
-            if (Input.GetKeyUp(KeyCode.S))
-            {
-                partyClass.currentSwaps += 10;
-            }
-            // List titans (debugging)
-            if (Input.GetKeyUp(KeyCode.L))
-            {
-                for (int i = 0; i < 6; i++)
-                {
-                    if (activeParty[i] != null)
-                    {
-                        Debug.Log("Member " + (i + 1) + ": " + activeParty[i]);
-                    }
-                    else
-                    {
-                        Debug.Log("Member " + (i + 1) + ": null");
-                    }
-                }
-            }
+            //// Give enemy more health (debugging)
+            //if (Input.GetKeyUp(KeyCode.H))
+            //{
+            //    enemy.health += 10;
+            //    enemy.UpdateUI();
+            //}
+            //// Test
+            //if (Input.GetKeyUp(KeyCode.S))
+            //{
+            //    partyClass.currentSwaps += 10;
+            //}
+            //// List titans (debugging)
+            //if (Input.GetKeyUp(KeyCode.L))
+            //{
+            //    for (int i = 0; i < 6; i++)
+            //    {
+            //        if (activeParty[i] != null)
+            //        {
+            //            Debug.Log("Member " + (i + 1) + ": " + activeParty[i]);
+            //        }
+            //        else
+            //        {
+            //            Debug.Log("Member " + (i + 1) + ": null");
+            //        }
+            //    }
+            //}
         }
     }
 
