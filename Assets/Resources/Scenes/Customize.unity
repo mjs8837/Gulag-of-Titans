@@ -391,9 +391,6 @@ MonoBehaviour:
   - {fileID: 7095402503455297438, guid: 8e4ec316f72875b40ae2d878cba295d2, type: 3}
   - {fileID: 4843815363870199091, guid: d1af81cef00f5e645a503e0fc5312953, type: 3}
   - {fileID: 7924226543299144044, guid: 2972f1ee4707ec84199681ba98287da4, type: 3}
-  - {fileID: 2849929857745194079, guid: 112e4c35f26f1e744a5a8b913c010b0c, type: 3}
-  - {fileID: 6911655212622934552, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
-  - {fileID: 4231172464123269103, guid: d277d557232e1014e8918809addfb55c, type: 3}
   shownTitans:
   - {fileID: 329378339}
   - {fileID: 418019317}
@@ -409,9 +406,6 @@ MonoBehaviour:
   - {fileID: 1775750597}
   - {fileID: 645712041}
   - {fileID: 1100794413}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   selectedTitans: []
   slotIndexer: 0
 --- !u!1 &167853472
