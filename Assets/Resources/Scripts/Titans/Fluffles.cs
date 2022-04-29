@@ -11,7 +11,7 @@ public class Fluffles : Titan
         totalHealth = 8.0f;
         titanName = "Mr. Fluffles";
         titanIndex = 8;
-        abilityDescription = "Heal the ally in front of me by 3 every turn";
+        abilityDescription = "Give the ally in front of me 3 health every turn";
         abilityName = "Protective Spirit";
 
         if (isEnemy)

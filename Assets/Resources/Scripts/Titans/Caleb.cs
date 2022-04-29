@@ -12,7 +12,7 @@ public class Caleb : Titan
         totalHealth = 5.0f;
         titanName = "Caleb";
         titanIndex = 1;
-        abilityDescription = "When I take damage, I gain +2|+0.";
+        abilityDescription = "When I take damage, I gain 2 attack.";
         abilityName = "Tortured";
 
         if (isEnemy)

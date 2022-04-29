@@ -12,7 +12,7 @@ public class William : Titan
         totalHealth = 5.0f;
         titanName = "William";
         titanIndex = 7;
-        abilityDescription = "At the start of the round, I gain -1|-1.";
+        abilityDescription = "At the start of the round, I lose 1 health and 1 attack.";
         abilityName = "Twice as Bright";
 
         if (isEnemy)
