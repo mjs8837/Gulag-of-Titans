@@ -18,22 +18,22 @@ public class CustomContinue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Debug.Log("p");
-        }
         if (switchSceneClass.codeIndex == 7)
         {
             transform.position = new Vector3(12, 4, 0);
-            if (Input.GetKeyDown(KeyCode.N))
-            {
-                partyCodeMaster = switchSceneClass.partyCodeScene;
-                SceneManager.LoadScene("Instantiation");
-            }
         }
         else
         {
             transform.position = new Vector3(12, 14, 0);
+        }
+    }
+
+    private void OnMouseDown()
+    {
+        if (switchSceneClass.codeIndex == 7)
+        {
+            partyCodeMaster = switchSceneClass.partyCodeScene;
+            SceneManager.LoadScene("Instantiation");
         }
     }
 
