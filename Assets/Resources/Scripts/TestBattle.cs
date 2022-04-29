@@ -10,7 +10,7 @@ public class TestBattle : MonoBehaviour
     [SerializeField] Party partyClass;
     public Titan enemy;
     public List<Titan> activeParty;
-    private bool battling;
+    public bool battling;
     private bool gameOver;
     public GameObject[] landingSpots;
     public GameObject endScreen;
