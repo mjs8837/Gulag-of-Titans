@@ -58,10 +58,10 @@ public class Angel : Titan
                 base.OnHit(party, enemy);
             }
 
-            firstHitTaken = false;
+            firstHitTaken = true;
         }
 
-        base.OnHit(party, enemy);
+        //base.OnHit(party, enemy);
     }
 
     public override void OnEndTurn(List<Titan> party, Titan enemy)
