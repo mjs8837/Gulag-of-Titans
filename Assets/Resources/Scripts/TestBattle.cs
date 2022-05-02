@@ -54,8 +54,9 @@ public class TestBattle : MonoBehaviour
             {
                 Turn();
             }
+
             // Give enemy more health (debugging)
-            if (Input.GetKeyUp(KeyCode.H))
+            /*if (Input.GetKeyUp(KeyCode.H))
             {
                 enemy.health += 10;
                 enemy.UpdateUI();
@@ -79,7 +80,7 @@ public class TestBattle : MonoBehaviour
                         Debug.Log("Member " + (i + 1) + ": null");
                     }
                 }
-            }
+            }*/
         }
     }
 

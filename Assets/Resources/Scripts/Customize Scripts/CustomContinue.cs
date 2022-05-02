@@ -20,11 +20,11 @@ public class CustomContinue : MonoBehaviour
     {
         if (switchSceneClass.codeIndex == 7)
         {
-            transform.position = new Vector3(12, 4, 0);
+            transform.position = new Vector3(11, 4, 0);
         }
         else
         {
-            transform.position = new Vector3(12, 14, 0);
+            transform.position = new Vector3(11, 14, 0);
         }
     }
 

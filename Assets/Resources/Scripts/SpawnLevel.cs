@@ -62,7 +62,7 @@ public class SpawnLevel : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             // Sets up placement then instantiates the prefab
-            placement.x = -2 - (i * 3);
+            placement.x = -1.25f - (i * 3);
             placement.y = 0;
             newObject = Instantiate(landingSpotPrefab, placement, Quaternion.identity, landingSpotHolder.transform);
             // Names the object
@@ -74,7 +74,7 @@ public class SpawnLevel : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             // Sets up placement then instantiates the prefab
-            placement.x = -2 - (i * 3);
+            placement.x = -1.25f - (i * 3);
             placement.y = -3;
             newObject = Instantiate(landingSpotPrefab, placement, Quaternion.identity, landingSpotHolder.transform);
             // Names the object
@@ -96,7 +96,7 @@ public class SpawnLevel : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             // Sets up placement then instantiates the titan
-            placement.x = -2 - (i * 3);
+            placement.x = -1.25f - (i * 3);
             placement.y = 0;
             titanObject = Instantiate(titanList[partyCode[i]], placement, Quaternion.identity, titanHolder.transform);
 
@@ -120,7 +120,7 @@ public class SpawnLevel : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             // Sets up placement then instantiates the titan
-            placement.x = -2 - (i * 3);
+            placement.x = -1.25f - (i * 3);
             placement.y = -3;
             titanObject = Instantiate(titanList[partyCode[i + 3]], placement, Quaternion.identity, titanHolder.transform);
 
@@ -155,8 +155,8 @@ public class SpawnLevel : MonoBehaviour
     void SpawnEnemyTitan()
     {
         // Spawns the titan, adjusts its scale, removes its drag component, and sets it to an enemy
-        enemyTitan = Instantiate(titanList[partyCode[6]], new Vector3(6, 0, 50), Quaternion.identity);
-        enemyTitan.transform.localScale = Vector3.one;
+        enemyTitan = Instantiate(titanList[partyCode[6]], new Vector3(4.5f, 0, 50), Quaternion.identity);
+        enemyTitan.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
         Destroy(enemyTitan.GetComponent<Drag>());
         enemyTitan.isEnemy = true;
 
