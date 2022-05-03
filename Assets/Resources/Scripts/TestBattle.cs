@@ -10,7 +10,7 @@ public class TestBattle : MonoBehaviour
     [SerializeField] Party partyClass;
     public Titan enemy;
     public List<Titan> activeParty;
-    private bool battling;
+    public bool battling;
     private bool gameOver;
     public GameObject[] landingSpots;
     public GameObject endScreen;
@@ -38,6 +38,7 @@ public class TestBattle : MonoBehaviour
     {
         if (!gameOver)
         {
+            // Checks if the first turn has happened yet and executes pre-first turn batlle logic if not
             if (firstTurn == true)
             {
                 for (int i = 0; i < activeParty.Count; i++)
@@ -53,13 +54,14 @@ public class TestBattle : MonoBehaviour
             {
                 Turn();
             }
+
             // Give enemy more health (debugging)
-            if (Input.GetKeyUp(KeyCode.H))
+            /*if (Input.GetKeyUp(KeyCode.H))
             {
                 enemy.health += 10;
                 enemy.UpdateUI();
             }
-            // Test
+            // Give player more swaps (debugging)
             if (Input.GetKeyUp(KeyCode.S))
             {
                 partyClass.currentSwaps += 10;
@@ -78,7 +80,7 @@ public class TestBattle : MonoBehaviour
                         Debug.Log("Member " + (i + 1) + ": null");
                     }
                 }
-            }
+            }*/
         }
     }
 
@@ -87,6 +89,7 @@ public class TestBattle : MonoBehaviour
         // Beginning Phase
         // Activates enemy's beginning of turn ability (if applicable)
         enemy.OnBeginTurn(activeParty, enemy);
+
         // Activates party's beginning of turn abilities (if applicable)
         for (int i = 0; i < activeParty.Count; i++)
         {
@@ -213,8 +216,6 @@ public class TestBattle : MonoBehaviour
         }
 
         // Attack Phase
-        // Enemy attacks party
-        enemy.TestAttack(activeParty);
         // Front two members attack enemy
         if (activeParty[0] != null)
         {
@@ -224,10 +225,11 @@ public class TestBattle : MonoBehaviour
         {
             activeParty[3].Attack(enemy, activeParty[3].damage);
         }
-        // Death Phase
-        // Checks if the enemy is dead and ends the battle if so
-        
 
+        // Enemy attacks party
+        enemy.TestAttack(activeParty);
+
+        // Death Phase
         // Checks if any party members in the top row have died
         for (int i = 0; i < 3; i++)
         {
@@ -338,6 +340,8 @@ public class TestBattle : MonoBehaviour
                 }
             }
         }
+
+        // Checks if the enemy is dead and ends the battle if so
         if (enemy.DeathCheck(activeParty, enemy))
         {
             WinBattle();
@@ -346,6 +350,7 @@ public class TestBattle : MonoBehaviour
         // End Phase
         // Activates enemy's end of turn ability (if applicable)
         enemy.OnEndTurn(activeParty, enemy);
+
         // Activates party's end of turn abilities (if applicable)
         for (int i = 0; i < activeParty.Count; i++)
         {
@@ -355,6 +360,7 @@ public class TestBattle : MonoBehaviour
             }
         }
 
+        // Updates party UI after all end turn abilities occur
         for (int i = 0; i < activeParty.Count; i++)
         {
             if (activeParty[i] != null)
@@ -362,8 +368,10 @@ public class TestBattle : MonoBehaviour
                 activeParty[i].UpdateUI();
             }
         }
+
         // Updates enemy's UI
         enemy.UpdateUI();
+
         // Gives the player a swap if they haven't reached the limit
         if (partyClass.currentSwaps < partyClass.maxSwaps)
         {

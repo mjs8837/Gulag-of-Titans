@@ -11,7 +11,7 @@ public class Ghost : Titan
         totalHealth = 2.0f;
         titanName = "Ghost";
         titanIndex = 13;
-        abilityDescription = "When I appear, give the enemy titan -1|-0.";
+        abilityDescription = "When I appear, reduce the enemy titan's attack by 1.";
         abilityName = "Haunt";
 
         if (isEnemy)

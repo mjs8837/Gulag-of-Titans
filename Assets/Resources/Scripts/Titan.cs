@@ -41,11 +41,11 @@ public class Titan : MonoBehaviour
     {
         if (party[0] != null)
         {
-            party[0].ChangeHealth(damage, party[0]);
+            party[0].OnHit(party, this);
         }
         if (party[3] != null)
         {
-            party[3].ChangeHealth(damage, party[3]);
+            party[3].OnHit(party, this);
         }
     }
 
@@ -112,7 +112,6 @@ public class Titan : MonoBehaviour
     // Creating a parent health function for child classes that can't be overridden, but can be called
     public virtual void ChangeHealth(float healthChange, Titan target)
     {
-
         hurtSpot.text = "-" + healthChange;
         StartCoroutine(ClearText(hurtSpot));
 

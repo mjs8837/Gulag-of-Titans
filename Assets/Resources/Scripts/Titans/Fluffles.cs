@@ -7,11 +7,11 @@ public class Fluffles : Titan
     void Start()
     {
         damage = 0.0f;
-        health = 8.0f;
+        health = 4.0f;
         totalHealth = 8.0f;
         titanName = "Mr. Fluffles";
         titanIndex = 8;
-        abilityDescription = "Heal the ally in front of me by 3 every turn";
+        abilityDescription = "Give the ally in front of me 1 health every turn";
         abilityName = "Protective Spirit";
 
         if (isEnemy)
@@ -53,7 +53,7 @@ public class Fluffles : Titan
                     Debug.Log(index);
                     index -= 1;
                     Debug.Log(index);
-                    party[index].ChangeHealth(-2, party[index]);
+                    party[index].ChangeHealth(-1, party[index]);
                 }                
             }
 

@@ -12,7 +12,7 @@ public class Moosh : Titan
         totalHealth = 4.0f;
         titanName = "Moosh";
         titanIndex = 5;
-        abilityDescription = "When I die give the unit behind me +2|+2.";
+        abilityDescription = "When I die give the unit behind me 2 health and 2 attack.";
         abilityName = "Sporulation";
 
         if (isEnemy)

@@ -12,7 +12,7 @@ public class Caleb : Titan
         totalHealth = 5.0f;
         titanName = "Caleb";
         titanIndex = 1;
-        abilityDescription = "When I take damage, I gain +2|+0.";
+        abilityDescription = "When I take damage, I gain 2 attack.";
         abilityName = "Tortured";
 
         if (isEnemy)
@@ -49,15 +49,15 @@ public class Caleb : Titan
     public override void ChangeHealth(float healthChange, Titan target)
     {
         base.ChangeHealth(healthChange, target);
-
-        if (!isEnemy)
-        {
-            damage += 2;
-        }
     }
 
     public override void OnHit(List<Titan> party, Titan enemy)
     {
+        if (!isEnemy)
+        {
+            damage += 2;
+        }
+
         base.OnHit(party, enemy);
     }
 

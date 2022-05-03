@@ -24,7 +24,6 @@ public class Angel : Titan
             abilityName = "No ability for now";
             health = 20.0f;
             totalHealth = 20.0f;
-            damage = 1.0f;
         }
 
         UpdateUI();
@@ -59,10 +58,10 @@ public class Angel : Titan
                 base.OnHit(party, enemy);
             }
 
-            firstHitTaken = false;
+            firstHitTaken = true;
         }
 
-        base.OnHit(party, enemy);
+        //base.OnHit(party, enemy);
     }
 
     public override void OnEndTurn(List<Titan> party, Titan enemy)

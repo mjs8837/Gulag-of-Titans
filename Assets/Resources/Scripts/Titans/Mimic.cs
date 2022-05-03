@@ -30,7 +30,7 @@ public class Mimic : Titan
     public override void ChangeHealth(float healthChange, Titan target)
     {
         base.ChangeHealth(healthChange, target);
-        if (!isEnemy)
+        /*if (!isEnemy)
         {
             if (!firstHitTaken && healthChange > 0)
             {
@@ -39,7 +39,7 @@ public class Mimic : Titan
                 firstHitTaken = true;
             }
 
-        }
+        }*/
     }
     public override void Attack(Titan enemy, float damage)
     {
@@ -63,6 +63,15 @@ public class Mimic : Titan
 
     public override void OnHit(List<Titan> party, Titan enemy)
     {
+        if (!isEnemy)
+        {
+            if (!firstHitTaken)
+            {
+                damage *= 2;
+                firstHitTaken = true;
+            }
+
+        }
 
         base.OnHit(party, enemy);
     }
