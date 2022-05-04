@@ -11,8 +11,6 @@ public class SelectTitan : MonoBehaviour
     [SerializeField] SwitchScene switchSceneClass;
     [SerializeField] CustomManager customManagerClass;
 
-    
-
     [SerializeField] GameObject continueButton;
 
     // Start is called before the first frame update

@@ -41,6 +41,7 @@ public class TestBattle : MonoBehaviour
             // Checks if the first turn has happened yet and executes pre-first turn batlle logic if not
             if (firstTurn == true)
             {
+                enemy.name = "Enemy";
                 for (int i = 0; i < activeParty.Count; i++)
                 {
                     activeParty[i].OnAppear(activeParty, enemy);
@@ -86,6 +87,7 @@ public class TestBattle : MonoBehaviour
 
     public void Turn()
     {
+
         // Beginning Phase
         // Activates enemy's beginning of turn ability (if applicable)
         enemy.OnBeginTurn(activeParty, enemy);
@@ -229,6 +231,19 @@ public class TestBattle : MonoBehaviour
         // Enemy attacks party
         enemy.TestAttack(activeParty);
 
+        // End Phase
+        // Activates enemy's end of turn ability (if applicable)
+        enemy.OnEndTurn(activeParty, enemy);
+
+        // Activates party's end of turn abilities (if applicable)
+        for (int i = 0; i < activeParty.Count; i++)
+        {
+            if (activeParty[i] != null)
+            {
+                activeParty[i].OnEndTurn(activeParty, enemy);
+            }
+        }
+
         // Death Phase
         // Checks if any party members in the top row have died
         for (int i = 0; i < 3; i++)
@@ -345,19 +360,6 @@ public class TestBattle : MonoBehaviour
         if (enemy.DeathCheck(activeParty, enemy))
         {
             WinBattle();
-        }
-
-        // End Phase
-        // Activates enemy's end of turn ability (if applicable)
-        enemy.OnEndTurn(activeParty, enemy);
-
-        // Activates party's end of turn abilities (if applicable)
-        for (int i = 0; i < activeParty.Count; i++)
-        {
-            if (activeParty[i] != null)
-            {
-                activeParty[i].OnEndTurn(activeParty, enemy);
-            }
         }
 
         // Updates party UI after all end turn abilities occur

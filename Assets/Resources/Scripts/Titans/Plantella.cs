@@ -27,7 +27,7 @@ public class Plantella : Titan
 
     public override void Attack(Titan enemy, float damage)
     {
-        enemy.poisonStack += 1;
+        OnPoison(enemy, 1);
         base.Attack(enemy, damage);
     }
 
@@ -38,7 +38,6 @@ public class Plantella : Titan
 
     public override void OnAppear(List<Titan> party, Titan enemy)
     {
-        enemy.poisonStack += 1;
         base.OnAppear(party, enemy);
     }
 

@@ -28,13 +28,13 @@ public class Titan : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void TestAttack(List<Titan> party)
@@ -109,7 +109,7 @@ public class Titan : MonoBehaviour
         enemy.ChangeHealth(damage, enemy);
     }
 
-    // Creating a parent health function for child classes that can't be overridden, but can be called
+    // Creating a parent health function for child classes
     public virtual void ChangeHealth(float healthChange, Titan target)
     {
         hurtSpot.text = "-" + healthChange;
@@ -125,14 +125,12 @@ public class Titan : MonoBehaviour
             hurt = true;
             StartCoroutine(MakeWhite(target));
         }
-
-        
     }
 
     // Checks if the titan has died
     public virtual bool DeathCheck(List<Titan> party, Titan enemy)
     {
-        // If their health or stamina is empty, triggers their on death effects (if applicable) then destroys them and returns true
+        // If their health is empty, triggers their on death effects (if applicable) then destroys them and returns true
         if (health <= 0)
         {
             Destroy(healthUI);
@@ -172,22 +170,17 @@ public class Titan : MonoBehaviour
 
     }
 
-    public virtual void OnPoison(List<Titan> party, Titan enemy, float newStacks)
+    public virtual void OnPoison(Titan enemy, float newStacks)
     {
-        GameObject poisonOBJ = GameObject.Find("PoisonIcon");
-        GameObject enemyStuff = GameObject.Find(enemy.name.ToString());
-        //Debug.Log(GameObject.Find(enemy.name.ToString()));
+        GameObject poinsonIcon = GameObject.Find(enemy.name.ToString() + "/PoisonIcon");
 
         if (enemy.poisonStack == 0)
         {
-            //poisonOBJ.GetComponent<SpriteRenderer>().enabled = true;
-            enemyStuff.GetComponent<SpriteRenderer>().enabled = true;
-            Debug.Log(enemyStuff.GetComponent<SpriteRenderer>());
-            Debug.Log("bitch");
+            poinsonIcon.GetComponent<SpriteRenderer>().enabled = true;
         }
 
-        poisonStack += newStacks;
-        enemyStuff.GetComponentInChildren<TextMeshPro>().text = poisonStack.ToString();
+        enemy.poisonStack += newStacks;
+        poinsonIcon.GetComponentInChildren<TextMeshPro>().text = enemy.poisonStack.ToString();
     }
 
     public virtual void UpdateUI()
