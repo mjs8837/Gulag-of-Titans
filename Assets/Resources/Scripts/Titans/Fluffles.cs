@@ -50,9 +50,7 @@ public class Fluffles : Titan
             {
                 if (party[index] != null)
                 {
-                    Debug.Log(index);
                     index -= 1;
-                    Debug.Log(index);
                     party[index].ChangeHealth(-1, party[index]);
                 }                
             }

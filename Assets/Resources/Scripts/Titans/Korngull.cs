@@ -12,7 +12,7 @@ public class Korngull : Titan
         totalHealth = 2.0f;
         titanName = "Korngull";
         titanIndex = 3;
-        abilityDescription = "When I die, deal 5 to the enemy titan.";
+        abilityDescription = "When I die, deal 4 to the enemy titan.";
         abilityName = "Bulbous Sacs";
 
         if (isEnemy)
@@ -60,9 +60,7 @@ public class Korngull : Titan
     {
         if (!isEnemy)
         {
-            Attack(enemy, 5.0f);
-            
-
+            Attack(enemy, 4.0f);
         }
 
         base.OnDeath(party, enemy);

@@ -55,50 +55,52 @@ public class Titan : MonoBehaviour
         // Gets a random number to determine the targets
         float attackChance = Random.Range(0.0f, 1.0f);
 
-        // 50% chance to attack 1 party member at the front
+        // 50% chance to attack the party members at the front nomally
         if (attackChance >= 0.0f && attackChance < 0.5f)
         {
-            // 50% chance to attack either slot 0 or slot 3 party member
-            if (Random.Range(0.0f, 1.0f) <= 0.5f)
+            Debug.Log("Normal");
+
+            if (party[0] != null)
             {
-                if (party[0] != null)
-                {
-                    ChangeHealth(damage, party[0]);
-                }
+                party[0].OnHit(party, this);
             }
-            else
+
+            if (party[3] != null)
             {
-                if (party[3] != null)
-                {
-                    ChangeHealth(damage, party[3]);
-                }
+                party[3].OnHit(party, this);
             }
         }
 
         // 25% chance to attack every party member
         if (attackChance >= 0.5f && attackChance < 0.75f)
         {
+            Debug.Log("All");
+
             for (int i = 0; i < party.Count; i++)
             {
                 if (party[i] != null)
                 {
-                    ChangeHealth(damage, party[i]);
+                    party[i].OnHit(party, this);
                 }
             }
 
         }
 
-        // 25% chance to attack 1 party member at the front for double damage
+        // 25% chance to attack both party members at the front for double damage
         if (attackChance >= 0.75f)
         {
-            // 50% chance to attack either slot 0 or slot 3 party member
-            if (Random.Range(0.0f, 1.0f) <= 0.5f)
+            Debug.Log("Double");
+
+            if (party[0] != null)
             {
-                ChangeHealth(damage * 2.0f, party[0]);
+                party[0].OnHit(party, this);
+                ChangeHealth(damage, party[0]);
             }
-            else
+
+            if (party[3] != null)
             {
-                ChangeHealth(damage * 2.0f, party[3]);
+                party[3].OnHit(party, this);
+                ChangeHealth(damage, party[3]);
             }
         }
     }

@@ -229,7 +229,7 @@ public class TestBattle : MonoBehaviour
         }
 
         // Enemy attacks party
-        enemy.TestAttack(activeParty);
+        enemy.Attack(activeParty);
 
         // End Phase
         // Activates enemy's end of turn ability (if applicable)
