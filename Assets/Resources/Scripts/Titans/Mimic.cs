@@ -61,7 +61,7 @@ public class Mimic : Titan
         base.OnBeginTurn(party, enemy);
     }
 
-    public override void OnHit(List<Titan> party, Titan enemy)
+    public override void OnHit(List<Titan> party, Titan enemy, float damageModifier)
     {
         if (!isEnemy)
         {
@@ -73,7 +73,7 @@ public class Mimic : Titan
 
         }
 
-        base.OnHit(party, enemy);
+        base.OnHit(party, enemy, damageModifier);
     }
 
     public override void OnEndTurn(List<Titan> party, Titan enemy)

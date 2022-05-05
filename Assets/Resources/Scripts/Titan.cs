@@ -41,11 +41,11 @@ public class Titan : MonoBehaviour
     {
         if (party[0] != null)
         {
-            party[0].OnHit(party, this);
+            party[0].OnHit(party, this, 1.0f);
         }
         if (party[3] != null)
         {
-            party[3].OnHit(party, this);
+            party[3].OnHit(party, this, 1.0f);
         }
     }
 
@@ -55,19 +55,27 @@ public class Titan : MonoBehaviour
         // Gets a random number to determine the targets
         float attackChance = Random.Range(0.0f, 1.0f);
 
-        // 50% chance to attack the party members at the front nomally
+        // 50% chance to attack a party member at the front nomally
         if (attackChance >= 0.0f && attackChance < 0.5f)
         {
-            Debug.Log("Normal");
-
-            if (party[0] != null)
+            if (Random.Range(0.0f, 1.0f) < 0.5f)
             {
-                party[0].OnHit(party, this);
+                Debug.Log("Normal1");
+
+                if (party[0] != null)
+                {
+                    party[0].OnHit(party, this, 1.0f);
+                }
             }
-
-            if (party[3] != null)
+            
+            else
             {
-                party[3].OnHit(party, this);
+                Debug.Log("Normal2");
+
+                if (party[3] != null)
+                {
+                    party[3].OnHit(party, this, 1.0f);
+                }
             }
         }
 
@@ -80,27 +88,33 @@ public class Titan : MonoBehaviour
             {
                 if (party[i] != null)
                 {
-                    party[i].OnHit(party, this);
+                    party[i].OnHit(party, this, 0.5f);
                 }
             }
 
         }
 
-        // 25% chance to attack both party members at the front for double damage
+        // 25% chance to attack a party member at the front for double damage
         if (attackChance >= 0.75f)
         {
-            Debug.Log("Double");
-
-            if (party[0] != null)
+            if (Random.Range(0.0f, 1.0f) < 0.5f)
             {
-                party[0].OnHit(party, this);
-                ChangeHealth(damage, party[0]);
+                Debug.Log("Double1");
+
+                if (party[0] != null)
+                {
+                    party[0].OnHit(party, this, 2.0f);
+                }
             }
 
-            if (party[3] != null)
+            else
             {
-                party[3].OnHit(party, this);
-                ChangeHealth(damage, party[3]);
+                Debug.Log("Double2");
+
+                if (party[3] != null)
+                {
+                    party[3].OnHit(party, this, 2.0f);
+                }
             }
         }
     }
@@ -153,9 +167,9 @@ public class Titan : MonoBehaviour
 
     }
 
-    public virtual void OnHit(List<Titan> party, Titan enemy)
+    public virtual void OnHit(List<Titan> party, Titan enemy, float damageModifier)
     {
-        ChangeHealth(enemy.damage, this);
+        ChangeHealth(enemy.damage  * damageModifier, this);
     }
 
     public virtual void OnEndTurn(List<Titan> party, Titan enemy)

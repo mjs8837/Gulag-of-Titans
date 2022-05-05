@@ -7,12 +7,12 @@ public class CustomContinue : MonoBehaviour
 {
     [SerializeField] SwitchScene switchSceneClass;
 
-    public static int[] partyCodeMaster;
+    public static List<int> partyCodeMaster;
 
     // Start is called before the first frame update
     void Start()
     {
-        switchSceneClass.partyCodeScene = new int[7];
+        switchSceneClass.partyCodeScene = new List<int>();
     }
 
     // Update is called once per frame

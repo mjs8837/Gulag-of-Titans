@@ -51,14 +51,14 @@ public class Caleb : Titan
         base.ChangeHealth(healthChange, target);
     }
 
-    public override void OnHit(List<Titan> party, Titan enemy)
+    public override void OnHit(List<Titan> party, Titan enemy, float damageModifer)
     {
         if (!isEnemy)
         {
             damage += 2;
         }
 
-        base.OnHit(party, enemy);
+        base.OnHit(party, enemy, damageModifer);
     }
 
     public override void OnEndTurn(List<Titan> party, Titan enemy)

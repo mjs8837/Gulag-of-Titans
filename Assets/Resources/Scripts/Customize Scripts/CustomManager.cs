@@ -71,6 +71,8 @@ public class CustomManager : MonoBehaviour
             tempTitan.GetComponent<SelectTitan>().switchSceneClass = tempManager.GetComponent<SwitchScene>();
             tempTitan.GetComponent<SelectTitan>().customManagerClass = tempManager.GetComponent<CustomManager>();
 
+            tempManager.GetComponent<SwitchScene>().partyCodeScene.RemoveAt(tempManager.GetComponent<SwitchScene>().partyCodeScene.Count - 1);
+
             Destroy(selectedTitans[slotIndexer]);
             selectedTitans[slotIndexer] = null;
         }

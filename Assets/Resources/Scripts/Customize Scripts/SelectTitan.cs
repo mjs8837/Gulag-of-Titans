@@ -43,7 +43,7 @@ public class SelectTitan : MonoBehaviour
     {
         if (switchSceneClass.codeIndex < 7)
         {
-            switchSceneClass.partyCodeScene[switchSceneClass.codeIndex] = titanClass.titanIndex;
+            switchSceneClass.partyCodeScene.Add(titanClass.titanIndex);
             switchSceneClass.codeIndex++;
 
             customManagerClass.AddToList(titanClass);

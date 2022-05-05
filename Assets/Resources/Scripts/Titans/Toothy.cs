@@ -54,9 +54,9 @@ public class Toothy : Titan
         base.OnBeginTurn(party, enemy);
     }
 
-    public override void OnHit(List<Titan> party, Titan enemy)
+    public override void OnHit(List<Titan> party, Titan enemy, float damageModifier)
     {
-        base.OnHit(party, enemy);
+        base.OnHit(party, enemy, damageModifier);
     }
 
     public override void OnEndTurn(List<Titan> party, Titan enemy)

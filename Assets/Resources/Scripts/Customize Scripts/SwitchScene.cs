@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour
 {
-    public int[] partyCodeScene;
+    public List<int> partyCodeScene;
     public int codeIndex;
 
     // Start is called before the first frame update
