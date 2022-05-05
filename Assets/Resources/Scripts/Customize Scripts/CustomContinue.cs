@@ -12,7 +12,7 @@ public class CustomContinue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        switchSceneClass.partyCodeScene = new int[7];
     }
 
     // Update is called once per frame

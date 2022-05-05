@@ -309,7 +309,6 @@ MonoBehaviour:
   sprite: {fileID: 117859034}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!1 &146726883 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6911655212622934552, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
@@ -362,7 +361,6 @@ MonoBehaviour:
   sprite: {fileID: 146726889}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!212 &146726889 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1270906348420192137, guid: d4d2a7dd9b6a9c941a657358cb56248c, type: 3}
@@ -776,7 +774,6 @@ MonoBehaviour:
   sprite: {fileID: 329378340}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!114 &329378339 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 997867927053776684, guid: 037a681d799b17546b9c1a3562fbb81f, type: 3}
@@ -994,7 +991,6 @@ MonoBehaviour:
   sprite: {fileID: 418019318}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!114 &418019317 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -4645389684486154012, guid: da5ff138eb699374294b9a87fef920a4, type: 3}
@@ -1231,7 +1227,6 @@ MonoBehaviour:
   sprite: {fileID: 645712044}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!1 &703570505 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2776877008016026983, guid: 230334260cf8396499d0b516c7dfa289, type: 3}
@@ -1258,7 +1253,6 @@ MonoBehaviour:
   sprite: {fileID: 703570510}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!114 &703570509 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -3312504294006450499, guid: 230334260cf8396499d0b516c7dfa289, type: 3}
@@ -1301,7 +1295,6 @@ MonoBehaviour:
   sprite: {fileID: 761325626}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!114 &761325625 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 946035251878428168, guid: 33d469dd47ae4c14ab537e8d079a1714, type: 3}
@@ -1496,7 +1489,6 @@ MonoBehaviour:
   sprite: {fileID: 825774187}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!212 &825774187 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 8677226575052050253, guid: d277d557232e1014e8918809addfb55c, type: 3}
@@ -1735,7 +1727,6 @@ MonoBehaviour:
   sprite: {fileID: 974732062}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!114 &974732061 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -7711263264660248746, guid: 936e18a836a43fc4996c70f039da1dad, type: 3}
@@ -1859,7 +1850,6 @@ MonoBehaviour:
   sprite: {fileID: 1100794415}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!212 &1100794415 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6699327235811365402, guid: 2972f1ee4707ec84199681ba98287da4, type: 3}
@@ -1976,7 +1966,6 @@ MonoBehaviour:
   sprite: {fileID: 1196961106}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!114 &1196961105 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2642199993874202431, guid: ffd75c3e12ad0a54cbc9b334569b4053, type: 3}
@@ -2139,7 +2128,6 @@ MonoBehaviour:
   sprite: {fileID: 1241867820}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!114 &1241867819 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7391399599065446922, guid: 31e4ce2b6604a214297d060f01232101, type: 3}
@@ -2685,7 +2673,6 @@ MonoBehaviour:
   sprite: {fileID: 1632158828}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!212 &1632158828 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 4943789247489801880, guid: 112e4c35f26f1e744a5a8b913c010b0c, type: 3}
@@ -2728,7 +2715,6 @@ MonoBehaviour:
   sprite: {fileID: 1775750599}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!212 &1775750599 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6195464990606107019, guid: 8e4ec316f72875b40ae2d878cba295d2, type: 3}
@@ -2775,7 +2761,6 @@ MonoBehaviour:
   sprite: {fileID: 1919584521}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!114 &1919584520 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7765739126360953199, guid: 14788c79197033d44b14e075084a7cb7, type: 3}
@@ -3052,7 +3037,6 @@ MonoBehaviour:
   sprite: {fileID: 1965462203}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!114 &1965462202 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -2315289063733096803, guid: 630a86660d3a85a429fe81acdfe84272, type: 3}
@@ -3419,7 +3403,6 @@ MonoBehaviour:
   sprite: {fileID: 2081451003}
   switchSceneClass: {fileID: 155661545}
   customManagerClass: {fileID: 155661547}
-  continueButton: {fileID: 0}
 --- !u!1001 &2143722123
 PrefabInstance:
   m_ObjectHideFlags: 0
