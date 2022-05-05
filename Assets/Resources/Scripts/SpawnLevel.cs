@@ -35,12 +35,27 @@ public class SpawnLevel : MonoBehaviour
 
     public AudioSource backgroundSong;
 
-    private List<int> partyCode = CustomContinue.partyCodeMaster;
+    private List<int> partyCode;
     [SerializeField] int enemyIndexCode;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (CustomContinue.partyCodeMaster != null)
+        {
+            partyCode = CustomContinue.partyCodeMaster;
+        }
+
+        else
+        {
+            partyCode = new List<int>();
+
+            for (int i = 0; i < 7; i++)
+            {
+                partyCode.Add(i);
+            }
+        } 
+
         SpawnLandingSpots();
         SpawnAllyTitans();
         SpawnEnemyTitan();
