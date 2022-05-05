@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Resources/Scenes/Instructions.unity
     guid: 89a12c33c51fab141bdbaef99ac495e1
+  - enabled: 1
+    path: Assets/Resources/Scenes/Adventure/AdventureBattle.unity
+    guid: 6f20a67876fe5f2479da8b05af9d39fb
+  - enabled: 1
+    path: Assets/Resources/Scenes/Adventure/AdventureMap.unity
+    guid: a028589e729c2654db0c3fc3c8333937
+  - enabled: 1
+    path: Assets/Resources/Scenes/Adventure/AdventureStart.unity
+    guid: 41e8cfd76c7aaff409401fc336000eb7
   m_configObjects: {}
